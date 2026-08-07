@@ -365,81 +365,16 @@
     .carrossel-dot.ativo { background: var(--marca); }
 
     .depoi-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 56px;
-      align-items: center;
-    }
-
-    .depoi-imagens { order: 1; }
-    .depoi-conteudo { order: 0; text-align: left; }
-    .depoi-imagens .carrossel-wrap { margin-top: 0; }
-
-    .depoi-titulo { font-size: 32px; margin-bottom: 14px; }
-    .depoi-sub {
-      font-size: 15px;
-      color: var(--cinza);
-      line-height: 1.6;
-      margin-bottom: 24px;
-      max-width: 460px;
-    }
-
-    .depoi-stat-card {
       display: flex;
+      flex-direction: column;
       align-items: center;
-      gap: 18px;
-      background: var(--cinza-claro);
-      border: 1px solid var(--borda);
-      border-radius: 18px;
-      padding: 18px 22px;
-      margin-bottom: 12px;
-    }
-    .depoi-stat-icone {
-      width: 52px; height: 52px;
-      background: var(--branco);
-      border: 1px solid var(--borda);
-      border-radius: 14px;
-      display: flex; align-items: center; justify-content: center;
-      flex-shrink: 0;
-    }
-    .depoi-stat-icone svg {
-      width: 24px; height: 24px;
-      stroke: var(--marca); fill: none; stroke-width: 1.8;
-      stroke-linecap: round; stroke-linejoin: round;
-    }
-    .depoi-stat-top { display: flex; align-items: center; gap: 10px; }
-    .depoi-stat-num { font-size: 30px; font-weight: 800; letter-spacing: -0.5px; line-height: 1; }
-    .depoi-stars { color: #F5A623; font-size: 16px; letter-spacing: 2px; }
-    .depoi-stat-titulo { font-size: 15px; font-weight: 700; margin-top: 4px; }
-    .depoi-stat-sub { font-size: 12.5px; color: var(--cinza); margin-top: 2px; }
-
-    .depoi-verificado {
-      display: flex; align-items: center; gap: 8px;
-      font-size: 13px; font-weight: 600; color: var(--marca);
-      margin-bottom: 26px;
-    }
-    .depoi-verificado svg {
-      width: 18px; height: 18px;
-      stroke: var(--verde-wpp); fill: none; stroke-width: 2;
-      stroke-linecap: round; stroke-linejoin: round;
     }
 
-    .depoi-features { display: flex; flex-direction: column; gap: 18px; }
-    .depoi-feature { display: flex; align-items: flex-start; gap: 14px; }
-    .depoi-feature-icone {
-      width: 40px; height: 40px;
-      background: var(--verde-suave);
-      border-radius: 11px;
-      display: flex; align-items: center; justify-content: center;
-      flex-shrink: 0;
-    }
-    .depoi-feature-icone svg {
-      width: 20px; height: 20px;
-      stroke: var(--marca); fill: none; stroke-width: 1.8;
-      stroke-linecap: round; stroke-linejoin: round;
-    }
-    .depoi-feature h4 { font-size: 15px; font-weight: 700; line-height: 1.35; }
-    .depoi-feature p { font-size: 13px; color: var(--cinza); line-height: 1.5; margin-top: 3px; }
+    .depoi-imagens { order: 1; width: 100%; }
+    .depoi-conteudo { order: 0; text-align: center; }
+    .depoi-imagens .carrossel-wrap { margin-top: 44px; }
+
+    .depoi-titulo { font-size: 34px; margin-bottom: 0; }
 
     /* SEÇÕES GERAIS */
     .sec {
@@ -708,15 +643,8 @@
       .carrossel-slide { padding: 0 16px; }
       .review-img-card { max-width: 100%; }
 
-      .depoi-grid { grid-template-columns: 1fr; gap: 36px; }
-      .depoi-imagens { order: 1; }
-      .depoi-conteudo { order: 0; text-align: center; }
-      .depoi-titulo { text-align: center; }
-      .depoi-sub { margin-left: auto; margin-right: auto; }
-      .depoi-stat-card,
-      .depoi-verificado,
-      .depoi-features { display: none; }
-      .depoi-sub { margin-bottom: 0; }
+      .depoi-titulo { font-size: 26px; }
+      .depoi-imagens .carrossel-wrap { margin-top: 32px; }
 
       .sec { padding: 56px 20px; text-align: center; }
       .sec-titulo { font-size: 26px; }
@@ -865,56 +793,6 @@
     <div class="depoi-conteudo">
       <span class="sec-tag">Depoimentos reais</span>
       <h2 class="sec-titulo depoi-titulo">Porto Alegre confia <span>na Point Animal.</span></h2>
-      <p class="depoi-sub">Prints reais do Google de tutores que precisaram de atendimento em qualquer hora do dia ou da madrugada e encontraram uma equipe pronta para cuidar.</p>
-
-      <div class="depoi-stat-card">
-        <div class="depoi-stat-icone">
-          <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-        </div>
-        <div>
-          <div class="depoi-stat-top">
-            <span class="depoi-stat-num">24h</span>
-            <span class="depoi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-          </div>
-          <div class="depoi-stat-titulo">Avaliações reais de tutores</div>
-          <div class="depoi-stat-sub">Aberta 24 horas · Todos os dias</div>
-        </div>
-      </div>
-
-      <div class="depoi-verificado">
-        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8 12l2.5 2.5L16 9"/></svg>
-        Avaliações verificadas · Google Reviews
-      </div>
-
-      <div class="depoi-features">
-        <div class="depoi-feature">
-          <div class="depoi-feature-icone">
-            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-          </div>
-          <div>
-            <h4>24 horas, 7 dias por semana</h4>
-            <p>Seu pet sempre terá onde receber atendimento.</p>
-          </div>
-        </div>
-        <div class="depoi-feature">
-          <div class="depoi-feature-icone">
-            <svg viewBox="0 0 24 24"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          </div>
-          <div>
-            <h4>Pertinho de Você</h4>
-            <p>Fácil acesso para toda a cidade.</p>
-          </div>
-        </div>
-        <div class="depoi-feature">
-          <div class="depoi-feature-icone">
-            <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-          </div>
-          <div>
-            <h4>Atendimento humanizado</h4>
-            <p>Cada animal é tratado com paciência, respeito e atenção real.</p>
-          </div>
-        </div>
-      </div>
     </div>
    </div>
   </div>
