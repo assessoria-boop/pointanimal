@@ -1,0 +1,25 @@
+POINT ANIMAL - Clinica Veterinaria 24 Horas (Porto Alegre/RS)
+=============================================================
+
+Coloque os arquivos abaixo NESTA MESMA PASTA, todos em formato .webp:
+
+1) logo.webp        -> logo do cliente (usada no cabecalho, no hero e como favicon)
+                       Recomendado: quadrada, fundo transparente ou branco, 512x512px
+
+2) 1.webp ... 5.webp -> prints reais das avaliacoes do Google (carrossel de depoimentos)
+                       Recomendado: largura ~800px, altura livre
+
+3) clinica1.webp ... clinica4.webp -> fotos da clinica (galeria com fade automatico)
+                       Recomendado: 1200x900px (proporcao 4:3) para nao cortar nada importante
+
+Observacoes:
+- A galeria ja ignora automaticamente as imagens que ainda nao foram enviadas.
+- Se quiser mais ou menos fotos da clinica, basta adicionar/remover as tags <img>
+  dentro de <div class="clinica-galeria"> no index.html.
+- Se quiser mais ou menos prints de avaliacao, adicione/remova um bloco
+  <div class="carrossel-slide"> e o respectivo <div class="carrossel-dot">.
+
+PENDENCIA:
+- Microsoft Clarity: no index.html, dentro do <script> do topo, substitua
+  CLARITY_ID pelo ID do projeto Clarity da clinica.
+- Google Tag Manager ja configurado: GTM-PT5CRMNH
