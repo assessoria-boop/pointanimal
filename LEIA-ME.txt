@@ -19,7 +19,6 @@ Observacoes:
 - Se quiser mais ou menos prints de avaliacao, adicione/remova um bloco
   <div class="carrossel-slide"> e o respectivo <div class="carrossel-dot">.
 
-PENDENCIA:
-- Microsoft Clarity: no index.html, dentro do <script> do topo, substitua
-  CLARITY_ID pelo ID do projeto Clarity da clinica.
+CONFIGURADO:
+- Microsoft Clarity ja configurado: xyotnfrny4
 - Google Tag Manager ja configurado: GTM-PT5CRMNH
