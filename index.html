@@ -267,7 +267,7 @@
       max-width: 900px;
       margin: 0 auto;
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       align-items: stretch;
     }
 
@@ -700,8 +700,7 @@
       .stats-inner { grid-template-columns: repeat(2, 1fr); }
       .stat { padding: 20px 12px; border-right: 1px solid rgba(255,255,255,0.18); border-bottom: 1px solid rgba(255,255,255,0.18); }
       .stat:nth-child(2) { border-right: none; }
-      .stat:nth-child(3) { border-bottom: none; }
-      .stat:nth-child(4) { border-right: none; border-bottom: none; }
+      .stat:nth-child(3) { grid-column: 1 / -1; border-right: none; border-bottom: none; }
       .stat-num { font-size: 20px; }
 
       .sec-depoi { padding: 56px 0; }
@@ -812,10 +811,6 @@
     <div class="stat">
       <div class="stat-num" style="font-size:18px;letter-spacing:0;">Referência</div>
       <div class="stat-label">Em Porto Alegre</div>
-    </div>
-    <div class="stat">
-      <div class="stat-num" style="font-size:18px;letter-spacing:0;">Jardim Lindóia</div>
-      <div class="stat-label">Fácil acesso</div>
     </div>
   </div>
 </div>
@@ -940,7 +935,7 @@
     </div>
     <div class="servico-card">
       <div class="servico-icone">
-        <svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V7l7-4 7 4v14"/><path d="M12 9v4M10 11h4"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M3 21h18"/><path d="M5 21V7a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v14"/><path d="M12 8.5v4M10 10.5h4"/><path d="M9.5 21v-4h5v4"/></svg>
       </div>
       <h3>Estrutura completa em um só lugar</h3>
       <p>Clínica, cirurgias, internação e exames.</p>
