@@ -10,10 +10,11 @@ Publicada em 11/09/2026 no lugar da LP anterior, que continua no histórico do G
 - Mapa do Google: o embed enviado, que só carrega quando a dobra de contato se aproxima
 
 ## Mobile
-- Cabeçalho oculto no celular (pedido do cliente); o hero fica com 784 px, sem a barra de navegação.
+- Cabeçalho visível, como na prancheta (logo, botão do WhatsApp e menu).
+- O texto gigante "Point Animal" atrás do cachorro fica oculto no celular (pedido do cliente); no desktop ele continua.
 
 ## Imagens
-- Fotos enviadas pelo cliente em 11/09/2026 guardadas sem alteração fora do repositório, em `C:UsersGaabsrand-assetspoint-animalotos-originais`; as versões usadas na página ficam em `img/`:
+- Fotos enviadas pelo cliente em 11/09/2026 guardadas sem alteração fora do repositório, em `C:\Users\Gaabs\brand-assets\point-animal\fotos-originais`; as versões usadas na página ficam em `img/`:
   - `etapa-1..4.webp`: recortadas em 740×440 (formato dos cards de etapas)
   - `card-caes`, `card-gatos`: 900×900
   - `destaque-cirurgia`, `destaque-exames`, `destaque-consultas`: 720 px de largura

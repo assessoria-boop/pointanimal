@@ -634,11 +634,10 @@
 
     @media (max-width: 1023px) {
       .only-d { display: none !important; }
-      /* cabecalho oculto no mobile: o hero perde os 60px da barra e mantem a mesma composicao */
-      .nav-wrap { display: none; }
-      .hero { height: 784px; }
+      /* texto gigante atras do cachorro oculto no mobile (pedido do cliente) */
+      .hero-gigante { display: none; }
       /* mobile: hero estatico, sem animar a foto grande (ela e o LCP; a animacao atrasava o Speed Index) */
-      .hero-cao, .hero-gigante { animation: none; }
+      .hero-cao { animation: none; }
     }
 
     /* ════════════════ DESKTOP (prancheta 1440) ════════════════ */
