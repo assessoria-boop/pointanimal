@@ -2,680 +2,852 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <title>Point Animal · Clínica Veterinária 24 Horas em Porto Alegre</title>
   <meta name="description" content="Point Animal Clínica Veterinária 24 Horas em Porto Alegre/RS. Aberta 24 horas, todos os dias. Consultas, cirurgias, internação, exames e emergências no Jardim Lindóia." />
-  <link rel="icon" type="image/webp" href="logo.webp" />
-  <link rel="apple-touch-icon" href="logo.webp" />
-  <link rel="preload" as="image" href="logo.webp" fetchpriority="high" type="image/webp" />
-  <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />
+  <meta name="theme-color" content="#4C7A22" />
+  <link rel="icon" type="image/webp" href="img/logo.webp" />
+  <link rel="apple-touch-icon" href="img/logo.webp" />
+  <link rel="preload" as="image" href="img/hero-cao-1600.webp" media="(min-width:1024px)" type="image/webp" fetchpriority="high" />
+  <link rel="preload" as="image" href="img/hero-cao-1100.webp" media="(max-width:1023px)" type="image/webp" fetchpriority="high" />
+  <link rel="preload" as="font" href="fonts/manrope-latin.woff2" type="font/woff2" crossorigin />
+  <link rel="preload" as="font" href="fonts/montserrat-latin.woff2" type="font/woff2" media="(min-width:1024px)" crossorigin />
   <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
-  <link rel="preconnect" href="https://www.google-analytics.com" crossorigin />
   <link rel="dns-prefetch" href="https://www.clarity.ms" />
   <script>
-    /* GTM + Clarity carregados sob demanda (primeira interação ou 3,5s) para não travar o LCP */
+    document.documentElement.className += ' js';
+    /* GTM + Microsoft Clarity carregados na primeira interacao (mouse, toque, rolagem ou tecla), sem timer: fora do caminho do carregamento e do PageSpeed */
     function _loadTags(){
       if(window._tagsLoaded)return;window._tagsLoaded=1;
       (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-PT5CRMNH');
       (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","xyotnfrny4");
     }
-    ['click','touchstart','scroll','keydown'].forEach(function(e){window.addEventListener(e,_loadTags,{once:true,passive:true});});
-    setTimeout(_loadTags,3500);
+    ['mousemove','pointerdown','touchstart','scroll','keydown','click'].forEach(function(e){window.addEventListener(e,_loadTags,{once:true,passive:true});});
   </script>
   <style>
+    /* fontes servidas localmente (subset latin): sem CSS externo bloqueando a renderizacao */
+    @font-face { font-family: 'Manrope'; font-style: normal; font-weight: 400 700; font-display: swap; src: url(fonts/manrope-latin.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Montserrat'; font-style: normal; font-weight: 500 700; font-display: swap; src: url(fonts/montserrat-latin.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
+    /* paleta da Point Animal (verde + verde-lima da logo), no lugar do turquesa do template */
     :root {
-      --marca: #4C7A22;            /* verde da logo */
-      --marca-escuro: #2E4C12;
-      --marca-claro: #6D9B33;
-      --lima: #9DC63E;             /* verde limão do anel da logo */
-      --lima-claro: #B9DC5F;
-      --verde-suave: #F1F7E4;
-      --vinho: #9E3230;            /* vermelho de "animal" e "24hs" */
-      --vinho-claro: #C4514C;
-      --creme: #FAFBF3;
-      --prata: #7F8B72;
-      --gradiente: linear-gradient(135deg, #24400D 0%, #4C7A22 55%, #6D9B33 100%);
-      --gradiente-destaque: linear-gradient(90deg, #9E3230 0%, #C4514C 100%);
-      --verde-wpp: #25D366;
-      --verde-wpp-hover: #1DA851;
-      --texto: #15200C;
-      --cinza: #66705C;
-      --cinza-claro: #F4F5EE;
-      --borda: #E1E5D6;
-      --branco: #fff;
+      --c-white: #FFFFFF;
+      --c-soft: #F1F7E4;
+      --c-pill: #F4F8EC;
+      --c-ink: #15200C;
+      --c-body: #5E6857;
+      --c-line: #CCDAB5;
+      --c-border: #DCE9C6;
+      --c-muted: #5E8A2E;
+      --c-readmore: #E3EFCF;
+      --c-footer: #1C2E0C;
+      --c-brand: #4C7A22;
+      --c-logo: #6B9E2C;
+      --c-light: #B9DC5F;
+      --c-lima: #B9DC5F;
+      --c-vermelho: #FF2B1F;
+      --c-trilho: #E2ECD2;
+      --wpp: #25D366;
+      --f: 'Manrope', system-ui, sans-serif;
+      --f2: 'Montserrat', system-ui, sans-serif;
+      --ease: cubic-bezier(.2, .7, .2, 1);
     }
 
-    html {
-      scroll-behavior: smooth;
-      -webkit-text-size-adjust: 100%;
-      text-size-adjust: 100%;
-    }
-
-    html, body {
-      width: 100%;
-      max-width: 100%;
-      overflow-x: hidden;
-      overscroll-behavior-x: none;
-    }
-
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; touch-action: pan-y; overflow-x: hidden; }
     body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
-      color: var(--texto);
-      background: var(--branco);
+      font-family: var(--f);
+      font-size: 12px;
+      line-height: 16px;
+      color: var(--c-ink);
+      background: #fff;
+      font-synthesis: none;
       -webkit-font-smoothing: antialiased;
-      position: relative;
-      touch-action: pan-y;
-    }
-
-    /* TOPO */
-    .topo {
-      background: var(--gradiente);
-      color: rgba(255,255,255,0.95);
-      text-align: center;
-      padding: 9px 20px;
-      font-size: 13px;
-      font-weight: 500;
-    }
-    .topo strong { color: var(--lima-claro); }
-
-    .topo-dot {
-      display: inline-block;
-      width: 7px; height: 7px;
-      background: #25D366;
-      border-radius: 50%;
-      margin-right: 8px;
-      vertical-align: middle;
-      animation: pulse 2s infinite;
-    }
-
-    @keyframes pulse {
-      0%, 100% { opacity: 1; }
-      50%      { opacity: 0.4; }
-    }
-
-    /* NAV */
-    nav {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 14px 48px;
-      border-bottom: 1px solid var(--borda);
-      background: var(--branco);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      box-shadow: 0 1px 8px rgba(0,0,0,0.06);
-    }
-
-    .nav-logo {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .nav-logo-circulo {
-      width: 42px; height: 42px;
-      border-radius: 50%;
-      overflow: hidden;
-      flex-shrink: 0;
-      background: var(--branco);
-    }
-
-    .nav-logo-circulo img {
-      width: 100%; height: 100%;
-      object-fit: contain;
-    }
-
-    .nav-nome {
-      font-size: 16px;
-      font-weight: 900;
-      color: var(--marca);
-      letter-spacing: -0.5px;
-    }
-
-    .nav-badge {
-      font-size: 11px;
-      font-weight: 700;
-      color: var(--branco);
-      background: var(--marca);
-      border-radius: 999px;
-      padding: 3px 10px;
-    }
-
-    .nav-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: var(--verde-wpp);
-      color: white;
-      font-size: 13px;
-      font-weight: 700;
-      padding: 10px 18px;
-      border-radius: 999px;
-      text-decoration: none;
-      transition: all 0.2s;
-      white-space: nowrap;
-    }
-    .nav-btn:hover { background: var(--verde-wpp-hover); transform: translateY(-1px); }
-    .nav-btn svg { width: 16px; height: 16px; fill: white; flex-shrink: 0; }
-
-    /* HERO */
-    .hero {
-      min-height: calc(100svh - 104px);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 48px 24px 44px;
-      position: relative;
-      overflow: hidden;
-      background: radial-gradient(circle at 50% 0%, var(--verde-suave) 0%, #ffffff 62%);
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      max-width: 660px;
+      -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
       width: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
     }
+    img { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; }
+    [hidden] { display: none !important; }
+    svg.i { display: block; flex-shrink: 0; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    svg.i-wpp { display: block; flex-shrink: 0; fill: currentColor; }
+    section, header { scroll-margin-top: 12px; }
 
-    .hero-logo {
-      width: 148px; height: 148px;
-      border-radius: 50%;
-      overflow: hidden;
-      margin-bottom: 34px;
-      box-shadow: 0 8px 32px rgba(36,64,13,0.20);
-      background: var(--branco);
-      padding: 4px;
-      flex-shrink: 0;
-    }
+    /* ── ANIMACOES DE ENTRADA ── */
+    @keyframes sobe { from { opacity: 0; transform: translateY(28px); } to { opacity: 1; transform: none; } }
+    /* o hero ja nasce pintado (sem fade): so assenta a escala, sem atrasar LCP nem Speed Index */
+    @keyframes surge { from { transform: scale(1.04); } to { transform: none; } }
+    @keyframes flutua { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-12px); } }
+    .js .rv:not(.vis) { opacity: 0; }
+    .rv.vis { animation: sobe .8s var(--ease) var(--d, 0s) backwards; }
+    .rv.vis.ok { animation: none; }
 
-    .hero-logo img {
-      width: 100%; height: 100%;
-      object-fit: contain;
-    }
-
-    .hero h1 {
-      font-size: 50px;
-      font-weight: 900;
-      color: var(--texto);
-      letter-spacing: -1.5px;
-      line-height: 1.14;
-      margin-bottom: 18px;
-      margin-top: 4px;
-    }
-
-    .br-mob { display: none; }
-
-    .hero h1 .h1-destaque { color: var(--vinho); }
-
-    .hero-rating {
-      font-size: 15px;
-      font-weight: 600;
-      color: var(--cinza);
-      margin-bottom: 34px;
-    }
-
-    .hero-btns {
-      display: flex;
-      flex-direction: column;
-      align-items: stretch;
-      gap: 10px;
-      width: 100%;
-      max-width: 420px;
-    }
-
+    /* ── BOTOES DE WHATSAPP: brilho no hover ── */
     .btn-wpp {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      background: var(--verde-wpp);
-      color: white;
-      font-size: 15px;
-      font-weight: 700;
-      letter-spacing: 0.2px;
-      padding: 16px 24px;
-      border-radius: 999px;
-      text-decoration: none;
-      width: 100%;
-      transition: all 0.2s;
-      box-shadow: 0 4px 18px rgba(37,211,102,0.40);
-    }
-    .btn-wpp:hover { background: var(--verde-wpp-hover); transform: translateY(-2px); }
-    .btn-wpp svg { width: 20px; height: 20px; fill: white; flex-shrink: 0; }
-
-    .hero-resposta {
-      font-size: 13px;
-      color: var(--cinza);
-      font-weight: 500;
-      text-align: center;
-    }
-
-    /* STATS */
-    .stats {
-      background: var(--gradiente);
-      padding: 28px 48px;
-    }
-
-    .stats-inner {
-      max-width: 900px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      align-items: stretch;
-    }
-
-    .stat {
-      text-align: center;
-      padding: 8px 16px;
-      border-right: 1px solid rgba(255,255,255,0.18);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-    .stat:last-child { border-right: none; }
-    .stat-num   { font-size: 26px; font-weight: 900; color: var(--lima-claro); letter-spacing: -1px; }
-    .stat-label { font-size: 12px; color: rgba(255,255,255,0.80); margin-top: 4px; font-weight: 500; }
-
-    /* DEPOIMENTOS */
-    .sec-depoi {
-      background: white;
-      padding: 88px 0;
-      border-bottom: 1px solid var(--borda);
-    }
-
-    .sec-depoi-inner { max-width: 1100px; margin: 0 auto; padding: 0 48px; }
-
-    .carrossel-wrap {
       position: relative;
-      margin-top: 48px;
       overflow: hidden;
-    }
-
-    .carrossel-track {
       display: flex;
-      transition: transform 0.4s ease;
-      cursor: grab;
-      user-select: none;
-    }
-    .carrossel-track.dragging { cursor: grabbing; transition: none; }
-
-    .carrossel-slide {
-      flex: 0 0 100%;
-      display: flex;
-      align-items: flex-start;
+      align-items: center;
       justify-content: center;
-      padding: 0 48px;
+      background: var(--wpp);
+      color: #fff;
+      border-radius: 999px;
+      transition: box-shadow .35s var(--ease), transform .35s var(--ease), filter .35s;
     }
-
-    .review-img-card {
-      width: 100%;
-      max-width: 400px;
-    }
-
-    .review-img-card img {
-      width: 100%;
-      height: auto;
-      border-radius: 20px;
-      box-shadow: 0 4px 24px rgba(0,0,0,0.13);
-      display: block;
+    .btn-wpp::after {
+      content: '';
+      position: absolute;
+      top: 0; bottom: 0;
+      left: -60%;
+      width: 40%;
+      background: linear-gradient(100deg, transparent, rgba(255,255,255,.5), transparent);
+      transform: skewX(-20deg);
+      transition: left .8s var(--ease);
       pointer-events: none;
     }
-
-    .carrossel-nav {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 12px;
-      margin-top: 32px;
+    .btn-wpp:hover {
+      filter: brightness(1.06);
+      box-shadow: 0 0 0 5px rgba(37,211,102,.18), 0 12px 34px rgba(37,211,102,.55);
+      transform: translateY(-1px);
     }
+    .btn-wpp:hover::after { left: 130%; }
+    .btn-wpp.abrindo { filter: brightness(.96); }
 
-    .carrossel-btn {
-      width: 44px; height: 44px;
-      border-radius: 50%;
-      background: white;
-      border: 1.5px solid var(--borda);
-      color: var(--marca);
-      font-size: 18px;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: all 0.2s;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-    }
-    .carrossel-btn:hover { background: var(--verde-suave); }
-
-    .carrossel-dots { display: flex; gap: 6px; }
-
-    .carrossel-dot {
-      width: 8px; height: 8px;
-      border-radius: 50%;
-      background: #CFD5C2;
-      cursor: pointer;
-      transition: background 0.2s;
-    }
-    .carrossel-dot.ativo { background: var(--marca); }
-
-    .depoi-grid {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .depoi-imagens { order: 1; width: 100%; }
-    .depoi-conteudo { order: 0; text-align: center; }
-    .depoi-imagens .carrossel-wrap { margin-top: 44px; }
-
-    .depoi-titulo { font-size: 34px; margin-bottom: 0; }
-
-    /* SEÇÕES GERAIS */
-    .sec {
-      padding: 88px 48px;
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-
-    .sec-tag {
-      display: inline-block;
-      font-size: 11px;
-      font-weight: 700;
-      color: var(--prata);
-      text-transform: uppercase;
-      letter-spacing: 2.5px;
-      margin-bottom: 12px;
-    }
-
-    .sec-titulo {
-      font-size: 36px;
-      font-weight: 800;
-      letter-spacing: -0.3px;
-      line-height: 1.2;
-      margin-bottom: 14px;
-    }
-
-    .sec-titulo span { color: var(--vinho); }
-
-    .sec-sub {
-      font-size: 15px;
-      color: var(--cinza);
-      line-height: 1.6;
-      max-width: 620px;
-      margin-bottom: 40px;
-    }
-
-    /* SERVIÇOS */
-    .servicos-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 16px;
-    }
-
-    .servico-card {
-      background: var(--cinza-claro);
-      border-radius: 20px;
-      padding: 26px 22px;
-      transition: all 0.2s;
-      border: 1px solid transparent;
-    }
-
-    .servico-card:hover {
-      background: var(--verde-suave);
-      border-color: #D8E7BC;
-      transform: translateY(-3px);
-    }
-
-    .servico-icone {
-      width: 44px; height: 44px;
-      background: var(--gradiente);
-      border-radius: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 14px;
-    }
-
-    .servico-icone svg {
-      width: 22px; height: 22px;
-      stroke: var(--lima-claro);
-      fill: none;
-      stroke-width: 1.8;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-    }
-
-    .servico-card h3 { font-size: 15px; font-weight: 700; line-height: 1.4; }
-    .servico-card p  { font-size: 13px; color: var(--cinza); margin-top: 6px; line-height: 1.5; }
-
-    .sec-btn-centro { display: flex; justify-content: center; margin-top: 36px; }
-    .sec-btn-centro .btn-wpp { max-width: 420px; }
-
-    /* POR QUE (galeria da clínica) */
-    .sec-porque {
-      padding: 88px 48px;
-      max-width: 1100px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 72px;
-      align-items: center;
-    }
-
-    .clinica-galeria {
+    /* ── HERO (mobile) ── */
+    .hero {
       position: relative;
-      width: 100%;
-      max-width: 430px;
-      aspect-ratio: 4 / 3;
-      border-radius: 24px;
-      overflow: hidden;
-      box-shadow: 0 12px 40px rgba(36,64,13,0.16);
-      background: var(--verde-suave);
-      margin: 0 auto;
+      height: 844px;
+      overflow: clip;
+      background: linear-gradient(170deg, #2E4C12 0%, #4C7A22 35%, #6B9E2C 70%, #9DC63E 100%);
+      background: linear-gradient(in oklab 170deg, #2E4C12 0%, #4C7A22 35%, #6B9E2C 70%, #9DC63E 100%);
     }
-    .clinica-galeria img {
+    .hero-palco { position: relative; height: 100%; display: flex; flex-direction: column; }
+    .hero-arco {
       position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center;
-      opacity: 0;
-      transition: opacity 1.2s ease;
+      right: 0;
+      bottom: 96px;
+      width: 350px;
+      height: 330px;
+      background: #FFFFFF12;
+      border-radius: 175px 175px 0 0;
     }
-    .clinica-galeria img.ativo { opacity: 1; }
-
-    .motivos { display: flex; flex-direction: column; gap: 8px; }
-
-    .motivo {
-      display: flex;
-      align-items: flex-start;
-      gap: 16px;
-      padding: 18px 20px;
-      border-radius: 16px;
-      border: 1px solid transparent;
-      transition: all 0.2s;
-    }
-
-    .motivo:hover { background: var(--verde-suave); border-color: #D8E7BC; }
-
-    .motivo-num {
-      width: 36px; height: 36px;
-      border-radius: 10px;
-      background: var(--gradiente);
-      color: var(--lima-claro);
-      font-size: 14px;
-      font-weight: 800;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-    }
-
-    .motivo h4 { font-size: 15px; font-weight: 700; margin-bottom: 4px; }
-    .motivo p  { font-size: 13px; color: var(--cinza); line-height: 1.5; }
-
-    /* CTA */
-    .sec-cta-wrap { background: var(--gradiente); }
-
-    .sec-cta {
-      padding: 88px 48px;
-      text-align: center;
-      max-width: 660px;
-      margin: 0 auto;
-    }
-
-    .sec-cta h2 {
-      font-size: 38px;
-      font-weight: 900;
-      letter-spacing: -1px;
-      line-height: 1.15;
-      margin-bottom: 14px;
-      color: #ffffff;
-    }
-
-    .sec-cta h2 span { color: var(--lima-claro); }
-
-    .sec-cta-texto {
-      font-size: 15px;
-      line-height: 1.6;
-      color: rgba(255,255,255,0.78);
-      margin-bottom: 32px;
-    }
-
-    /* LOCALIZAÇÃO */
-    .sec-local { background: var(--cinza-claro); padding: 88px 48px; }
-
-    .sec-local-inner {
-      max-width: 1100px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1fr 1.2fr;
-      gap: 64px;
-      align-items: center;
-    }
-
-    .info-box {
-      background: white;
-      border-radius: 20px;
-      padding: 28px;
-      margin-top: 32px;
+    .hero-gigante {
+      position: absolute;
+      right: 14px;
+      bottom: 250px;
+      width: 363px;
+      height: 137px;
       display: flex;
       flex-direction: column;
-      gap: 16px;
-      border: 1px solid var(--borda);
+      align-items: flex-end;
+      pointer-events: none;
+      animation: surge 1.2s var(--ease) .2s backwards;
     }
+    .hero-gigante span { display: inline-block; padding-right: 6px; }
+    .hero-gigante b {
+      display: inline-block;
+      font-weight: 400;
+      letter-spacing: -0.075em;
+      line-height: 62px;
+      white-space: nowrap;
+      background: linear-gradient(180deg, rgba(255,255,255,.95) 35%, rgba(255,255,255,.05) 100%);
+      background: linear-gradient(in oklab 180deg, rgba(255,255,255,.95) 35%, rgba(255,255,255,.05) 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .hero-gigante .g1 b { font-size: 103px; }
+    .hero-gigante .g2 b { font-size: 62px; }
+    .hero-cao {
+      position: absolute;
+      right: -58px;
+      bottom: -3px;
+      width: 676px;
+      height: 382px;
+      max-width: none;
+      object-fit: cover;
+      animation: surge 1.1s var(--ease) backwards;
+    }
+    .hero-barra {
+      position: relative;
+      height: 35px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      gap: 14px;
+      padding: 0 16px 12px;
+    }
+    .hero-barra div { display: flex; align-items: center; gap: 6px; color: #fff; font-size: 11px; font-weight: 500; line-height: 14px; }
+    .hero-barra svg { width: 12px; height: 12px; }
 
-    .info-linha { display: flex; align-items: flex-start; gap: 12px; font-size: 14px; color: var(--cinza); line-height: 1.5; }
-    .info-linha .ico { font-size: 18px; flex-shrink: 0; margin-top: 1px; }
-    .info-linha strong { color: var(--texto); display: block; }
-
-    .mapa { border-radius: 24px; overflow: hidden; height: 340px; box-shadow: 0 8px 32px rgba(0,0,0,0.1); }
-    .mapa iframe { width: 100%; height: 100%; border: none; display: block; }
-
-    /* FOOTER */
-    footer {
-      border-top: 1px solid var(--borda);
-      padding: 32px 48px;
+    .nav-wrap { position: relative; z-index: 5; padding: 0 16px; }
+    .nav {
+      height: 60px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 20px;
-      flex-wrap: wrap;
+      padding: 0 10px 0 12px;
+      background: #fff;
+      border-radius: 14px;
+      box-shadow: 0 10px 30px #1C2E0C1F;
     }
-
-    .footer-logo {
-      font-size: 18px;
-      font-weight: 900;
-      color: var(--marca);
-      letter-spacing: -0.5px;
-    }
-
-    .footer-texto { font-size: 13px; color: var(--cinza); }
-    .footer-texto strong { color: var(--texto); }
-
-    /* FLUTUANTE */
-    .wpp-float {
-      position: fixed;
-      bottom: 28px; right: 28px;
-      width: 58px; height: 58px;
-      background: var(--verde-wpp);
+    .logo { display: flex; align-items: center; gap: 8px; }
+    .logo-ic { width: 36px; height: 36px; border-radius: 9px; background: #fff; overflow: hidden; flex-shrink: 0; }
+    .logo-ic img { width: 100%; height: 100%; object-fit: cover; }
+    .logo-nome { display: flex; flex-direction: column; font-size: 13px; font-weight: 700; letter-spacing: -0.02em; line-height: 14px; color: var(--c-ink); }
+    .nav-menu, .nav-acoes-d { display: none; }
+    .nav-acoes-m { display: flex; align-items: center; gap: 8px; }
+    .nav-circ {
+      width: 40px; height: 40px;
       border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+      transition: transform .3s var(--ease), box-shadow .3s;
+    }
+    .nav-circ svg { width: 18px; height: 18px; }
+    .nav-circ--wpp { background: var(--wpp); color: #fff; }
+    .nav-circ--menu { background: var(--c-pill); color: var(--c-ink); }
+    .nav-circ:hover { transform: translateY(-1px); }
+    .menu-m {
+      position: absolute;
+      left: 16px; right: 16px;
+      top: calc(100% + 8px);
       display: flex;
+      flex-direction: column;
+      gap: 2px;
+      padding: 8px;
+      background: #fff;
+      border-radius: 14px;
+      box-shadow: 0 16px 40px #1C2E0C29;
+    }
+    .menu-m a { padding: 14px 16px; border-radius: 10px; font-size: 15px; font-weight: 500; line-height: 20px; color: var(--c-ink); }
+    .menu-m a.ativo, .menu-m a:hover { background: var(--c-pill); }
+
+    .hero-texto {
+      position: relative;
+      display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
-      box-shadow: 0 6px 24px rgba(37,211,102,0.45);
-      text-decoration: none;
-      z-index: 999;
-      transition: all 0.2s;
+      gap: 18px;
+      padding: 36px 16px 0;
     }
-    .wpp-float:hover { transform: scale(1.1); }
-    .wpp-float svg { width: 28px; height: 28px; fill: white; }
+    .hero-h1 {
+      align-self: stretch;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      font-size: 42px;
+      font-weight: 700;
+      letter-spacing: -0.045em;
+      line-height: 46px;
+      color: #fff;
+    }
+    /* linha de destaque no verde-lima da logo, que sobre o verde escuro faz o papel do ciano do template */
+    .hero-h1 .l2 { color: var(--c-lima); }
+    /* "24h" em vermelho vivo; o halo escuro separa o vermelho do verde (cores de luminancia parecida) */
+    .hero-h1 .h24 { color: var(--c-vermelho); text-shadow: 0 2px 4px rgba(0,0,0,.28), 0 4px 22px rgba(0,0,0,.5); }
+    .hero-h1 .l3 { font-weight: 500; }
+    .hero-sub { width: 330px; max-width: 100%; text-align: center; font-size: 14px; font-weight: 500; line-height: 22px; color: #fff; }
+    .hero-cta { width: 324px; max-width: 100%; height: 56px; gap: 10px; margin-top: 6px; box-shadow: 0 10px 26px #25D36659; }
+    .hero-cta .lbl { font-size: 12px; font-weight: 700; letter-spacing: 0.14em; line-height: 14px; }
+    .hero-cta svg { width: 18px; height: 18px; }
 
-    /* RESPONSIVO */
-    @media (max-width: 900px) {
-      nav { padding: 12px 20px; }
-      nav .nav-nome, nav .nav-badge { display: none; }
+    /* ── HERO CARDS ── */
+    .hero-cards { position: relative; z-index: 3; display: flex; flex-direction: column; gap: 12px; width: 272px; margin: -37px auto 0; }
+    .hc {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      padding: 20px 18px 22px 20px;
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 10px 30px #1C2E0C1A;
+      transition: transform .35s var(--ease), box-shadow .35s var(--ease);
+    }
+    .hc:nth-child(3) { display: none; }
+    .hc-txt { display: flex; flex-direction: column; gap: 10px; }
+    .hc-n { font-size: 12px; font-weight: 600; line-height: 14px; color: var(--c-brand); }
+    .hc-d { font-size: 15px; font-weight: 500; line-height: 21px; color: var(--c-ink); }
+    /* cada texto fica sempre em 2 linhas, como na prancheta */
+    .hc-d span { display: block; white-space: nowrap; }
+    .hc-ic { width: 44px; height: 44px; border-radius: 12px; background: var(--c-logo); color: #fff; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .hc-ic svg { width: 20px; height: 20px; }
+    .hc:hover { transform: translateY(-4px); box-shadow: 0 16px 38px #1C2E0C26; }
 
-      .hero { min-height: calc(100svh - 96px); padding: 36px 20px 36px; }
-      .hero h1 { font-size: 32px; letter-spacing: -1px; }
-      .br-mob { display: inline; }
-      .br-desk { display: none; }
-      .hero-logo { width: 120px; height: 120px; margin-bottom: 28px; }
-      .hero-rating { font-size: 14.5px; margin-bottom: 30px; }
-      .hero-btns { max-width: 100%; }
+    /* ── CARROSSEIS (avaliacoes e etapas) ── */
+    .sec-car { --pl: 16px; display: flex; flex-direction: column; gap: 28px; overflow: clip; }
+    .sec-aval { padding-top: 29px; }
+    .sec-etapas { padding-top: 88px; gap: 26px; }
+    .car-cab { display: flex; flex-direction: column; gap: 12px; margin: 0 var(--pl); }
+    .car-tag { font-size: 16px; line-height: 20px; color: var(--c-brand); }
+    .car-dir { display: flex; flex-direction: column; gap: 12px; }
+    .car-h2 { display: flex; font-size: 30px; font-weight: 500; letter-spacing: -0.03em; line-height: 36px; color: var(--c-ink); }
+    .car-h2 .c { color: var(--c-brand); }
+    .sec-aval .car-h2 { gap: 8px; }
+    .sec-etapas .car-h2 { flex-direction: column; font-size: 26px; line-height: 32px; }
+    .car-p { font-size: 14px; line-height: 22px; color: var(--c-body); }
+    .car-track {
+      position: relative;
+      overflow: hidden;
+      padding: 12px 0 30px var(--pl);
+      margin: -12px 0 -30px;
+      cursor: grab;
+      touch-action: pan-y;
+      -webkit-user-select: none;
+      user-select: none;
+    }
+    .car-track.arrastando { cursor: grabbing; }
+    .car-fita { display: flex; gap: 12px; width: max-content; will-change: transform; }
+    .car-fita > * { flex-shrink: 0; }
+    .car-track img { -webkit-user-drag: none; pointer-events: none; }
+    .car-prog { position: relative; height: 4px; margin: 0 var(--pl); background: var(--c-trilho); border-radius: 4px; overflow: hidden; }
+    .car-prog span { position: absolute; left: 0; top: 0; height: 100%; width: 20.1%; background: var(--c-logo); border-radius: 4px; will-change: transform; }
+    .sec-etapas .car-prog span { width: 25.1%; }
 
-      .stats { padding: 0 20px; }
-      .stats-inner { grid-template-columns: repeat(2, 1fr); }
-      .stat { padding: 20px 12px; border-right: 1px solid rgba(255,255,255,0.18); border-bottom: 1px solid rgba(255,255,255,0.18); }
-      .stat:nth-child(2) { border-right: none; }
-      .stat:nth-child(3) { grid-column: 1 / -1; border-right: none; border-bottom: none; }
-      .stat-num { font-size: 20px; }
+    .av {
+      width: 270px;
+      padding: 8px;
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 8px 24px #1C2E0C14;
+      transition: transform .35s var(--ease), box-shadow .35s var(--ease);
+    }
+    .av img { width: 254px; height: 319px; border-radius: 12px; object-fit: cover; }
 
-      .sec-depoi { padding: 56px 0; }
-      .sec-depoi-inner { padding: 0 20px; text-align: center; }
-      .carrossel-slide { padding: 0 16px; }
-      .review-img-card { max-width: 100%; }
+    .et {
+      width: 272px;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      padding: 8px 8px 24px;
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 8px 24px #1C2E0C14;
+      transition: transform .35s var(--ease), box-shadow .35s var(--ease);
+    }
+    .et-img { position: relative; height: 160px; border-radius: 14px; overflow: hidden; }
+    .et-img img { width: 100%; height: 100%; object-fit: cover; }
+    .et-n {
+      position: absolute; left: 14px; top: 14px;
+      width: 36px; height: 36px;
+      display: flex; align-items: center; justify-content: center;
+      background: #fff; border-radius: 9px;
+      font-size: 11px; font-weight: 500; line-height: 14px; color: var(--c-brand);
+    }
+    .et-txt { display: flex; flex-direction: column; gap: 8px; padding: 0 12px; }
+    .et h3 { font-size: 16px; font-weight: 500; line-height: 22px; color: var(--c-ink); }
+    .et p { font-size: 13px; line-height: 21px; color: var(--c-body); }
+    .av:hover, .et:hover { transform: translateY(-4px); box-shadow: 0 16px 36px #1C2E0C1F; }
 
-      .depoi-titulo { font-size: 26px; }
-      .depoi-imagens .carrossel-wrap { margin-top: 32px; }
+    /* ── DESTAQUES ── */
+    .sec-dest { display: flex; flex-direction: column; align-items: center; gap: 24px; padding: 80px 16px 72px; background: #fff; }
+    .dest-cab { display: flex; flex-direction: column; align-items: center; gap: 14px; }
+    .selo {
+      display: flex; align-items: center; gap: 7px;
+      padding: 6px 14px;
+      border: 1px solid #C3DA9A; border-radius: 999px;
+      font-size: 11px; font-weight: 500; line-height: 14px; color: var(--c-ink);
+    }
+    .selo svg { width: 12px; height: 12px; color: var(--c-brand); }
+    .dest-h2 { display: flex; flex-direction: column; align-items: center; text-align: center; font-size: 26px; font-weight: 500; letter-spacing: -0.045em; line-height: 32px; color: var(--c-ink); }
+    .dest-cards { display: flex; flex-direction: column; gap: 14px; width: 100%; }
+    .dc {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      background: #fff;
+      border: 1.5px solid var(--c-border);
+      border-radius: 12px;
+      overflow: clip;
+      transition: transform .35s var(--ease), box-shadow .35s var(--ease);
+    }
+    .dc-img { width: 100%; height: 190px; object-fit: cover; }
+    .dc-img--exames { object-position: 50% 36%; }
+    .dc-img--consultas { object-position: 50% 30%; }
+    .dc-img--cirurgia { object-position: 50% 38%; }
+    .dc-body { position: relative; display: flex; flex-direction: column; gap: 14px; padding: 18px 18px 20px 20px; }
+    .dc-tag {
+      align-self: flex-start;
+      padding: 6px 12px;
+      background: #fff;
+      border: 1px solid var(--c-muted); border-radius: 999px;
+      font-size: 11px; font-weight: 500; line-height: 13px; color: var(--c-muted);
+    }
+    .dc-main { display: flex; align-items: flex-end; justify-content: space-between; }
+    .dc--desc .dc-main { flex-direction: column; align-items: stretch; justify-content: flex-start; gap: 14px; }
+    .dc h3 { display: flex; flex-direction: column; font-size: 21px; font-weight: 500; letter-spacing: -0.02em; line-height: 28px; color: var(--c-ink); }
+    .dc-row { display: flex; align-items: flex-end; justify-content: space-between; gap: 16px; }
+    .dc-row p { flex: 1; min-width: 0; font-size: 13px; line-height: 21px; color: var(--c-body); }
+    .dc-seta {
+      width: 36px; height: 36px;
+      display: flex; align-items: center; justify-content: center;
+      background: var(--c-pill); border-radius: 8px;
+      color: var(--c-brand);
+      flex-shrink: 0;
+      transition: background .3s, color .3s;
+    }
+    .dc-seta svg { width: 14px; height: 14px; stroke-width: 2.4; }
+    .dc:hover { transform: translateY(-4px); box-shadow: 0 16px 36px #1C2E0C1A; }
+    .dc:hover .dc-seta { background: var(--c-brand); color: #fff; }
 
-      .sec { padding: 56px 20px; text-align: center; }
-      .sec-titulo { font-size: 26px; }
-      .sec-sub { margin-left: auto; margin-right: auto; margin-bottom: 32px; }
+    /* ── SERVICOS ── */
+    .sec-serv { display: flex; flex-direction: column; align-items: center; padding-bottom: 64px; background: var(--c-soft); }
+    .serv-titulo { position: relative; width: 100%; height: 150px; overflow: clip; flex-shrink: 0; }
+    .serv-palco { position: absolute; left: 50%; top: 0; width: 390px; height: 100%; transform: translateX(-50%); }
+    .serv-gigante {
+      position: absolute;
+      left: 0; right: 0;
+      top: 26px;
+      text-align: center;
+      font-size: 112px;
+      font-weight: 400;
+      letter-spacing: -0.075em;
+      line-height: 112px;
+      background: linear-gradient(180deg, #4C7A22 38%, rgba(76,122,34,0) 80%);
+      background: linear-gradient(in oklab 180deg, #4C7A22 38%, rgba(76,122,34,0) 80%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .serv-pill { display: none; }
+    .serv-sub { max-width: 390px; padding: 0 24px 32px; text-align: center; font-size: 20px; font-weight: 500; letter-spacing: -0.03em; line-height: 28px; color: var(--c-ink); }
+    .serv-sub span { display: block; }
+    .serv-lista { display: flex; flex-direction: column; width: calc(100% - 32px); border-top: 2px solid var(--c-line); }
+    .sr {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      column-gap: 12px;
+      align-items: center;
+      padding: 22px 0;
+      border-bottom: 2px solid var(--c-line);
+      cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
+    }
+    /* foto escondida: no mobile abre para cima ao tocar e empurra o texto para baixo */
+    .sr-midia {
+      grid-column: 1 / -1;
+      display: block;
+      height: 0;
+      overflow: hidden;
+      border-radius: 10px;
+      outline: 2px solid transparent;
+      transition: height .55s var(--ease), margin .55s var(--ease), outline-color .3s;
+    }
+    .sr-midia img { width: 100%; height: 150px; object-fit: cover; opacity: 0; transform: scale(1.08); transition: opacity .45s var(--ease), transform .7s var(--ease); }
+    .sr.aberto .sr-midia { height: 150px; margin-bottom: 16px; outline-color: #C3DA9A; }
+    .sr.aberto .sr-midia img { opacity: 1; transform: none; }
+    .sr-info { flex: 1; min-width: 0; display: grid; grid-template-columns: 18px 1fr; column-gap: 8px; row-gap: 8px; align-items: center; }
+    .sr-ic { display: flex; width: 18px; color: var(--c-muted); }
+    .sr-ic svg { width: 16px; height: 16px; }
+    .sr-nome { font-size: 30px; font-weight: 500; letter-spacing: -0.045em; line-height: 36px; color: var(--c-ink); transition: color .35s var(--ease); }
+    .sr-desc { grid-column: 2; font-size: 13px; line-height: 20px; color: var(--c-body); }
+    .sr-btn {
+      width: 92px; height: 38px;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+      background: var(--c-readmore); border-radius: 999px;
+      font-size: 12px; font-weight: 600; line-height: 14px; color: var(--c-brand);
+      transition: background .3s, color .3s, box-shadow .3s;
+    }
+    /* estado aberto = a linha em destaque da prancheta (nome na cor da marca e botao escuro) */
+    .sr.aberto .sr-nome { color: var(--c-brand); }
+    .sr.aberto .sr-btn { background: var(--c-brand); color: #fff; box-shadow: 0 8px 20px #4C7A2240; }
 
-      .servicos-grid { grid-template-columns: 1fr; gap: 12px; }
-      .servico-card { text-align: center; }
-      .servico-icone { margin-left: auto; margin-right: auto; }
+    /* ── CARDS CAES E GATOS ── */
+    .sec-pets { display: flex; flex-direction: column; gap: 14px; padding: 12px 16px 0; background: #fff; }
+    .pc { position: relative; height: 460px; border-radius: 12px; overflow: clip; isolation: isolate; transition: transform .35s var(--ease), box-shadow .35s var(--ease); }
+    .pc--caes {
+      background: linear-gradient(135deg, #4C7A22 0%, #7FAE3A 55%, #CFE3A6 100%);
+      background: linear-gradient(in oklab 135deg, #4C7A22 0%, #7FAE3A 55%, #CFE3A6 100%);
+    }
+    .pc--gatos {
+      background: linear-gradient(135deg, #9DC63E 0%, #5E8F2A 55%, #2E4C12 100%);
+      background: linear-gradient(in oklab 135deg, #9DC63E 0%, #5E8F2A 55%, #2E4C12 100%);
+    }
+    .pc-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 12px; transition: transform 1s var(--ease); }
+    .pc-gigante {
+      position: absolute;
+      top: -44px;
+      right: -20px;
+      font-size: 130px;
+      font-weight: 400;
+      letter-spacing: -0.075em;
+      line-height: 130px;
+      background: linear-gradient(180deg, rgba(255,255,255,.9) 45%, rgba(255,255,255,0) 75%);
+      background: linear-gradient(in oklab 180deg, rgba(255,255,255,.9) 45%, rgba(255,255,255,0) 75%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      pointer-events: none;
+    }
+    .pc--gatos .pc-gigante { right: -24px; }
+    .pc-vidro {
+      position: absolute;
+      left: 6px; right: 6px; bottom: 6px;
+      height: 160px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 20px 20px 20px 22px;
+      border: 1px solid #FFFFFF40;
+      border-radius: 10px;
+      transition: transform .35s var(--ease);
+    }
+    .pc--caes .pc-vidro {
+      background: linear-gradient(90deg, rgba(46,76,18,.5) 0%, rgba(127,174,58,.42) 55%, rgba(207,227,166,.5) 100%);
+      background: linear-gradient(in oklab 90deg, rgba(46,76,18,.5) 0%, rgba(127,174,58,.42) 55%, rgba(207,227,166,.5) 100%);
+    }
+    .pc--gatos .pc-vidro {
+      background: linear-gradient(90deg, rgba(36,64,13,.5) 0%, rgba(141,184,58,.42) 55%, rgba(220,234,190,.5) 100%);
+      background: linear-gradient(in oklab 90deg, rgba(36,64,13,.5) 0%, rgba(141,184,58,.42) 55%, rgba(220,234,190,.5) 100%);
+    }
+    .pc-tag {
+      align-self: flex-start;
+      display: flex; align-items: center; gap: 6px;
+      padding: 6px 12px;
+      border: 1px solid #FFFFFFBF; border-radius: 999px;
+      font-size: 11px; font-weight: 500; line-height: 13px; color: #fff;
+    }
+    .pc-tag svg { width: 11px; height: 11px; }
+    .pc-baixo { display: flex; align-items: flex-end; justify-content: space-between; }
+    .pc-h3 { display: flex; flex-direction: column; font-size: 22px; font-weight: 500; letter-spacing: -0.03em; line-height: 28px; color: #fff; }
+    .pc-mais {
+      position: absolute; right: 20px; bottom: 22px;
+      display: flex; align-items: center; gap: 6px;
+      font-size: 12px; font-weight: 600; line-height: 14px; color: #fff;
+    }
+    .pc-mais svg { width: 12px; height: 12px; stroke-width: 2.2; transition: transform .3s var(--ease); }
+    .pc:hover { box-shadow: 0 18px 40px #1C2E0C26; }
+    .pc:hover .pc-img { transform: scale(1.04); }
+    .pc:hover .pc-vidro { transform: translateY(-3px); }
+    .pc-mais:hover svg { transform: translateX(4px); }
 
-      .sec-porque { grid-template-columns: 1fr; gap: 40px; padding: 56px 20px; text-align: center; }
-      .clinica-galeria { max-width: 420px; }
-      .motivos { align-items: center; }
-      .motivo { text-align: left; max-width: 440px; width: 100%; }
+    /* ── CTA FINAL ── */
+    .sec-cta { padding: 110px 16px 0; }
+    .cta-card {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      padding: 186px 20px 20px;
+      background: var(--c-brand);
+      border-radius: 24px;
+    }
+    .cta-mapa {
+      position: absolute;
+      left: 20px; right: 20px; top: -44px;
+      height: 208px;
+      overflow: hidden;
+      background: #6B9E2C4D;
+      border-radius: 20px;
+      box-shadow: 0 14px 34px #1C2E0C33;
+    }
+    .cta-mapa iframe { display: block; width: 100%; height: 100%; border: 0; }
+    .cta-tag { font-size: 16px; line-height: 20px; color: #fff; }
+    .cta-conteudo { display: flex; flex-direction: column; gap: 14px; }
+    .cta-h2 { display: flex; flex-direction: column; font-size: 26px; font-weight: 500; letter-spacing: -0.02em; line-height: 32px; color: #fff; }
+    .cta-p { font-size: 14px; line-height: 22px; color: #FFFFFFE0; }
+    .cta-form {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-top: 8px;
+      padding: 8px;
+      background: #fff;
+      border-radius: 24px;
+      box-shadow: 0 14px 34px #1C2E0C1F;
+    }
+    .cta-campo {
+      display: flex; align-items: center;
+      height: 50px;
+      padding: 0 22px;
+      background: var(--c-pill); border-radius: 999px;
+      font-size: 13px; line-height: 16px; color: var(--c-body);
+      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+      transition: background .3s;
+    }
+    .cta-campo:hover { background: #E9F2DA; }
+    .cta-btn { height: 54px; gap: 8px; }
+    .cta-btn .lbl { font-size: 11px; font-weight: 700; letter-spacing: 0.14em; line-height: 14px; }
+    .cta-btn svg { width: 18px; height: 18px; }
 
-      .sec-cta { padding: 56px 20px; }
-      .sec-cta h2 { font-size: 26px; }
+    /* ── RODAPE ── */
+    .rodape { padding-top: 24px; }
+    .rod-in {
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+      padding: 40px 20px 96px;
+      background: var(--c-footer);
+      border-radius: 28px 28px 0 0;
+      color: #fff;
+    }
+    .rod-l1 { display: flex; flex-direction: column; gap: 22px; }
+    .rod-logo { display: flex; align-items: center; gap: 12px; font-size: 19px; font-weight: 600; line-height: 24px; }
+    .rod-logo .ic { width: 42px; height: 42px; border-radius: 50%; background: #fff; overflow: hidden; flex-shrink: 0; }
+    .rod-logo .ic img { width: 100%; height: 100%; object-fit: cover; }
+    .rod-wpp { display: flex; flex-direction: column; gap: 4px; }
+    .rod-wpp b { font-size: 18px; font-weight: 600; line-height: 24px; transition: color .3s; }
+    .rod-wpp span { font-size: 13px; line-height: 18px; color: #FFFFFFA6; }
+    .rod-wpp:hover b { color: var(--wpp); }
+    .rod-l2 { display: flex; flex-direction: column; gap: 14px; padding-top: 22px; border-top: 1px solid #FFFFFF1F; }
+    .rod-copy { display: flex; flex-direction: column; gap: 4px; font-size: 12px; line-height: 19px; color: #FFFFFF99; }
+    .rod-chegar { font-size: 12px; font-weight: 500; line-height: 18px; color: var(--c-light); transition: color .3s; }
+    .rod-chegar:hover { color: #fff; }
 
-      .sec-local { padding: 56px 20px; }
-      .sec-local-inner { grid-template-columns: 1fr; gap: 32px; }
-      .sec-local-inner > div:first-child { text-align: center; }
-      .info-box { text-align: left; }
-      .mapa { height: 260px; }
+    /* ── BOTAO FLUTUANTE DO WHATSAPP ── */
+    @keyframes pulso { 0% { transform: scale(1); opacity: .55; } 70%, 100% { transform: scale(1.55); opacity: 0; } }
+    .wpp-float {
+      position: fixed;
+      right: 18px;
+      bottom: calc(18px + env(safe-area-inset-bottom));
+      z-index: 50;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      box-shadow: 0 10px 26px #25D36673;
+    }
+    .wpp-float::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      background: var(--wpp);
+      animation: pulso 2.6s ease-out infinite;
+      z-index: -1;
+    }
+    .wpp-float svg { width: 30px; height: 30px; }
+    .wpp-float.btn-wpp { overflow: visible; transition: opacity .35s var(--ease), transform .45s var(--ease); }
+    .wpp-float.btn-wpp::after { display: none; }
+    /* so aparece depois que o botao verde do hero sai da tela */
+    .js .wpp-float:not(.visivel) { opacity: 0; transform: scale(.6) translateY(16px); pointer-events: none; }
 
-      footer { padding: 24px 20px; flex-direction: column; text-align: center; }
-
-      .wpp-float { width: 62px; height: 62px; bottom: 20px; right: 20px; }
-      .wpp-float svg { width: 30px; height: 30px; }
+    /* ── TABLET: mantem o layout mobile, com largura contida ── */
+    @media (min-width: 600px) and (max-width: 1023px) {
+      .dest-cards, .serv-lista, .cta-card { max-width: 560px; margin-left: auto; margin-right: auto; }
+      .sec-pets .pc { width: 100%; max-width: 560px; margin: 0 auto; }
     }
 
-    @media (max-width: 420px) {
-      .hero h1 { font-size: 32px; }
+    @media (max-width: 1023px) {
+      .only-d { display: none !important; }
+      /* cabecalho oculto no mobile: o hero perde os 60px da barra e mantem a mesma composicao */
+      .nav-wrap { display: none; }
+      .hero { height: 784px; }
+      /* mobile: hero estatico, sem animar a foto grande (ela e o LCP; a animacao atrasava o Speed Index) */
+      .hero-cao, .hero-gigante { animation: none; }
+    }
+
+    /* ════════════════ DESKTOP (prancheta 1440) ════════════════ */
+    @media (min-width: 1024px) {
+      .only-m { display: none !important; }
+
+      /* hero */
+      .hero {
+        height: 870px;
+        background: linear-gradient(100deg, #2E4C12 0%, #4C7A22 30%, #6B9E2C 62%, #9DC63E 100%);
+        background: linear-gradient(in oklab 100deg, #2E4C12 0%, #4C7A22 30%, #6B9E2C 62%, #9DC63E 100%);
+      }
+      .hero-palco { display: block; max-width: 1440px; margin: 0 auto; }
+      .hero-arco { top: 205px; bottom: auto; width: 868px; height: 665px; border-radius: 150px 150px 0 0; }
+      .hero-gigante { top: 104px; bottom: auto; width: 381px; height: auto; }
+      .hero-gigante span { padding-right: 14px; }
+      .hero-gigante .g1 { height: 66px; }
+      .hero-gigante .g2 { height: 136px; }
+      .hero-gigante b { line-height: 170px; }
+      .hero-gigante .g1 b { font-size: 100px; height: 125px; }
+      .hero-gigante .g2 b { font-size: 100px; height: 117px; }
+      .hero-cao { right: -17px; bottom: 2px; width: min(1349px, 93.68vw); height: auto; aspect-ratio: 1349 / 764; }
+      .hero-barra { position: absolute; top: 11px; right: 52px; height: auto; padding: 0; gap: 46px; }
+      .hero-barra div { gap: 8px; }
+      .hero-barra svg { width: 13px; height: 13px; }
+      .nav-wrap { position: absolute; top: 37px; left: 52px; right: 52px; padding: 0; }
+      .nav { height: 75px; padding: 0 16px; }
+      .logo-ic { width: 40px; height: 40px; border-radius: 10px; }
+      .logo-nome { line-height: 13px; }
+      .nav-acoes-m { display: none; }
+      .nav-menu { display: flex; align-items: center; gap: 6px; }
+      .nav-menu a {
+        display: flex; align-items: center;
+        padding: 12px 16px;
+        border-radius: 8px;
+        font-size: 12px; font-weight: 500; line-height: 14px; color: var(--c-ink);
+        transition: background .25s;
+      }
+      .nav-menu a.ativo, .nav-menu a:hover { background: var(--c-pill); }
+      .nav-acoes-d { display: flex; align-items: center; justify-content: flex-end; gap: 18px; width: 300px; flex-shrink: 0; }
+      .nav-chat { display: flex; color: var(--c-ink); transition: color .3s, transform .3s var(--ease); }
+      .nav-chat svg { width: 18px; height: 18px; stroke-width: 1.8; }
+      .nav-chat:hover { color: var(--wpp); transform: translateY(-1px); }
+      .nav-btn { width: 132px; height: 44px; }
+      .nav-btn .lbl { font-size: 12px; font-weight: 500; line-height: 14px; }
+      .hero-texto { position: absolute; top: 176px; left: 52px; align-items: flex-start; gap: 44px; padding: 0; }
+      .hero-h1 { align-self: auto; text-align: left; font-size: clamp(52px, 4.72vw, 68px); line-height: 1.0588; }
+      .hero-sub { width: 400px; text-align: left; font-size: 12px; line-height: 24px; }
+      .hero-cta { width: 352px; height: 67px; padding: 20px 34px; margin-top: 10px; }
+      .hero-cta .lbl { font-family: var(--f2); font-size: 14px; letter-spacing: 0.18em; }
+      .hero-cta svg { width: 20px; height: 20px; }
+
+      /* hero cards */
+      .hero-cards { flex-direction: row; gap: 20px; width: min(1120px, calc(100% - 64px)); margin-top: -58px; }
+      .hc { flex: 0 1 360px; padding: 24px 24px 26px 28px; border-radius: 20px; box-shadow: 0 10px 30px #15200C0F; }
+      .hc:nth-child(3) { display: flex; }
+      .hc-txt { gap: 12px; }
+      .hc-n { font-family: var(--f2); font-weight: 500; color: var(--c-brand); }
+      .hc-d { font-family: var(--f2); font-size: 14px; line-height: 20px; color: var(--c-ink); }
+
+      /* carrosseis */
+      .sec-car { --pl: max(140px, calc((100% - 1160px) / 2)); gap: 48px; }
+      .sec-aval { padding-top: 82px; }
+      .sec-etapas { padding-top: 150px; gap: 48px; }
+      .car-cab { flex-direction: row; align-items: flex-start; gap: 0; }
+      .car-tag { width: 50%; flex-shrink: 0; padding-top: 4px; font-size: 20px; line-height: 22px; }
+      .car-dir { gap: 18px; }
+      .car-h2, .sec-etapas .car-h2 { font-size: 36px; letter-spacing: -0.015em; line-height: 44px; }
+      .sec-aval .car-h2 { gap: 11px; }
+      .car-p { width: 460px; max-width: 100%; font-size: 15px; line-height: 24px; }
+      .car-fita { gap: 20px; }
+      .sec-aval .car-prog span, .sec-etapas .car-prog span { width: 37.93%; }
+      .av { width: 370px; padding: 10px; border-radius: 20px; box-shadow: none; }
+      .av img { width: 350px; height: 439px; border-radius: 14px; }
+      .et { width: 370px; gap: 22px; padding: 10px 10px 30px; border-radius: 20px; box-shadow: none; }
+      .et-img { height: 220px; }
+      .et-txt { gap: 12px; padding: 0 18px; }
+
+      /* destaques */
+      .sec-dest { gap: 28px; padding: 108px 15px 97px; }
+      .selo { padding: 5px 14px; font-size: 9px; line-height: 12px; }
+      .selo svg { width: 11px; height: 11px; }
+      .dest-h2 { font-size: 46px; line-height: 56px; }
+      .dest-cards { flex-direction: row; gap: 15px; }
+      .dc { height: 372px; border-radius: 10px; flex: 384 1 0; min-width: 0; }
+      .dc--grande { flex: 571 1 0; }
+      .dc-img { position: absolute; top: 0; right: 0; width: 57.3%; height: 100%; }
+      .dc--grande .dc-img { width: 57.8%; }
+      .dc-img--exames { object-position: 45% 50%; }
+      .dc-img--consultas { object-position: 68% 50%; }
+      .dc-img--cirurgia { object-position: 55% 45%; }
+      .dc-body { height: 100%; justify-content: space-between; padding: 32px 30px 36px; }
+      .dc-tag { font-size: 9px; line-height: 11px; }
+      .dc-main, .dc--desc .dc-main { flex-direction: column; align-items: flex-start; justify-content: flex-start; gap: 22px; }
+      .dc--desc .dc-main { gap: 16px; }
+      .dc h3 { line-height: 32px; }
+      .dc-row { flex-direction: column; align-items: flex-start; gap: 22px; }
+      .dc-row p { flex: none; width: 201px; font-size: 10px; line-height: 22px; }
+      .dc-seta { width: 32px; height: 32px; border-radius: 6px; }
+      .dc-seta svg { width: 13px; height: 13px; }
+
+      /* servicos */
+      .sec-serv { padding-bottom: 111px; }
+      .serv-titulo { height: 272px; }
+      .serv-palco { width: 1440px; }
+      .serv-gigante {
+        top: 50px;
+        font-size: 250px;
+        line-height: 250px;
+        background: linear-gradient(180deg, #4C7A22 38%, rgba(76,122,34,0) 78%);
+        background: linear-gradient(in oklab 180deg, #4C7A22 38%, rgba(76,122,34,0) 78%);
+        -webkit-background-clip: text;
+        background-clip: text;
+      }
+      /* notificacoes flutuando */
+      .serv-pill {
+        position: absolute;
+        left: 0; top: 0;
+        display: flex;
+        transform-origin: 0 0;
+        padding: 12px 22px;
+        background: #fff;
+        border-radius: 999px;
+        box-shadow: 0 10px 24px #1C2E0C24;
+        font-size: 10px; font-weight: 500; line-height: 12px; color: var(--c-ink);
+        animation: flutua 4.6s ease-in-out infinite;
+      }
+      .serv-pill.p1 { rotate: -30deg; translate: 257px 97.4px; }
+      .serv-pill.p2 { rotate: 20deg; translate: 543px 28.4px; animation-duration: 5.2s; animation-delay: -1.3s; }
+      .serv-pill.p3 { rotate: 20deg; translate: 914px 34.4px; animation-duration: 4.9s; animation-delay: -2.4s; }
+      .serv-pill.p4 { rotate: -45deg; translate: 1134px 194.4px; animation-duration: 5.6s; animation-delay: -.7s; }
+      .serv-sub { max-width: none; padding: 0 0 50px; font-size: 26px; letter-spacing: -0.035em; line-height: 36px; }
+      .serv-sub span { display: block; }
+      .serv-lista { width: 878px; max-width: calc(100% - 64px); }
+      .sr { display: flex; align-items: center; height: 147px; padding: 0; }
+      .sr-info { margin-right: auto; }
+      .sr-btn { margin-left: 24px; }
+      /* no desktop a foto abre na lateral e o texto desliza para a direita */
+      .sr-midia { width: 0; height: 133px; flex-shrink: 0; transition: width .55s var(--ease), margin .55s var(--ease), outline-color .3s; }
+      .sr-midia img { width: 188px; height: 133px; }
+      .sr.aberto .sr-midia { width: 188px; height: 133px; margin: 0 24px 0 0; }
+      .sr-info { flex: none; grid-template-columns: 18px auto; column-gap: 10px; row-gap: 14px; }
+      .sr-ic { grid-row: 1 / span 2; align-self: start; padding-top: 10px; }
+      .sr-nome { font-size: 48px; line-height: 52px; }
+      .sr-desc { font-size: 11px; line-height: 14px; }
+      .sr-btn { width: 110px; height: 44px; font-size: 10px; line-height: 12px; }
+
+      /* cards caes e gatos */
+      .sec-pets { flex-direction: row; gap: 16px; padding: 12px 15px 0; }
+      .pc { flex: 1 1 0; height: 602px; }
+      .pc-gigante, .pc--gatos .pc-gigante {
+        top: -86px;
+        right: -139px;
+        font-size: 240px;
+        line-height: 240px;
+        background: linear-gradient(180deg, rgba(255,255,255,.9) 45%, rgba(255,255,255,0) 72%);
+        background: linear-gradient(in oklab 180deg, rgba(255,255,255,.9) 45%, rgba(255,255,255,0) 72%);
+        -webkit-background-clip: text;
+        background-clip: text;
+      }
+      .pc-vidro { left: 7px; right: 7px; bottom: 7px; height: 196px; padding: 30px 32px 32px 38px; }
+      .pc-tag { padding: 6px 14px; font-size: 9px; line-height: 11px; }
+      .pc-tag svg { width: 10px; height: 10px; }
+      .pc-h3 { font-size: 32px; letter-spacing: -0.035em; line-height: 44px; }
+      .pc-mais { position: static; gap: 8px; padding-bottom: 8px; font-size: 10px; font-weight: 500; line-height: 12px; }
+
+      /* cta final */
+      .sec-cta { padding: 130px 70px 0; }
+      .cta-card { height: 400px; gap: 0; padding: 64px 0 0 50%; border-radius: 32px; }
+      .cta-mapa { left: 15.385%; right: auto; top: -60px; width: 29.23%; height: 460px; border-radius: 24px; }
+      .cta-tag { position: absolute; left: 70px; top: 64px; font-size: 20px; line-height: 22px; }
+      .cta-conteudo { gap: 18px; padding-right: 40px; }
+      .cta-h2 { font-size: clamp(26px, 2.36vw, 34px); letter-spacing: -0.015em; line-height: 1.235; }
+      .cta-p { width: 430px; max-width: 100%; }
+      .cta-form { position: absolute; left: 70px; right: 70px; bottom: 36px; flex-direction: row; margin: 0; border-radius: 999px; }
+      .cta-campo { flex: 1 1 0; min-width: 0; height: 56px; padding: 0 26px; }
+      .cta-btn { flex: 0 1 420px; height: 56px; gap: 10px; }
+      .cta-btn .lbl { letter-spacing: 0.18em; }
+      .cta-btn svg { width: 20px; height: 20px; }
+
+      /* rodape */
+      .rod-in { gap: 30px; padding: 54px max(140px, calc((100% - 1160px) / 2)) 40px; border-radius: 32px 32px 0 0; }
+      .rod-l1 { flex-direction: row; align-items: flex-end; justify-content: space-between; }
+      .rod-logo { font-size: 20px; }
+      .rod-wpp { align-items: flex-end; }
+      .rod-wpp span { font-size: 12px; line-height: 16px; }
+      .rod-l2 { flex-direction: row; align-items: flex-end; justify-content: space-between; padding-top: 26px; }
+      .rod-copy { line-height: 18px; }
+
+      /* botao flutuante no desktop */
+      .wpp-float { right: 28px; bottom: 28px; }
+    }
+
+    /* notebooks estreitos (1024 a 1279): mesmo layout, com folga para o texto nao invadir as fotos */
+    @media (min-width: 1024px) and (max-width: 1279px) {
+      .dc { container-type: inline-size; }
+      .dc-img, .dc--grande .dc-img { width: 42%; }
+      .dc-main, .dc--desc .dc-main { max-width: calc(58cqw - 42px); }
+      .dc h3 { font-size: 17px; line-height: 24px; }
+      .dc-row p { width: auto; }
+      .pc-h3 { font-size: 26px; line-height: 36px; }
+    }
+    .pc-mais, .rod-chegar, .sr-btn { white-space: nowrap; }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .js .rv:not(.vis) { opacity: 1; }
+      .rv.vis, .hero-cao, .hero-gigante, .serv-pill, .wpp-float::before { animation: none; }
+      .btn-wpp::after { display: none; }
     }
   </style>
 </head>
@@ -684,337 +856,610 @@
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PT5CRMNH" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-<!-- TOPO -->
-<div class="topo">
-  <span class="topo-dot"></span>
-  Atendimento Disponível <strong>Agora</strong>
-</div>
-
-<!-- NAV -->
-<nav>
-  <div class="nav-logo">
-    <div class="nav-logo-circulo">
-      <img src="logo.webp" alt="Point Animal Clínica Veterinária 24 Horas" loading="eager" decoding="async" width="42" height="42" />
-    </div>
-    <span class="nav-nome">Point Animal</span>
-    <span class="nav-badge">Clínica Veterinária 24h</span>
-  </div>
-  <a href="https://wa.me/5551998282558?text=Ol%C3%A1%20encontrei%20voc%C3%AAs%20pelo%20Google%2C%20gostaria%20de%20atendimento." class="nav-btn">
-    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-    Entre em contato
-  </a>
-</nav>
+<!-- ICONES -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.6A8.4 8.4 0 1 1 21 11.5z"/></symbol>
+  <symbol id="i-alarme" viewBox="0 0 24 24"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2 2M5 3L2 6M22 6l-3-3"/></symbol>
+  <symbol id="i-relogio" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+  <symbol id="i-cruz" viewBox="0 0 24 24"><path d="M12 4v16M4 12h16" stroke-width="2.2"/></symbol>
+  <symbol id="i-frasco" viewBox="0 0 24 24"><path d="M9 3h6M10 3v6l-5 9a2 2 0 0 0 1.8 3h10.4a2 2 0 0 0 1.8-3l-5-9V3"/></symbol>
+  <symbol id="i-tag" viewBox="0 0 24 24"><path d="M17 3a3 3 0 0 0-2.8 4L7 14.2A3 3 0 1 0 9.8 17L17 9.8A3 3 0 1 0 17 3z"/></symbol>
+  <symbol id="i-seta" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h10"/></symbol>
+  <symbol id="i-esteto" viewBox="0 0 24 24"><path d="M5 3v6a5 5 0 0 0 10 0V3M10 14v2a5 5 0 0 0 10 0v-2"/><circle cx="20" cy="12" r="2"/></symbol>
+  <symbol id="i-raio" viewBox="0 0 24 24"><path d="M13 2L4.5 13H12l-1 9 8.5-11H13z"/></symbol>
+  <symbol id="i-pulso" viewBox="0 0 24 24"><path d="M3 12h4l3-7 4 14 3-7h4"/></symbol>
+  <symbol id="i-wpp" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></symbol>
+</svg>
 
 <!-- HERO -->
-<div class="hero">
-  <div class="hero-content">
-    <div class="hero-logo">
-      <img src="logo.webp" alt="Point Animal Clínica Veterinária 24 Horas" decoding="async" loading="eager" width="148" height="148" />
+<header class="hero" id="inicio">
+  <div class="hero-palco">
+    <div class="hero-arco"></div>
+    <div class="hero-gigante" aria-hidden="true">
+      <span class="g1"><b>Point</b></span>
+      <span class="g2"><b>Animal</b></span>
     </div>
-    <h1>
-      <span class="h1-destaque">Clínica Veterinária<br />24H</span> em Porto Alegre
-    </h1>
-    <p class="hero-rating">Prontos para qualquer emergência<br class="br-mob" /> que seu pet precisar!</p>
-    <div class="hero-btns">
-      <a href="https://wa.me/5551998282558?text=Ol%C3%A1%20encontrei%20voc%C3%AAs%20pelo%20Google%2C%20gostaria%20de%20atendimento." class="btn-wpp">
-        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-        Atendimento Imediato
-      </a>
-      <p class="hero-resposta">⚡ Resposta em 2 minutos</p>
-    </div>
-  </div>
-</div>
+    <picture>
+      <source media="(min-width:1024px)" srcset="img/hero-cao-1600.webp" width="1600" height="905" />
+      <img class="hero-cao" src="img/hero-cao-1100.webp" width="1100" height="622" alt="Golden retriever" fetchpriority="high" decoding="async" />
+    </picture>
 
-<!-- STATS -->
-<div class="stats">
-  <div class="stats-inner">
-    <div class="stat">
-      <div class="stat-num">24h</div>
-      <div class="stat-label">Aberta todos os dias</div>
-    </div>
-    <div class="stat">
-      <div class="stat-num">+18 anos</div>
-      <div class="stat-label">De experiência</div>
-    </div>
-    <div class="stat">
-      <div class="stat-num" style="font-size:18px;letter-spacing:0;">Referência</div>
-      <div class="stat-label">Em Porto Alegre</div>
-    </div>
-  </div>
-</div>
-
-<!-- DEPOIMENTOS -->
-<div class="sec-depoi">
-  <div class="sec-depoi-inner">
-   <div class="depoi-grid">
-    <div class="depoi-imagens">
-    <div class="carrossel-wrap">
-      <div class="carrossel-track" id="carrosselTrack">
-        <div class="carrossel-slide">
-          <div class="review-img-card">
-            <img src="1.webp" alt="Avaliação real de tutor no Google" loading="lazy" decoding="async" />
-          </div>
-        </div>
-        <div class="carrossel-slide">
-          <div class="review-img-card">
-            <img src="2.webp" alt="Avaliação real de tutor no Google" loading="lazy" decoding="async" />
-          </div>
-        </div>
-        <div class="carrossel-slide">
-          <div class="review-img-card">
-            <img src="3.webp" alt="Avaliação real de tutor no Google" loading="lazy" decoding="async" />
-          </div>
-        </div>
-        <div class="carrossel-slide">
-          <div class="review-img-card">
-            <img src="4.webp" alt="Avaliação real de tutor no Google" loading="lazy" decoding="async" />
-          </div>
-        </div>
-        <div class="carrossel-slide">
-          <div class="review-img-card">
-            <img src="5.webp" alt="Avaliação real de tutor no Google" loading="lazy" decoding="async" />
-          </div>
-        </div>
-      </div>
-      <div class="carrossel-nav">
-        <button class="carrossel-btn" onclick="moverCarrossel(-1)" aria-label="Anterior">&#8592;</button>
-        <div class="carrossel-dots">
-          <div class="carrossel-dot ativo" onclick="irParaSlide(0)"></div>
-          <div class="carrossel-dot" onclick="irParaSlide(1)"></div>
-          <div class="carrossel-dot" onclick="irParaSlide(2)"></div>
-          <div class="carrossel-dot" onclick="irParaSlide(3)"></div>
-          <div class="carrossel-dot" onclick="irParaSlide(4)"></div>
-        </div>
-        <button class="carrossel-btn" onclick="moverCarrossel(1)" aria-label="Próximo">&#8594;</button>
-      </div>
-    </div>
+    <div class="hero-barra">
+      <div><svg class="i"><use href="#i-chat"/></svg>Atendimento pelo WhatsApp</div>
+      <div><svg class="i"><use href="#i-alarme"/></svg><span><span class="only-d">Todos os dias: </span>24 horas</span></div>
     </div>
 
-    <div class="depoi-conteudo">
-      <span class="sec-tag">Depoimentos reais</span>
-      <h2 class="sec-titulo depoi-titulo">Porto Alegre confia <span>na Point Animal.</span></h2>
+    <div class="nav-wrap">
+      <nav class="nav" aria-label="Navegação principal">
+        <div class="logo">
+          <span class="logo-ic"><img src="img/logo-96.webp" width="96" height="96" alt="Logo Point Animal" /></span>
+          <span class="logo-nome"><span>Point</span><span>Animal</span></span>
+        </div>
+        <div class="nav-menu">
+          <a href="#inicio" class="ativo">Início</a>
+          <a href="#servicos">Serviços</a>
+          <a href="#avaliacoes">Avaliações</a>
+          <a href="#contato">Contato</a>
+        </div>
+        <div class="nav-acoes-d">
+          <a class="nav-chat" href="https://wa.me/5551998282558?text=Ol%C3%A1%20encontrei%20voc%C3%AAs%20pelo%20Google%2C%20gostaria%20de%20atendimento." target="_blank" rel="noopener" data-wpp aria-label="Falar no WhatsApp"><svg class="i"><use href="#i-chat"/></svg></a>
+          <a class="btn-wpp nav-btn" href="https://wa.me/5551998282558?text=Ol%C3%A1%20encontrei%20voc%C3%AAs%20pelo%20Google%2C%20gostaria%20de%20atendimento." target="_blank" rel="noopener" data-wpp data-abrindo="Abrindo o WhatsApp"><span class="lbl">Entre em contato</span></a>
+        </div>
+        <div class="nav-acoes-m">
+          <a class="nav-circ nav-circ--wpp" href="https://wa.me/5551998282558?text=Ol%C3%A1%20encontrei%20voc%C3%AAs%20pelo%20Google%2C%20gostaria%20de%20atendimento." target="_blank" rel="noopener" data-wpp aria-label="Falar no WhatsApp"><svg class="i"><use href="#i-chat"/></svg></a>
+          <button class="nav-circ nav-circ--menu" id="btnMenu" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menuM"><svg class="i"><use href="#i-menu"/></svg></button>
+        </div>
+      </nav>
+      <div class="menu-m" id="menuM" hidden>
+        <a href="#inicio" class="ativo">Início</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#avaliacoes">Avaliações</a>
+        <a href="#contato">Contato</a>
+      </div>
     </div>
-   </div>
-  </div>
-</div>
 
-<!-- SERVIÇOS -->
-<div class="sec">
-  <span class="sec-tag">O que fazemos</span>
-  <h2 class="sec-titulo">Atendimento rápido e acolhedor, <span>a qualquer hora do dia ou da noite</span></h2>
-  <p class="sec-sub">A equipe Point Animal está pronta para cuidar do seu companheiro com cuidado, técnica e muito carinho há mais de 18 anos sendo referência em Porto Alegre.</p>
-  <div class="servicos-grid">
-    <div class="servico-card">
-      <div class="servico-icone">
-        <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
-      </div>
-      <h3>Equipe veterinária experiente</h3>
-      <p>Especialistas em consultas, diagnósticos e acompanhamento completo.</p>
-    </div>
-    <div class="servico-card">
-      <div class="servico-icone">
-        <svg viewBox="0 0 24 24"><path d="M3 21h18"/><path d="M5 21V7a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v14"/><path d="M12 8.5v4M10 10.5h4"/><path d="M9.5 21v-4h5v4"/></svg>
-      </div>
-      <h3>Estrutura completa em um só lugar</h3>
-      <p>Clínica, cirurgias, internação e exames.</p>
-    </div>
-    <div class="servico-card">
-      <div class="servico-icone">
-        <svg viewBox="0 0 24 24"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg>
-      </div>
-      <h3>Emergências atendidas com rapidez</h3>
-      <p>Pronto-atendimento nos momentos que mais importam.</p>
-    </div>
-    <div class="servico-card">
-      <div class="servico-icone">
-        <svg viewBox="0 0 24 24"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-      </div>
-      <h3>Localização acessível em Porto Alegre</h3>
-      <p>Fácil de encontrar, sempre de portas abertas.</p>
-    </div>
-  </div>
-  <div class="sec-btn-centro">
-    <a href="https://wa.me/5551998282558?text=Ol%C3%A1%20encontrei%20voc%C3%AAs%20pelo%20Google%2C%20gostaria%20de%20atendimento." class="btn-wpp">
-      <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-      Atendimento Imediato
-    </a>
-  </div>
-</div>
-
-<!-- POR QUE -->
-<div style="background:var(--cinza-claro); padding: 1px 0;">
-  <div class="sec-porque">
-    <div class="clinica-galeria">
-      <img src="clinica1.webp" class="ativo" alt="Estrutura da Point Animal Clínica Veterinária 24 Horas" loading="lazy" decoding="async" />
-      <img src="clinica2.webp" alt="Estrutura da Point Animal Clínica Veterinária 24 Horas" loading="lazy" decoding="async" />
-      <img src="clinica3.webp" alt="Estrutura da Point Animal Clínica Veterinária 24 Horas" loading="lazy" decoding="async" />
-      <img src="clinica4.webp" alt="Estrutura da Point Animal Clínica Veterinária 24 Horas" loading="lazy" decoding="async" />
-    </div>
-    <div>
-      <span class="sec-tag">Por que Porto Alegre confia na Point Animal?</span>
-      <h2 class="sec-titulo" style="font-size:32px;">Cuidado que<br class="br-mob" /> <span>não para.</span></h2>
-      <div class="motivos">
-        <div class="motivo">
-          <div class="motivo-num">01</div>
-          <div>
-            <h4>24 horas, 7 dias por semana</h4>
-            <p>Seu pet sempre terá onde receber atendimento.</p>
-          </div>
-        </div>
-        <div class="motivo">
-          <div class="motivo-num">02</div>
-          <div>
-            <h4>Pertinho de Você</h4>
-            <p>Fácil acesso para toda a cidade.</p>
-          </div>
-        </div>
-        <div class="motivo">
-          <div class="motivo-num">03</div>
-          <div>
-            <h4>Atendimento humanizado</h4>
-            <p>Cada animal é tratado com paciência, respeito e atenção real.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- CTA -->
-<div class="sec-cta-wrap">
-  <div class="sec-cta">
-    <h2>Clínica Veterinária 24h no Jardim Lindóia. <span>A Point Animal está esperando por você.</span></h2>
-    <p class="sec-cta-texto">Qualquer hora do dia ou da madrugada, nossa equipe está de prontidão para atender com agilidade e dedicação. Fale com a gente agora ou venha até nós.</p>
-    <a href="https://wa.me/5551998282558?text=Ol%C3%A1%20encontrei%20voc%C3%AAs%20pelo%20Google%2C%20gostaria%20de%20atendimento." class="btn-wpp" style="max-width:420px;margin:0 auto;">
-      <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-      Atendimento Imediato
-    </a>
-  </div>
-</div>
-
-<!-- LOCALIZAÇÃO -->
-<div class="sec-local">
-  <div class="sec-local-inner">
-    <div>
-      <span class="sec-tag">Nossa clínica</span>
-      <h2 class="sec-titulo" style="font-size:32px;"><span>Localização Privilegiada</span><br />no Jardim Lindóia, Porto Alegre/RS</h2>
-      <div class="info-box">
-        <div class="info-linha">
-          <span class="ico">📍</span>
-          <div>
-            <strong>Endereço</strong>
-            Av. Sertório, 5165 · Jardim Lindóia, Porto Alegre/RS, 91050-371
-          </div>
-        </div>
-        <div class="info-linha">
-          <span class="ico">🕐</span>
-          <div>
-            <strong>Funcionamento</strong>
-            Aberta 24 horas, todos os dias
-          </div>
-        </div>
-      </div>
-      <a href="https://wa.me/5551998282558?text=Ol%C3%A1%20encontrei%20voc%C3%AAs%20pelo%20Google%2C%20gostaria%20de%20atendimento." class="btn-wpp" style="margin-top:24px;font-size:15px;padding:14px 24px;max-width:300px;">
-        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-        Atendimento Imediato
+    <div class="hero-texto">
+      <h1 class="hero-h1">
+        <span class="l1">Clínica</span>
+        <span class="l2">Veterinária <span class="h24">24h</span></span>
+        <span class="l3">em Porto Alegre</span>
+      </h1>
+      <p class="hero-sub">Point Animal, no Jardim Lindóia, em Porto Alegre. Prontos para qualquer emergência que seu pet precisar!</p>
+      <a class="btn-wpp hero-cta" href="https://wa.me/5551998282558?text=Ol%C3%A1%20encontrei%20voc%C3%AAs%20pelo%20Google%2C%20gostaria%20de%20atendimento." target="_blank" rel="noopener" data-wpp>
+        <span class="lbl">ATENDIMENTO IMEDIATO</span>
+        <svg class="i-wpp"><use href="#i-wpp"/></svg>
       </a>
     </div>
-    <div class="mapa">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3455.3408012612767!2d-51.1540543!3d-29.998369200000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9519770681e6631d%3A0xea596da0f3b6162!2sPoint%20Animal%20Cl%C3%ADnica%20Veterin%C3%A1ria%2024%20horas!5e0!3m2!1spt-BR!2sbr!4v1786110960586!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" title="Localização Point Animal Clínica Veterinária 24 Horas"></iframe>
-    </div>
+  </div>
+</header>
+
+<!-- HERO CARDS -->
+<div class="hero-cards">
+  <div class="hc rv" style="--d:.45s">
+    <div class="hc-txt"><span class="hc-n">#1</span><span class="hc-d"><span>Aberta 24 horas,</span> <span>todos os dias</span></span></div>
+    <span class="hc-ic"><svg class="i"><use href="#i-relogio"/></svg></span>
+  </div>
+  <div class="hc rv" style="--d:.55s">
+    <div class="hc-txt"><span class="hc-n">#2</span><span class="hc-d"><span>Mais de 18 anos</span> <span>de experiência</span></span></div>
+    <span class="hc-ic"><svg class="i"><use href="#i-esteto"/></svg></span>
+  </div>
+  <div class="hc rv" style="--d:.65s">
+    <div class="hc-txt"><span class="hc-n">#3</span><span class="hc-d"><span>Referência em</span> <span>Porto Alegre</span></span></div>
+    <span class="hc-ic"><svg class="i"><use href="#i-pin"/></svg></span>
   </div>
 </div>
 
-<!-- FOOTER -->
-<footer>
-  <span class="footer-logo">Point Animal</span>
-  <div class="footer-texto">
-    <strong>Point Animal Clínica Veterinária em Porto Alegre</strong><br />
-    Cuidado que não para. Para o pet que você ama. 🐾
+<!-- AVALIACOES -->
+<section class="sec-car sec-aval" id="avaliacoes" data-carrossel>
+  <div class="car-cab">
+    <div class="car-tag rv">avaliações</div>
+    <div class="car-dir">
+      <h2 class="car-h2 rv" style="--d:.08s"><span class="c">Depoimentos</span><span>reais</span></h2>
+      <p class="car-p rv" style="--d:.16s">Porto Alegre confia na Point Animal. Veja o que os tutores dizem sobre o atendimento da nossa equipe.</p>
+    </div>
   </div>
-  <a href="https://wa.me/5551998282558?text=Ol%C3%A1%20encontrei%20voc%C3%AAs%20pelo%20Google%2C%20gostaria%20de%20atendimento." class="nav-btn">Atendimento Imediato</a>
+  <div class="car-track">
+    <div class="av rv"><img src="img/avaliacao-1.webp" width="496" height="636" alt="Avaliação real de tutor no Google" loading="lazy" decoding="async" /></div>
+    <div class="av rv" style="--d:.08s"><img src="img/avaliacao-2.webp" width="496" height="636" alt="Avaliação real de tutor no Google" loading="lazy" decoding="async" /></div>
+    <div class="av rv" style="--d:.16s"><img src="img/avaliacao-3.webp" width="496" height="636" alt="Avaliação real de tutor no Google" loading="lazy" decoding="async" /></div>
+    <div class="av rv" style="--d:.24s"><img src="img/avaliacao-4.webp" width="496" height="636" alt="Avaliação real de tutor no Google" loading="lazy" decoding="async" /></div>
+    <div class="av rv" style="--d:.32s"><img src="img/avaliacao-5.webp" width="496" height="636" alt="Avaliação real de tutor no Google" loading="lazy" decoding="async" /></div>
+  </div>
+  <div class="car-prog"><span></span></div>
+</section>
+
+<!-- DESTAQUES -->
+<section class="sec-dest">
+  <div class="dest-cab">
+    <span class="selo rv"><svg class="i"><use href="#i-tag"/></svg>O que fazemos</span>
+    <h2 class="dest-h2 rv" style="--d:.08s"><span>Atendimento rápido e acolhedor,</span><span>de dia ou de noite</span></h2>
+  </div>
+  <div class="dest-cards">
+    <article class="dc dc--grande dc--desc rv">
+      <img class="dc-img dc-img--cirurgia" src="img/destaque-cirurgia.webp" width="720" height="958" alt="Gato com colar elizabetano em recuperação" loading="lazy" decoding="async" />
+      <div class="dc-body">
+        <span class="dc-tag">Estrutura completa</span>
+        <div class="dc-main">
+          <h3><span>Cirurgias e</span><span>internação</span></h3>
+          <div class="dc-row">
+            <p>Clínica, cirurgias, internação e exames em um só lugar, com cuidado e técnica.</p>
+            <a class="dc-seta" href="https://wa.me/5551998282558?text=Ol%C3%A1%20encontrei%20voc%C3%AAs%20pelo%20Google%2C%20gostaria%20de%20atendimento." target="_blank" rel="noopener" data-wpp aria-label="Saiba mais sobre cirurgias pelo WhatsApp"><svg class="i"><use href="#i-seta"/></svg></a>
+          </div>
+        </div>
+      </div>
+    </article>
+    <article class="dc rv" style="--d:.1s">
+      <img class="dc-img dc-img--exames" src="img/destaque-exames.webp" width="720" height="960" alt="Cão no colo da tutora durante o atendimento" loading="lazy" decoding="async" />
+      <div class="dc-body">
+        <span class="dc-tag">Diagnóstico</span>
+        <div class="dc-main">
+          <h3><span>Exames e</span><span>diagnósticos</span></h3>
+          <div class="dc-row">
+            <a class="dc-seta" href="https://wa.me/5551998282558?text=Ol%C3%A1%20encontrei%20voc%C3%AAs%20pelo%20Google%2C%20gostaria%20de%20atendimento." target="_blank" rel="noopener" data-wpp aria-label="Saiba mais sobre exames pelo WhatsApp"><svg class="i"><use href="#i-seta"/></svg></a>
+          </div>
+        </div>
+      </div>
+    </article>
+    <article class="dc rv" style="--d:.2s">
+      <img class="dc-img dc-img--consultas" src="img/destaque-consultas.webp" width="720" height="960" alt="Gato recebendo carinho durante o atendimento" loading="lazy" decoding="async" />
+      <div class="dc-body">
+        <span class="dc-tag">Equipe experiente</span>
+        <div class="dc-main">
+          <h3><span>Consultas</span><span>veterinárias</span></h3>
+          <div class="dc-row">
+            <a class="dc-seta" href="https://wa.me/5551998282558?text=Ol%C3%A1%20encontrei%20voc%C3%AAs%20pelo%20Google%2C%20gostaria%20de%20atendimento." target="_blank" rel="noopener" data-wpp aria-label="Saiba mais sobre consultas pelo WhatsApp"><svg class="i"><use href="#i-seta"/></svg></a>
+          </div>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- SERVICOS -->
+<section class="sec-serv" id="servicos">
+  <div class="serv-titulo">
+    <div class="serv-palco">
+      <div class="serv-gigante rv">serviços</div>
+      <span class="serv-pill p1">Emergência</span>
+      <span class="serv-pill p2">Cirurgias</span>
+      <span class="serv-pill p3">Internação</span>
+      <span class="serv-pill p4">Exames</span>
+    </div>
+  </div>
+  <p class="serv-sub rv"><span>Clínica, cirurgias, internação e exames:</span> <span>estrutura completa em um só lugar</span></p>
+  <div class="serv-lista" id="servLista">
+    <div class="sr rv">
+      <span class="sr-midia"><img style="object-position:50% 36%" src="img/destaque-exames.webp" width="720" height="960" alt="Cão no colo da tutora durante a consulta" loading="lazy" decoding="async" /></span>
+      <div class="sr-info">
+        <span class="sr-ic"><svg class="i"><use href="#i-esteto"/></svg></span>
+        <span class="sr-nome">Consultas</span>
+        <span class="sr-desc">Especialistas em consultas, diagnósticos e acompanhamento completo.</span>
+      </div>
+      <a class="sr-btn" href="https://wa.me/5551998282558?text=Ol%C3%A1%20encontrei%20voc%C3%AAs%20pelo%20Google%2C%20gostaria%20de%20atendimento." target="_blank" rel="noopener" data-wpp>Saiba mais</a>
+    </div>
+    <div class="sr rv aberto padrao">
+      <span class="sr-midia"><img src="img/servico-emergencia.webp" width="560" height="471" alt="Cão em atendimento de emergência" loading="lazy" decoding="async" /></span>
+      <div class="sr-info">
+        <span class="sr-ic"><svg class="i"><use href="#i-raio"/></svg></span>
+        <span class="sr-nome">Emergência 24h</span>
+        <span class="sr-desc">Pronto-atendimento com rapidez nos momentos que mais importam.</span>
+      </div>
+      <a class="sr-btn" href="https://wa.me/5551998282558?text=Ol%C3%A1%20encontrei%20voc%C3%AAs%20pelo%20Google%2C%20gostaria%20de%20atendimento." target="_blank" rel="noopener" data-wpp>Saiba mais</a>
+    </div>
+    <div class="sr rv">
+      <span class="sr-midia"><img style="object-position:50% 36%" src="img/destaque-cirurgia.webp" width="720" height="958" alt="Gato com colar elizabetano em recuperação" loading="lazy" decoding="async" /></span>
+      <div class="sr-info">
+        <span class="sr-ic"><svg class="i"><use href="#i-cruz"/></svg></span>
+        <span class="sr-nome">Cirurgias</span>
+        <span class="sr-desc">Procedimentos feitos com cuidado, técnica e muito carinho.</span>
+      </div>
+      <a class="sr-btn" href="https://wa.me/5551998282558?text=Ol%C3%A1%20encontrei%20voc%C3%AAs%20pelo%20Google%2C%20gostaria%20de%20atendimento." target="_blank" rel="noopener" data-wpp>Saiba mais</a>
+    </div>
+    <div class="sr rv">
+      <span class="sr-midia"><img style="object-position:50% 30%" src="img/card-caes.webp" width="900" height="900" alt="Pug no colo da veterinária" loading="lazy" decoding="async" /></span>
+      <div class="sr-info">
+        <span class="sr-ic"><svg class="i"><use href="#i-pulso"/></svg></span>
+        <span class="sr-nome">Internação</span>
+        <span class="sr-desc">Cada animal tratado com paciência, respeito e atenção real.</span>
+      </div>
+      <a class="sr-btn" href="https://wa.me/5551998282558?text=Ol%C3%A1%20encontrei%20voc%C3%AAs%20pelo%20Google%2C%20gostaria%20de%20atendimento." target="_blank" rel="noopener" data-wpp>Saiba mais</a>
+    </div>
+    <div class="sr rv">
+      <span class="sr-midia"><img style="object-position:50% 30%" src="img/destaque-consultas.webp" width="720" height="960" alt="Gato em atendimento com acesso venoso" loading="lazy" decoding="async" /></span>
+      <div class="sr-info">
+        <span class="sr-ic"><svg class="i"><use href="#i-frasco"/></svg></span>
+        <span class="sr-nome">Exames</span>
+        <span class="sr-desc">Estrutura para o diagnóstico no mesmo endereço, sem ir a outro lugar.</span>
+      </div>
+      <a class="sr-btn" href="https://wa.me/5551998282558?text=Ol%C3%A1%20encontrei%20voc%C3%AAs%20pelo%20Google%2C%20gostaria%20de%20atendimento." target="_blank" rel="noopener" data-wpp>Saiba mais</a>
+    </div>
+  </div>
+</section>
+
+<!-- CARDS CAES E GATOS -->
+<section class="sec-pets">
+  <article class="pc pc--caes rv">
+    <img class="pc-img" src="img/card-caes.webp" width="900" height="900" alt="Pug no colo da veterinária" loading="lazy" decoding="async" />
+    <span class="pc-gigante" aria-hidden="true">cães</span>
+    <div class="pc-vidro">
+      <span class="pc-tag"><svg class="i"><use href="#i-tag"/></svg>Atendimento humanizado</span>
+      <div class="pc-baixo">
+        <h3 class="pc-h3"><span>Cuidado que não para,</span><span>para quem você ama</span></h3>
+        <a class="pc-mais" href="https://wa.me/5551998282558?text=Ol%C3%A1%20encontrei%20voc%C3%AAs%20pelo%20Google%2C%20gostaria%20de%20atendimento." target="_blank" rel="noopener" data-wpp>Saiba mais <svg class="i"><use href="#i-seta"/></svg></a>
+      </div>
+    </div>
+  </article>
+  <article class="pc pc--gatos rv" style="--d:.12s">
+    <img class="pc-img" src="img/card-gatos.webp" width="900" height="900" alt="Gato siamês" loading="lazy" decoding="async" />
+    <span class="pc-gigante" aria-hidden="true">gatos</span>
+    <div class="pc-vidro">
+      <span class="pc-tag"><svg class="i"><use href="#i-tag"/></svg>Aberta 24 horas</span>
+      <div class="pc-baixo">
+        <h3 class="pc-h3"><span>Clínica completa</span><span>em um só lugar</span></h3>
+        <a class="pc-mais" href="https://wa.me/5551998282558?text=Ol%C3%A1%20encontrei%20voc%C3%AAs%20pelo%20Google%2C%20gostaria%20de%20atendimento." target="_blank" rel="noopener" data-wpp>Saiba mais <svg class="i"><use href="#i-seta"/></svg></a>
+      </div>
+    </div>
+  </article>
+</section>
+
+<!-- ETAPAS -->
+<section class="sec-car sec-etapas" data-carrossel>
+  <div class="car-cab">
+    <div class="car-tag rv">etapas</div>
+    <div class="car-dir">
+      <h2 class="car-h2 rv" style="--d:.08s"><span class="c">Como funciona</span><span>o atendimento na Point Animal</span></h2>
+      <p class="car-p rv" style="--d:.16s">Consultas, emergências, cirurgias, internação e exames no mesmo endereço, no Jardim Lindóia.</p>
+    </div>
+  </div>
+  <div class="car-track">
+    <div class="et rv">
+      <div class="et-img"><img src="img/etapa-1.webp" width="740" height="440" alt="Equipe da Point Animal com um filhote" loading="lazy" decoding="async" /><span class="et-n">01</span></div>
+      <div class="et-txt"><h3>Atendimento rápido</h3><p>Fale pelo WhatsApp e tenha resposta em 2 minutos, a qualquer hora do dia ou da noite.</p></div>
+    </div>
+    <div class="et rv" style="--d:.08s">
+      <div class="et-img"><img src="img/etapa-2.webp" width="740" height="440" alt="Veterinária da Point Animal com um gato no colo" loading="lazy" decoding="async" /><span class="et-n">02</span></div>
+      <div class="et-txt"><h3>Consulta com veterinário</h3><p>Especialistas em consultas, diagnósticos e acompanhamento completo.</p></div>
+    </div>
+    <div class="et rv" style="--d:.16s">
+      <div class="et-img"><img src="img/etapa-3.webp" width="740" height="440" alt="Gato recebendo soro durante o atendimento" loading="lazy" decoding="async" /><span class="et-n">03</span></div>
+      <div class="et-txt"><h3>Exames e diagnóstico</h3><p>Estrutura completa para investigar o caso e agir com rapidez.</p></div>
+    </div>
+    <div class="et rv" style="--d:.24s">
+      <div class="et-img"><img src="img/etapa-4.webp" width="740" height="440" alt="Cão em recuperação na internação" loading="lazy" decoding="async" /><span class="et-n">04</span></div>
+      <div class="et-txt"><h3>Tratamento e internação</h3><p>Cirurgias e internação quando o seu pet precisar, 24 horas por dia.</p></div>
+    </div>
+  </div>
+  <div class="car-prog"><span></span></div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="sec-cta" id="contato">
+  <div class="cta-card rv">
+    <div class="cta-mapa">
+      <iframe data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3455.3408012612767!2d-51.1540543!3d-29.998369200000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9519770681e6631d%3A0xea596da0f3b6162!2sPoint%20Animal%20Cl%C3%ADnica%20Veterin%C3%A1ria%2024%20horas!5e0!3m2!1spt-BR!2sbr!4v1789136428615!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" title="Mapa: Point Animal Clínica Veterinária 24 horas em Porto Alegre"></iframe>
+    </div>
+    <div class="cta-tag">contato</div>
+    <div class="cta-conteudo">
+      <h2 class="cta-h2"><span>A Point Animal está</span><span>esperando por você.</span></h2>
+      <p class="cta-p">Qualquer hora do dia ou da madrugada, nossa equipe está de prontidão para atender você.</p>
+    </div>
+    <div class="cta-form">
+      <a class="cta-campo" href="https://wa.me/5551998282558?text=Ol%C3%A1%20encontrei%20voc%C3%AAs%20pelo%20Google%2C%20gostaria%20de%20atendimento." target="_blank" rel="noopener" data-wpp>Entre em contato pelo WhatsApp</a>
+      <a class="cta-campo" href="https://wa.me/5551998282558?text=Ol%C3%A1%20encontrei%20voc%C3%AAs%20pelo%20Google%2C%20gostaria%20de%20atendimento." target="_blank" rel="noopener" data-wpp>Atendimento disponível agora</a>
+      <a class="btn-wpp cta-btn" href="https://wa.me/5551998282558?text=Ol%C3%A1%20encontrei%20voc%C3%AAs%20pelo%20Google%2C%20gostaria%20de%20atendimento." target="_blank" rel="noopener" data-wpp>
+        <span class="lbl">ATENDIMENTO IMEDIATO</span>
+        <svg class="i-wpp"><use href="#i-wpp"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- RODAPE -->
+<footer class="rodape">
+  <div class="rod-in">
+    <div class="rod-l1">
+      <div class="rod-logo">
+        <span class="ic"><img src="img/logo-96.webp" width="96" height="96" alt="" loading="lazy" /></span>
+        Point Animal.
+      </div>
+      <a class="rod-wpp" href="https://wa.me/5551998282558?text=Ol%C3%A1%20encontrei%20voc%C3%AAs%20pelo%20Google%2C%20gostaria%20de%20atendimento." target="_blank" rel="noopener" data-wpp>
+        <b>WhatsApp 24h</b>
+        <span>Resposta em 2 minutos</span>
+      </a>
+    </div>
+    <div class="rod-l2">
+      <div class="rod-copy">
+        <span>© 2026 Point Animal Clínica Veterinária 24 Horas. Av. Sertório, 5165, Jardim Lindóia, Porto Alegre/RS.</span>
+        <span class="only-d">Cuidado que não para. Para o pet que você ama.</span>
+      </div>
+      <a class="rod-chegar only-d" href="https://www.google.com/maps/dir/?api=1&amp;destination=Point%20Animal%20Cl%C3%ADnica%20Veterin%C3%A1ria%2024%20horas%2C%20Av.%20Sert%C3%B3rio%2C%205165%2C%20Porto%20Alegre" target="_blank" rel="noopener">Como chegar</a>
+    </div>
+  </div>
 </footer>
 
-<!-- BOTÃO FLUTUANTE -->
-<a href="https://wa.me/5551998282558?text=Ol%C3%A1%20encontrei%20voc%C3%AAs%20pelo%20Google%2C%20gostaria%20de%20atendimento." class="wpp-float" title="WhatsApp" aria-label="Falar no WhatsApp">
-  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+<!-- BOTAO FLUTUANTE -->
+<a class="btn-wpp wpp-float" href="https://wa.me/5551998282558?text=Ol%C3%A1%20encontrei%20voc%C3%AAs%20pelo%20Google%2C%20gostaria%20de%20atendimento." target="_blank" rel="noopener" data-wpp aria-label="Falar no WhatsApp">
+  <svg class="i-wpp"><use href="#i-wpp"/></svg>
 </a>
 
 <script>
-  /* Carrossel de Depoimentos */
-  var slideAtual = 0;
-  var totalSlides = document.querySelectorAll('.carrossel-slide').length;
-
-  function atualizarCarrossel() {
-    var track = document.getElementById('carrosselTrack');
-    var slideW = track.querySelector('.carrossel-slide').offsetWidth;
-    track.style.transform = 'translateX(-' + (slideAtual * slideW) + 'px)';
-    document.querySelectorAll('.carrossel-dot').forEach(function(d, i) {
-      d.classList.toggle('ativo', i === slideAtual);
+  /* Entrada dos itens conforme a rolagem */
+  (function () {
+    var itens = document.querySelectorAll('.rv');
+    itens.forEach(function (el) {
+      el.addEventListener('animationend', function (e) {
+        if (e.animationName === 'sobe') el.classList.add('ok');
+      });
     });
-  }
-
-  function moverCarrossel(dir) {
-    slideAtual = (slideAtual + dir + totalSlides) % totalSlides;
-    atualizarCarrossel();
-  }
-
-  function irParaSlide(i) {
-    slideAtual = i;
-    atualizarCarrossel();
-  }
-
-  var track = document.getElementById('carrosselTrack');
-
-  var touchStartX = 0;
-  track.addEventListener('touchstart', function(e) { touchStartX = e.touches[0].clientX; }, { passive: true });
-  track.addEventListener('touchend', function(e) {
-    var diff = touchStartX - e.changedTouches[0].clientX;
-    if (Math.abs(diff) > 40) moverCarrossel(diff > 0 ? 1 : -1);
-  });
-
-  var mouseStartX = 0, isDragging = false;
-  track.addEventListener('mousedown', function(e) { isDragging = true; mouseStartX = e.clientX; track.classList.add('dragging'); });
-  document.addEventListener('mouseup', function(e) {
-    if (!isDragging) return;
-    isDragging = false;
-    track.classList.remove('dragging');
-    var diff = mouseStartX - e.clientX;
-    if (Math.abs(diff) > 40) moverCarrossel(diff > 0 ? 1 : -1);
-  });
-
-  setInterval(function() { moverCarrossel(1); }, 5000);
-  window.addEventListener('resize', atualizarCarrossel);
-
-  /* Galeria da clínica com fade (ignora imagens ainda não enviadas) */
-  var galeria = document.querySelector('.clinica-galeria');
-  var galeriaAtual = 0;
-
-  function iniciarGaleria() {
-    var imgs = galeria.querySelectorAll('img');
-    if (!imgs.length) {
-      galeria.style.display = 'none';
-      galeria.parentElement.style.gridTemplateColumns = '1fr';
+    if (!('IntersectionObserver' in window)) {
+      itens.forEach(function (el) { el.classList.add('vis'); });
       return;
     }
-    imgs[0].classList.add('ativo');
-    if (imgs.length < 2) return;
-    setInterval(function() {
-      imgs[galeriaAtual].classList.remove('ativo');
-      galeriaAtual = (galeriaAtual + 1) % imgs.length;
-      imgs[galeriaAtual].classList.add('ativo');
-    }, 4000);
-  }
+    var io = new IntersectionObserver(function (entradas) {
+      entradas.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        var alvo = e.target;
+        /* nos carrosseis todos os cards entram juntos, mesmo os que estao fora da tela na lateral */
+        if (alvo.classList.contains('car-track')) {
+          alvo.querySelectorAll('.rv').forEach(function (c) { c.classList.add('vis'); });
+        } else {
+          alvo.classList.add('vis');
+        }
+        io.unobserve(alvo);
+      });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.12 });
+    itens.forEach(function (el) { if (!el.closest('.car-track')) io.observe(el); });
+    document.querySelectorAll('.car-track').forEach(function (t) { io.observe(t); });
+  })();
 
-  var pendentes = galeria.querySelectorAll('img').length;
-  function checarGaleria() { if (--pendentes === 0) iniciarGaleria(); }
+  /* Carrosseis de avaliacoes e etapas: faixa infinita deslizando sem parar, com arraste e inercia */
+  document.querySelectorAll('[data-carrossel]').forEach(function (sec) {
+    var faixa = sec.querySelector('.car-track');
+    var barra = sec.querySelector('.car-prog span');
+    var reduzido = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var comMouse = window.matchMedia('(hover: hover) and (pointer: fine)');
+    var originais = [].slice.call(faixa.children);
+    var n = originais.length;
 
-  galeria.querySelectorAll('img').forEach(function(img) {
-    img.addEventListener('error', function() { img.remove(); checarGaleria(); });
-    if (img.complete && img.naturalWidth > 0) { checarGaleria(); }
-    else if (img.complete) { img.remove(); checarGaleria(); }
-    else { img.addEventListener('load', checarGaleria); }
+    var fita = document.createElement('div');
+    fita.className = 'car-fita';
+    originais.forEach(function (c) { fita.appendChild(c); });
+    faixa.appendChild(fita);
+
+    function clona(c) {
+      var k = c.cloneNode(true);
+      k.setAttribute('aria-hidden', 'true');
+      k.addEventListener('animationend', function (e) { if (e.animationName === 'sobe') k.classList.add('ok'); });
+      return k;
+    }
+    originais.forEach(function (c) { fita.insertBefore(clona(c), originais[0]); });
+    var copiasDepois = 0;
+
+    var s = 0, x = 0, fracao = 0.2;
+    function mede() {
+      var fase = s ? ((((-x - s) % s) + s) % s) / s : 0;
+      var gap = parseFloat(getComputedStyle(fita).columnGap) || 0;
+      s = (originais[0].getBoundingClientRect().width + gap) * n;
+      var precisa = Math.ceil(Math.max(window.innerWidth, 1440) / s) + 1;
+      while (copiasDepois < precisa) {
+        originais.forEach(function (c) { fita.appendChild(clona(c)); });
+        copiasDepois++;
+      }
+      fracao = barra.offsetWidth / barra.parentNode.offsetWidth;
+      x = -(s + fase * s);
+    }
+    function normaliza() {
+      while (x <= -2 * s) x += s;
+      while (x > -s) x -= s;
+    }
+    function desenha() {
+      fita.style.transform = 'translate3d(' + x.toFixed(2) + 'px,0,0)';
+      var p = (-x - s) / s;
+      var pos = ((p + fracao / (1 + fracao)) % 1) * (1 + fracao) - fracao;
+      barra.style.transform = 'translate3d(' + (pos / fracao * 100).toFixed(3) + '%,0,0)';
+    }
+
+    var vel = 0, inercia = 0, retoma = 0, ultimo = 0;
+    var naTela = false, sobre = false, arrastando = false, rodando = false;
+    function cruzeiro() { return (window.innerWidth < 1024 ? 30 : 42) / 1000; } /* px por ms */
+    function quadro(t) {
+      var dt = ultimo ? Math.min(t - ultimo, 48) : 16;
+      ultimo = t;
+      if (!arrastando) {
+        if (inercia) {
+          x += inercia * dt;
+          inercia *= Math.pow(0.94, dt / 16.7);
+          if (Math.abs(inercia) < 0.02) inercia = 0;
+        } else {
+          var alvo = (reduzido || sobre || t < retoma) ? 0 : cruzeiro();
+          vel += (alvo - vel) * Math.min(1, dt / 400);
+          x -= vel * dt;
+        }
+        normaliza();
+        desenha();
+      }
+      if (naTela && !document.hidden) requestAnimationFrame(quadro);
+      else { rodando = false; ultimo = 0; }
+    }
+    function liga() {
+      if (rodando || !naTela || document.hidden) return;
+      rodando = true;
+      ultimo = 0;
+      requestAnimationFrame(quadro);
+    }
+
+    mede();
+    desenha();
+    window.addEventListener('resize', function () { mede(); normaliza(); desenha(); });
+
+    if ('IntersectionObserver' in window) {
+      var perto = new IntersectionObserver(function (es) {
+        if (!es[0].isIntersecting) return;
+        faixa.querySelectorAll('img[loading="lazy"]').forEach(function (img) { img.loading = 'eager'; });
+        perto.disconnect();
+      }, { rootMargin: '800px 0px' });
+      perto.observe(sec);
+      new IntersectionObserver(function (es) {
+        naTela = es[0].isIntersecting;
+        liga();
+      }, { rootMargin: '100px 0px' }).observe(faixa);
+    } else {
+      naTela = true;
+      liga();
+    }
+    document.addEventListener('visibilitychange', liga);
+
+    faixa.addEventListener('mouseenter', function () { if (comMouse.matches) sobre = true; });
+    faixa.addEventListener('mouseleave', function () { sobre = false; });
+
+    var xIni = 0, xBase = 0, amostras = [], moveu = false;
+    faixa.addEventListener('pointerdown', function (e) {
+      if (e.pointerType === 'mouse' && e.button !== 0) return;
+      arrastando = true; moveu = false; inercia = 0; vel = 0;
+      xIni = e.clientX; xBase = x;
+      amostras = [{ t: e.timeStamp, x: e.clientX }];
+      faixa.classList.add('arrastando');
+      if (faixa.setPointerCapture) faixa.setPointerCapture(e.pointerId);
+    });
+    faixa.addEventListener('pointermove', function (e) {
+      if (!arrastando) return;
+      var dx = e.clientX - xIni;
+      if (Math.abs(dx) > 5) moveu = true;
+      x = xBase + dx;
+      normaliza();
+      xBase = x - dx;
+      desenha();
+      amostras.push({ t: e.timeStamp, x: e.clientX });
+      if (amostras.length > 6) amostras.shift();
+    });
+    function solta() {
+      if (!arrastando) return;
+      arrastando = false;
+      faixa.classList.remove('arrastando');
+      var a = amostras[0], b = amostras[amostras.length - 1], dt = b.t - a.t;
+      var parado = performance.now() - b.t > 90;
+      inercia = (!parado && dt > 0) ? Math.max(-2.5, Math.min(2.5, (b.x - a.x) / dt)) : 0;
+      retoma = performance.now() + 1400;
+      liga();
+    }
+    faixa.addEventListener('pointerup', solta);
+    faixa.addEventListener('pointercancel', solta);
+    faixa.addEventListener('click', function (e) {
+      if (moveu) { e.preventDefault(); e.stopPropagation(); moveu = false; }
+    }, true);
+
+    faixa.addEventListener('wheel', function (e) {
+      if (Math.abs(e.deltaX) <= Math.abs(e.deltaY)) return;
+      e.preventDefault();
+      x -= e.deltaX; vel = 0; inercia = 0;
+      normaliza();
+      desenha();
+      retoma = performance.now() + 1400;
+    }, { passive: false });
   });
+
+  /* CTAs de WhatsApp: o texto vira "ABRINDO O WHATSAPP" e o WhatsApp abre logo em seguida */
+  document.querySelectorAll('[data-wpp]').forEach(function (a) {
+    a.addEventListener('click', function (e) {
+      var lbl = a.querySelector('.lbl');
+      if (!lbl) return;
+      e.preventDefault();
+      if (!lbl.dataset.orig) lbl.dataset.orig = lbl.textContent;
+      lbl.textContent = a.dataset.abrindo || 'ABRINDO O WHATSAPP';
+      a.classList.add('abrindo');
+      setTimeout(function () {
+        var w = window.open(a.href, '_blank');
+        if (w) w.opener = null; else location.href = a.href;
+      }, 450);
+      clearTimeout(a._volta);
+      a._volta = setTimeout(function () {
+        lbl.textContent = lbl.dataset.orig;
+        a.classList.remove('abrindo');
+      }, 4000);
+    });
+  });
+
+  /* Servicos: a linha em destaque da prancheta (Vacinacao) fica aberta em repouso;
+     com o mouse a foto acompanha a linha, no toque abre uma linha por vez */
+  (function () {
+    var lista = document.getElementById('servLista');
+    var linhas = lista.querySelectorAll('.sr');
+    var padrao = lista.querySelector('.sr.padrao');
+    var comMouse = window.matchMedia('(hover: hover) and (pointer: fine)');
+    function abre(sr) { linhas.forEach(function (l) { l.classList.toggle('aberto', l === sr); }); }
+    linhas.forEach(function (sr) {
+      sr.addEventListener('mouseenter', function () { if (comMouse.matches) abre(sr); });
+      sr.addEventListener('click', function (e) {
+        if (comMouse.matches || e.target.closest('.sr-btn')) return;
+        abre(sr.classList.contains('aberto') ? null : sr);
+      });
+    });
+    lista.addEventListener('mouseleave', function () { if (comMouse.matches) abre(padrao); });
+  })();
+
+  /* Mapa: o iframe do Google so carrega quando a dobra de contato se aproxima */
+  (function () {
+    var f = document.querySelector('.cta-mapa iframe');
+    if (!f) return;
+    function carrega() { if (!f.src) f.src = f.dataset.src; }
+    if (!('IntersectionObserver' in window)) { carrega(); return; }
+    var io = new IntersectionObserver(function (es) {
+      if (es[0].isIntersecting) { carrega(); io.disconnect(); }
+    }, { rootMargin: '600px 0px' });
+    io.observe(f);
+  })();
+
+  /* Botao flutuante: aparece quando o botao verde do hero sai da tela */
+  (function () {
+    var flutua = document.querySelector('.wpp-float');
+    var cta = document.querySelector('.hero-cta');
+    if (!flutua || !cta) return;
+    if (!('IntersectionObserver' in window)) { flutua.classList.add('visivel'); return; }
+    new IntersectionObserver(function (es) {
+      flutua.classList.toggle('visivel', !es[0].isIntersecting);
+    }).observe(cta);
+  })();
+
+  /* Menu mobile */
+  (function () {
+    var btn = document.getElementById('btnMenu');
+    var menu = document.getElementById('menuM');
+    btn.addEventListener('click', function () {
+      var abrir = menu.hidden;
+      menu.hidden = !abrir;
+      btn.setAttribute('aria-expanded', String(abrir));
+    });
+    menu.querySelectorAll('a').forEach(function (a) {
+      a.addEventListener('click', function () {
+        menu.hidden = true;
+        btn.setAttribute('aria-expanded', 'false');
+      });
+    });
+    document.addEventListener('click', function (e) {
+      if (!menu.hidden && !menu.contains(e.target) && !btn.contains(e.target)) {
+        menu.hidden = true;
+        btn.setAttribute('aria-expanded', 'false');
+      }
+    });
+  })();
+
+  /* Navbar marca a dobra que esta na tela */
+  (function () {
+    if (!('IntersectionObserver' in window)) return;
+    var links = document.querySelectorAll('.nav-menu a, .menu-m a');
+    var io = new IntersectionObserver(function (entradas) {
+      entradas.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        links.forEach(function (l) { l.classList.toggle('ativo', l.getAttribute('href') === '#' + e.target.id); });
+      });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+    ['inicio', 'avaliacoes', 'servicos', 'contato'].forEach(function (id) {
+      var s = document.getElementById(id);
+      if (s) io.observe(s);
+    });
+  })();
 </script>
 </body>
 </html>
