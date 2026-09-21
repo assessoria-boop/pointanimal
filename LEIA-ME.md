@@ -20,8 +20,12 @@ Publicada em 11/09/2026 no lugar da LP anterior, que continua no histórico do G
   - `destaque-cirurgia`, `destaque-exames`, `destaque-consultas`: 720 px de largura
 - `avaliacao-1..5.webp`: prints reais do Google (os mesmos `1.webp`–`5.webp` da LP anterior, recomprimidos, cerca de 28% menores)
 - `logo.webp`: logo do cliente (150 px, usada como favicon); `logo-96.webp`: a mesma reduzida para o cabeçalho e o rodapé (3 KB)
-- `hero-cao-*`, `servico-emergencia`: fotos do template
-  (`servico-emergencia` reduzida para 560 px, de 126 KB para 45 KB)
+- `emergencia.webp` (linha "Emergência 24h"): recorte 720×540 da foto do cliente do cão no soro (a mesma da etapa 04). A foto do template (cão deitado no asfalto) foi apagada em 21/09/2026
+- `hero-cao-*`: foto do template
+
+## Ajustes de 21/09/2026
+- Sem botões "Saiba mais" (lista de serviços e cards de cães/gatos) e sem as setas dos destaques
+- Cards de cães e gatos com foto redonda (borda branca), etiqueta e título abaixo; "cães"/"gatos" viram marca d'água verde
 
 ## Cores (template turquesa → Point Animal)
 | Papel | Template | Point Animal |
