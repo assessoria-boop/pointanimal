@@ -804,6 +804,91 @@
       .cta-p { margin-left: auto; margin-right: auto; }
       .cta-btn { align-self: center; }
     }
+
+    /* dobra "o que fazemos" oculta (pedido do cliente em 24/09/2026); para voltar, apague estas duas linhas */
+    .sec-dest { display: none; }
+
+    /* botoes na cor da marca no fim das dobras de depoimentos e servicos (pedido do cliente em 24/09/2026) */
+    .cta-linha { display: flex; justify-content: center; padding: 0 16px; }
+    .sec-serv .cta-linha { margin-top: 36px; }
+    .btn-marca {
+      display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+      height: 54px; padding: 0 28px;
+      background: var(--c-brand); color: #fff;
+      border-radius: 999px;
+      font-size: 11px; font-weight: 700; letter-spacing: 0.14em; line-height: 14px; text-transform: uppercase; text-align: center;
+      box-shadow: 0 10px 26px rgba(0,0,0,.18);
+      transition: transform .3s ease, box-shadow .3s ease, filter .3s ease;
+    }
+    .btn-marca svg { width: 18px; height: 18px; flex-shrink: 0; fill: currentColor; }
+    .btn-marca:hover { transform: translateY(-2px); box-shadow: 0 16px 34px rgba(0,0,0,.26); filter: brightness(1.08); }
+    @media (min-width: 1024px) {
+      .sec-serv .cta-linha { margin-top: 48px; }
+      .btn-marca { height: 56px; padding: 0 36px; font-size: 12px; letter-spacing: 0.18em; }
+      .btn-marca svg { width: 20px; height: 20px; }
+    }
+
+    /* respiro depois do botao dos depoimentos, igual ao do fim da dobra de servicos (pedido do cliente em 24/09/2026) */
+    .sec-aval .cta-linha { margin-bottom: 64px; }
+    @media (min-width: 1024px) { .sec-aval .cta-linha { margin-bottom: 111px; } }
+
+    /* texto das avaliacoes centralizado no mobile (pedido do cliente em 24/09/2026) */
+    @media (max-width: 1023px) {
+      .sec-aval .car-cab { align-items: center; text-align: center; }
+      .sec-aval .car-dir { align-items: center; }
+      .sec-aval .car-h2 { justify-content: center; flex-wrap: wrap; }
+    }
+
+    /* cards de caes e gatos: foto redonda sobre a palavra gigante (pedido do cliente em 24/09/2026) */
+    .sec-pets { display: flex; flex-direction: column; align-items: center; gap: 36px; padding: 36px 16px 8px; background: #fff; }
+    .pc {
+      position: relative; display: flex; flex-direction: column; align-items: center; gap: 14px;
+      width: 100%; max-width: 420px; height: auto; padding: 0; text-align: center;
+      background: none; border: 0; border-radius: 0; box-shadow: none; overflow: visible;
+      transition: transform .35s var(--ease);
+    }
+    .pc-topo { position: relative; display: flex; align-items: center; justify-content: center; width: 100%; height: 220px; }
+    .pc .pc-gigante {
+      position: absolute; left: 50%; top: 50%; right: auto; bottom: auto; transform: translate(-50%, -50%);
+      width: max-content; font-size: 130px; font-weight: 400; letter-spacing: -0.075em; line-height: 1;
+      background: linear-gradient(180deg, var(--c-logo) 18%, transparent 90%);
+      -webkit-background-clip: text; background-clip: text; color: transparent; pointer-events: none;
+    }
+    .pc--gatos .pc-gigante { background: linear-gradient(180deg, color-mix(in srgb, var(--c-light) 55%, var(--c-brand) 45%) 18%, transparent 90%); -webkit-background-clip: text; background-clip: text; }
+    .pc-foto {
+      position: relative; z-index: 1; width: 220px; height: 220px; flex-shrink: 0;
+      border-radius: 50%; overflow: hidden; border: 8px solid #fff; background: #fff;
+      box-shadow: 0 16px 34px rgba(0,0,0,.16);
+    }
+    .pc-foto > .pc-img { position: static; inset: auto; width: 100%; height: 100%; object-fit: cover; border-radius: 0; transition: transform .8s var(--ease); }
+    .pc .pc-tag { display: inline-flex; align-items: center; gap: 6px; padding: 6px 14px; background: #fff; border: 1px solid var(--c-border); border-radius: 999px; font-size: 11px; font-weight: 500; line-height: 13px; color: var(--c-brand); }
+    .pc .pc-tag svg { width: 11px; height: 11px; color: var(--c-brand); }
+    .pc .pc-h3 { display: flex; flex-direction: column; font-size: 22px; font-weight: 500; letter-spacing: -0.03em; line-height: 28px; color: var(--c-ink); }
+    .pc:hover { transform: translateY(-4px); box-shadow: none; }
+    .pc:hover .pc-foto > .pc-img { transform: scale(1.06); }
+    @media (min-width: 1024px) {
+      .sec-pets { flex-direction: row; align-items: flex-start; gap: 24px; padding: 56px 15px 24px; }
+      .pc { flex: 1 1 0; max-width: none; gap: 18px; }
+      .pc-topo { height: 320px; }
+      .pc .pc-gigante { font-size: 280px; }
+      .pc-foto { width: 320px; height: 320px; border-width: 10px; }
+      .pc .pc-tag { font-size: 12px; line-height: 14px; }
+      .pc .pc-h3 { font-size: 32px; letter-spacing: -0.035em; line-height: 40px; }
+    }
+
+    /* feixe de luz no 24h da headline: o feixe passa e o texto responde (pedido do cliente em 24/09/2026) */
+    .hero-h1 .h24 { position: relative; display: inline-block; transform-origin: center; animation: h24-pulso 3.5s ease-in-out 1.2s infinite; }
+    .hero-h1 .h24::after {
+      content: attr(data-brilho);
+      position: absolute; left: 0; top: 0; white-space: nowrap; pointer-events: none;
+      background: linear-gradient(100deg, transparent 32%, rgba(255,255,255,.92) 50%, transparent 68%);
+      background-size: 300% 100%; background-repeat: no-repeat;
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+      animation: h24-feixe 3.5s ease-in-out 1.2s infinite;
+    }
+    @keyframes h24-feixe { 0% { background-position: 100% 0; } 22% { background-position: 0 0; } 100% { background-position: 0 0; } }
+    @keyframes h24-pulso { 0%, 6%, 18%, 100% { transform: none; filter: none; } 11% { transform: translateY(-4px) scale(1.05); filter: drop-shadow(0 0 12px rgba(255,255,255,.6)); } }
+    @media (prefers-reduced-motion: reduce) { .hero-h1 .h24 { animation: none; } .hero-h1 .h24::after { display: none; } }
   </style>
 </head>
 <body>
@@ -878,7 +963,7 @@
     <div class="hero-texto">
       <h1 class="hero-h1">
         <span class="l1">Clínica</span>
-        <span class="l2">Veterinária <span class="h24">24h</span></span>
+        <span class="l2">Veterinária <span class="h24" data-brilho="24h">24h</span></span>
         <span class="l3">em Porto Alegre</span>
       </h1>
       <p class="hero-sub">Clínica veterinária Point Animal em Porto Alegre. Prontos para qualquer emergência que seu pet precisar!</p>
@@ -923,6 +1008,12 @@
     <div class="av rv" style="--d:.32s"><img src="img/avaliacao-5.webp" width="496" height="636" alt="Avaliação real de tutor no Google" loading="lazy" decoding="async" /></div>
   </div>
   <div class="car-prog"><span></span></div>
+  <div class="cta-linha">
+    <a class="btn-marca" href="https://wa.me/5551998282558?text=Ol%C3%A1%20encontrei%20voc%C3%AAs%20pelo%20Google%2C%20gostaria%20de%20atendimento." target="_blank" rel="noopener" data-wpp>
+      <span class="lbl">Falar com Veterinário Agora</span>
+      <svg class="i-wpp"><use href="#i-wpp"/></svg>
+    </a>
+  </div>
 </section>
 
 <!-- DESTAQUES -->
@@ -1019,19 +1110,29 @@
       </div>
     </div>
   </div>
+  <div class="cta-linha">
+    <a class="btn-marca" href="https://wa.me/5551998282558?text=Ol%C3%A1%20encontrei%20voc%C3%AAs%20pelo%20Google%2C%20gostaria%20de%20atendimento." target="_blank" rel="noopener" data-wpp>
+      <span class="lbl">Atendimento rápido agora</span>
+      <svg class="i-wpp"><use href="#i-wpp"/></svg>
+    </a>
+  </div>
 </section>
 
 <!-- CARDS CAES E GATOS -->
 <section class="sec-pets">
   <article class="pc pc--caes rv">
-    <span class="pc-gigante" aria-hidden="true">cães</span>
-    <div class="pc-foto"><img class="pc-img" src="img/card-caes.webp" width="900" height="900" alt="Pug no colo da veterinária" loading="lazy" decoding="async" /></div>
+    <div class="pc-topo">
+      <span class="pc-gigante" aria-hidden="true">cães</span>
+      <div class="pc-foto"><img class="pc-img" src="img/card-caes.webp" width="900" height="900" alt="Pug no colo da veterinária" loading="lazy" decoding="async" /></div>
+    </div>
     <span class="pc-tag"><svg class="i"><use href="#i-tag"/></svg>Atendimento humanizado</span>
     <h3 class="pc-h3"><span>Cuidado que não para,</span><span>para quem você ama</span></h3>
   </article>
   <article class="pc pc--gatos rv" style="--d:.12s">
-    <span class="pc-gigante" aria-hidden="true">gatos</span>
-    <div class="pc-foto"><img class="pc-img" src="img/card-gatos.webp" width="900" height="900" alt="Gato siamês" loading="lazy" decoding="async" /></div>
+    <div class="pc-topo">
+      <span class="pc-gigante" aria-hidden="true">gatos</span>
+      <div class="pc-foto"><img class="pc-img" src="img/card-gatos.webp" width="900" height="900" alt="Gato siamês" loading="lazy" decoding="async" /></div>
+    </div>
     <span class="pc-tag"><svg class="i"><use href="#i-tag"/></svg>Aberta 24 horas</span>
     <h3 class="pc-h3"><span>Clínica completa</span><span>em um só lugar</span></h3>
   </article>
