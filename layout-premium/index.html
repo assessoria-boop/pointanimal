@@ -1,0 +1,1483 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Point Animal · Clínica Veterinária 24 Horas em Porto Alegre</title>
+  <meta name="description" content="Point Animal Clínica Veterinária 24 Horas em Porto Alegre/RS. Aberta 24 horas, todos os dias. Consultas, cirurgias, internação, exames e emergências no Jardim Lindóia." />
+  <meta name="theme-color" content="#4C7A22" />
+  <link rel="icon" type="image/webp" href="img/logo.webp" />
+  <link rel="apple-touch-icon" href="img/logo.webp" />
+  <link rel="preload" as="image" href="img/hero-cao-1600.webp" media="(min-width:1024px)" type="image/webp" fetchpriority="high" />
+  <link rel="preload" as="image" href="img/hero-cao-1100.webp" media="(max-width:1023px)" type="image/webp" fetchpriority="high" />
+  <link rel="preload" as="font" href="fonts/manrope-latin.woff2" type="font/woff2" crossorigin />
+  <link rel="preload" as="font" href="fonts/montserrat-latin.woff2" type="font/woff2" media="(min-width:1024px)" crossorigin />
+  <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+  <link rel="dns-prefetch" href="https://www.clarity.ms" />
+  <script>
+    document.documentElement.className += ' js';
+    /* GTM + Microsoft Clarity carregados na primeira interacao (mouse, toque, rolagem ou tecla), sem timer: fora do caminho do carregamento e do PageSpeed */
+    function _loadTags(){
+      if(window._tagsLoaded)return;window._tagsLoaded=1;
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-PT5CRMNH');
+      (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","xyotnfrny4");
+    }
+    ['mousemove','pointerdown','touchstart','scroll','keydown','click'].forEach(function(e){window.addEventListener(e,_loadTags,{once:true,passive:true});});
+  </script>
+  <style>
+    /* fontes servidas localmente (subset latin): sem CSS externo bloqueando a renderizacao */
+    @font-face { font-family: 'Manrope'; font-style: normal; font-weight: 400 700; font-display: swap; src: url(fonts/manrope-latin.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Montserrat'; font-style: normal; font-weight: 500 700; font-display: swap; src: url(fonts/montserrat-latin.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    /* paleta da Point Animal (verde + verde-lima da logo), no lugar do turquesa do template */
+    :root {
+      --c-white: #FFFFFF;
+      --c-soft: #F1F7E4;
+      --c-pill: #F4F8EC;
+      --c-ink: #15200C;
+      --c-body: #5E6857;
+      --c-line: #CCDAB5;
+      --c-border: #DCE9C6;
+      --c-muted: #5E8A2E;
+      --c-readmore: #E3EFCF;
+      --c-footer: #1C2E0C;
+      --c-brand: #4C7A22;
+      --c-logo: #6B9E2C;
+      --c-light: #B9DC5F;
+      --c-lima: #B9DC5F;
+      --c-vermelho: #FF2B1F;
+      --c-trilho: #E2ECD2;
+      --wpp: #25D366;
+      --f: 'Manrope', system-ui, sans-serif;
+      --f2: 'Montserrat', system-ui, sans-serif;
+      --ease: cubic-bezier(.2, .7, .2, 1);
+    }
+
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; touch-action: pan-y; overflow-x: hidden; }
+    body {
+      font-family: var(--f);
+      font-size: 12px;
+      line-height: 16px;
+      color: var(--c-ink);
+      background: #fff;
+      font-synthesis: none;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
+      width: 100%;
+    }
+    img { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; }
+    [hidden] { display: none !important; }
+    svg.i { display: block; flex-shrink: 0; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    svg.i-wpp { display: block; flex-shrink: 0; fill: currentColor; }
+    section, header { scroll-margin-top: 12px; }
+
+    /* ── ANIMACOES DE ENTRADA ── */
+    @keyframes sobe { from { opacity: 0; transform: translateY(28px); } to { opacity: 1; transform: none; } }
+    /* o hero ja nasce pintado (sem fade): so assenta a escala, sem atrasar LCP nem Speed Index */
+    @keyframes surge { from { transform: scale(1.04); } to { transform: none; } }
+    @keyframes flutua { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-12px); } }
+    .js .rv:not(.vis) { opacity: 0; }
+    .rv.vis { animation: sobe .8s var(--ease) var(--d, 0s) backwards; }
+    .rv.vis.ok { animation: none; }
+
+    /* ── BOTOES DE WHATSAPP: brilho no hover ── */
+    .btn-wpp {
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--wpp);
+      color: #fff;
+      border-radius: 999px;
+      transition: box-shadow .35s var(--ease), transform .35s var(--ease), filter .35s;
+    }
+    .btn-wpp::after {
+      content: '';
+      position: absolute;
+      top: 0; bottom: 0;
+      left: -60%;
+      width: 40%;
+      background: linear-gradient(100deg, transparent, rgba(255,255,255,.5), transparent);
+      transform: skewX(-20deg);
+      transition: left .8s var(--ease);
+      pointer-events: none;
+    }
+    .btn-wpp:hover {
+      filter: brightness(1.06);
+      box-shadow: 0 0 0 5px rgba(37,211,102,.18), 0 12px 34px rgba(37,211,102,.55);
+      transform: translateY(-1px);
+    }
+    .btn-wpp:hover::after { left: 130%; }
+    .btn-wpp.abrindo { filter: brightness(.96); }
+
+    /* ── HERO (mobile) ── */
+    .hero {
+      position: relative;
+      height: 844px;
+      overflow: clip;
+      background: linear-gradient(170deg, #2E4C12 0%, #4C7A22 35%, #6B9E2C 70%, #9DC63E 100%);
+      background: linear-gradient(in oklab 170deg, #2E4C12 0%, #4C7A22 35%, #6B9E2C 70%, #9DC63E 100%);
+    }
+    .hero-palco { position: relative; height: 100%; display: flex; flex-direction: column; }
+    .hero-arco {
+      position: absolute;
+      right: 0;
+      bottom: 96px;
+      width: 350px;
+      height: 330px;
+      background: #FFFFFF12;
+      border-radius: 175px 175px 0 0;
+    }
+    .hero-gigante {
+      position: absolute;
+      right: 14px;
+      bottom: 250px;
+      width: 363px;
+      height: 137px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      pointer-events: none;
+      animation: surge 1.2s var(--ease) .2s backwards;
+    }
+    .hero-gigante span { display: inline-block; padding-right: 6px; }
+    .hero-gigante b {
+      display: inline-block;
+      font-weight: 400;
+      letter-spacing: -0.075em;
+      line-height: 62px;
+      white-space: nowrap;
+      background: linear-gradient(180deg, rgba(255,255,255,.95) 35%, rgba(255,255,255,.05) 100%);
+      background: linear-gradient(in oklab 180deg, rgba(255,255,255,.95) 35%, rgba(255,255,255,.05) 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .hero-gigante .g1 b { font-size: 103px; }
+    .hero-gigante .g2 b { font-size: 62px; }
+    .hero-cao {
+      position: absolute;
+      right: -58px;
+      bottom: -3px;
+      width: 676px;
+      height: 382px;
+      max-width: none;
+      object-fit: cover;
+      animation: surge 1.1s var(--ease) backwards;
+    }
+    .hero-barra {
+      position: relative;
+      height: 35px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      gap: 14px;
+      padding: 0 16px 12px;
+    }
+    .hero-barra div { display: flex; align-items: center; gap: 6px; color: #fff; font-size: 11px; font-weight: 500; line-height: 14px; }
+    .hero-barra svg { width: 12px; height: 12px; }
+
+    .nav-wrap { position: relative; z-index: 5; padding: 0 16px; }
+    .nav {
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 10px 0 12px;
+      background: #fff;
+      border-radius: 14px;
+      box-shadow: 0 10px 30px #1C2E0C1F;
+    }
+    .logo { display: flex; align-items: center; gap: 8px; }
+    .logo-ic { width: 36px; height: 36px; border-radius: 9px; background: #fff; overflow: hidden; flex-shrink: 0; }
+    .logo-ic img { width: 100%; height: 100%; object-fit: cover; }
+    .logo-nome { display: flex; flex-direction: column; font-size: 13px; font-weight: 700; letter-spacing: -0.02em; line-height: 14px; color: var(--c-ink); }
+    .nav-menu, .nav-acoes-d { display: none; }
+    .nav-acoes-m { display: flex; align-items: center; gap: 8px; }
+    .nav-circ {
+      width: 40px; height: 40px;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+      transition: transform .3s var(--ease), box-shadow .3s;
+    }
+    .nav-circ svg { width: 18px; height: 18px; }
+    .nav-circ--wpp { background: var(--wpp); color: #fff; }
+    .nav-circ--menu { background: var(--c-pill); color: var(--c-ink); }
+    .nav-circ:hover { transform: translateY(-1px); }
+    .menu-m {
+      position: absolute;
+      left: 16px; right: 16px;
+      top: calc(100% + 8px);
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      padding: 8px;
+      background: #fff;
+      border-radius: 14px;
+      box-shadow: 0 16px 40px #1C2E0C29;
+    }
+    .menu-m a { padding: 14px 16px; border-radius: 10px; font-size: 15px; font-weight: 500; line-height: 20px; color: var(--c-ink); }
+    .menu-m a.ativo, .menu-m a:hover { background: var(--c-pill); }
+
+    .hero-texto {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 18px;
+      padding: 36px 16px 0;
+    }
+    .hero-h1 {
+      align-self: stretch;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      font-size: 42px;
+      font-weight: 700;
+      letter-spacing: -0.045em;
+      line-height: 46px;
+      color: #fff;
+    }
+    /* linha de destaque no verde-lima da logo, que sobre o verde escuro faz o papel do ciano do template */
+    .hero-h1 .l2 { color: var(--c-lima); }
+    /* "24h" em vermelho vivo; o halo escuro separa o vermelho do verde (cores de luminancia parecida) */
+    .hero-h1 .h24 { color: var(--c-vermelho); text-shadow: 0 2px 4px rgba(0,0,0,.28), 0 4px 22px rgba(0,0,0,.5); }
+    .hero-h1 .l3 { font-weight: 500; }
+    .hero-sub { width: 330px; max-width: 100%; text-align: center; font-size: 14px; font-weight: 500; line-height: 22px; color: #fff; }
+    .hero-cta { width: 324px; max-width: 100%; height: 56px; gap: 10px; margin-top: 6px; box-shadow: 0 10px 26px #25D36659; }
+    .hero-cta .lbl { font-size: 12px; font-weight: 700; letter-spacing: 0.14em; line-height: 14px; }
+    .hero-cta svg { width: 18px; height: 18px; }
+
+    /* ── HERO CARDS ── */
+    .hero-cards { position: relative; z-index: 3; display: flex; flex-direction: column; gap: 12px; width: 272px; margin: -37px auto 0; }
+    .hc {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      padding: 20px 18px 22px 20px;
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 10px 30px #1C2E0C1A;
+      transition: transform .35s var(--ease), box-shadow .35s var(--ease);
+    }
+    .hc:nth-child(3) { display: none; }
+    .hc-txt { display: flex; flex-direction: column; gap: 10px; }
+    .hc-n { font-size: 12px; font-weight: 600; line-height: 14px; color: var(--c-brand); }
+    .hc-d { font-size: 15px; font-weight: 500; line-height: 21px; color: var(--c-ink); }
+    /* cada texto fica sempre em 2 linhas, como na prancheta */
+    .hc-d span { display: block; white-space: nowrap; }
+    .hc-ic { width: 44px; height: 44px; border-radius: 12px; background: var(--c-logo); color: #fff; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .hc-ic svg { width: 20px; height: 20px; }
+    .hc:hover { transform: translateY(-4px); box-shadow: 0 16px 38px #1C2E0C26; }
+
+    /* ── CARROSSEIS (avaliacoes e etapas) ── */
+    .sec-car { --pl: 16px; display: flex; flex-direction: column; gap: 28px; overflow: clip; }
+    .sec-aval { padding-top: 29px; }
+    .sec-etapas { padding-top: 88px; gap: 26px; }
+    .car-cab { display: flex; flex-direction: column; gap: 12px; margin: 0 var(--pl); }
+    .car-tag { font-size: 16px; line-height: 20px; color: var(--c-brand); }
+    .car-dir { display: flex; flex-direction: column; gap: 12px; }
+    .car-h2 { display: flex; font-size: 30px; font-weight: 500; letter-spacing: -0.03em; line-height: 36px; color: var(--c-ink); }
+    .car-h2 .c { color: var(--c-brand); }
+    .sec-aval .car-h2 { gap: 8px; }
+    .sec-etapas .car-h2 { flex-direction: column; font-size: 26px; line-height: 32px; }
+    .car-p { font-size: 14px; line-height: 22px; color: var(--c-body); }
+    .car-track {
+      position: relative;
+      overflow: hidden;
+      padding: 12px 0 30px var(--pl);
+      margin: -12px 0 -30px;
+      cursor: grab;
+      touch-action: pan-y;
+      -webkit-user-select: none;
+      user-select: none;
+    }
+    .car-track.arrastando { cursor: grabbing; }
+    .car-fita { display: flex; gap: 12px; width: max-content; will-change: transform; }
+    .car-fita > * { flex-shrink: 0; }
+    .car-track img { -webkit-user-drag: none; pointer-events: none; }
+    .car-prog { position: relative; height: 4px; margin: 0 var(--pl); background: var(--c-trilho); border-radius: 4px; overflow: hidden; }
+    .car-prog span { position: absolute; left: 0; top: 0; height: 100%; width: 20.1%; background: var(--c-logo); border-radius: 4px; will-change: transform; }
+    .sec-etapas .car-prog span { width: 25.1%; }
+
+    .av {
+      width: 270px;
+      padding: 8px;
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 8px 24px #1C2E0C14;
+      transition: transform .35s var(--ease), box-shadow .35s var(--ease);
+    }
+    .av img { width: 254px; height: 319px; border-radius: 12px; object-fit: cover; }
+
+    .et {
+      width: 272px;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      padding: 8px 8px 24px;
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 8px 24px #1C2E0C14;
+      transition: transform .35s var(--ease), box-shadow .35s var(--ease);
+    }
+    .et-img { position: relative; height: 160px; border-radius: 14px; overflow: hidden; }
+    .et-img img { width: 100%; height: 100%; object-fit: cover; }
+    .et-n {
+      position: absolute; left: 14px; top: 14px;
+      width: 36px; height: 36px;
+      display: flex; align-items: center; justify-content: center;
+      background: #fff; border-radius: 9px;
+      font-size: 11px; font-weight: 500; line-height: 14px; color: var(--c-brand);
+    }
+    .et-txt { display: flex; flex-direction: column; gap: 8px; padding: 0 12px; }
+    .et h3 { font-size: 16px; font-weight: 500; line-height: 22px; color: var(--c-ink); }
+    .et p { font-size: 13px; line-height: 21px; color: var(--c-body); }
+    .av:hover, .et:hover { transform: translateY(-4px); box-shadow: 0 16px 36px #1C2E0C1F; }
+
+    /* ── DESTAQUES ── */
+    .sec-dest { display: flex; flex-direction: column; align-items: center; gap: 24px; padding: 80px 16px 72px; background: #fff; }
+    .dest-cab { display: flex; flex-direction: column; align-items: center; gap: 14px; }
+    .selo {
+      display: flex; align-items: center; gap: 7px;
+      padding: 6px 14px;
+      border: 1px solid #C3DA9A; border-radius: 999px;
+      font-size: 11px; font-weight: 500; line-height: 14px; color: var(--c-ink);
+    }
+    .selo svg { width: 12px; height: 12px; color: var(--c-brand); }
+    .dest-h2 { display: flex; flex-direction: column; align-items: center; text-align: center; font-size: 26px; font-weight: 500; letter-spacing: -0.045em; line-height: 32px; color: var(--c-ink); }
+    .dest-cards { display: flex; flex-direction: column; gap: 14px; width: 100%; }
+    .dc {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      background: #fff;
+      border: 1.5px solid var(--c-border);
+      border-radius: 12px;
+      overflow: clip;
+      transition: transform .35s var(--ease), box-shadow .35s var(--ease);
+    }
+    .dc-img { width: 100%; height: 190px; object-fit: cover; }
+    .dc-img--exames { object-position: 50% 36%; }
+    .dc-img--consultas { object-position: 50% 30%; }
+    .dc-img--cirurgia { object-position: 50% 38%; }
+    .dc-body { position: relative; display: flex; flex-direction: column; gap: 14px; padding: 18px 18px 20px 20px; }
+    .dc-tag {
+      align-self: flex-start;
+      padding: 6px 12px;
+      background: #fff;
+      border: 1px solid var(--c-muted); border-radius: 999px;
+      font-size: 11px; font-weight: 500; line-height: 13px; color: var(--c-muted);
+    }
+    .dc-main { display: flex; align-items: flex-end; justify-content: space-between; }
+    .dc--desc .dc-main { flex-direction: column; align-items: stretch; justify-content: flex-start; gap: 14px; }
+    .dc h3 { display: flex; flex-direction: column; font-size: 21px; font-weight: 500; letter-spacing: -0.02em; line-height: 28px; color: var(--c-ink); }
+    .dc-row { display: flex; align-items: flex-end; justify-content: space-between; gap: 16px; }
+    .dc-row p { flex: 1; min-width: 0; font-size: 13px; line-height: 21px; color: var(--c-body); }
+    .dc:hover { transform: translateY(-4px); box-shadow: 0 16px 36px #1C2E0C1A; }
+
+    /* ── SERVICOS ── */
+    .sec-serv { display: flex; flex-direction: column; align-items: center; padding-bottom: 64px; background: var(--c-soft); }
+    .serv-titulo { position: relative; width: 100%; height: 150px; overflow: clip; flex-shrink: 0; }
+    .serv-palco { position: absolute; left: 50%; top: 0; width: 390px; height: 100%; transform: translateX(-50%); }
+    .serv-gigante {
+      position: absolute;
+      left: 0; right: 0;
+      top: 26px;
+      text-align: center;
+      font-size: 112px;
+      font-weight: 400;
+      letter-spacing: -0.075em;
+      line-height: 112px;
+      background: linear-gradient(180deg, #4C7A22 38%, rgba(76,122,34,0) 80%);
+      background: linear-gradient(in oklab 180deg, #4C7A22 38%, rgba(76,122,34,0) 80%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .serv-pill { display: none; }
+    .serv-sub { max-width: 390px; padding: 0 24px 32px; text-align: center; font-size: 20px; font-weight: 500; letter-spacing: -0.03em; line-height: 28px; color: var(--c-ink); }
+    .serv-sub span { display: block; }
+    .serv-lista { display: flex; flex-direction: column; width: calc(100% - 32px); border-top: 2px solid var(--c-line); }
+    .sr {
+      display: grid;
+      grid-template-columns: 1fr;
+      column-gap: 12px;
+      align-items: center;
+      padding: 22px 0;
+      border-bottom: 2px solid var(--c-line);
+      cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
+    }
+    /* foto escondida: no mobile abre para cima ao tocar e empurra o texto para baixo */
+    .sr-midia {
+      grid-column: 1 / -1;
+      display: block;
+      height: 0;
+      overflow: hidden;
+      border-radius: 10px;
+      outline: 2px solid transparent;
+      transition: height .55s var(--ease), margin .55s var(--ease), outline-color .3s;
+    }
+    .sr-midia img { width: 100%; height: 150px; object-fit: cover; opacity: 0; transform: scale(1.08); transition: opacity .45s var(--ease), transform .7s var(--ease); }
+    .sr.aberto .sr-midia { height: 150px; margin-bottom: 16px; outline-color: #C3DA9A; }
+    .sr.aberto .sr-midia img { opacity: 1; transform: none; }
+    .sr-info { flex: 1; min-width: 0; display: grid; grid-template-columns: 18px 1fr; column-gap: 8px; row-gap: 8px; align-items: center; }
+    .sr-ic { display: flex; width: 18px; color: var(--c-muted); }
+    .sr-ic svg { width: 16px; height: 16px; }
+    .sr-nome { font-size: 30px; font-weight: 500; letter-spacing: -0.045em; line-height: 36px; color: var(--c-ink); transition: color .35s var(--ease); }
+    .sr-desc { grid-column: 2; font-size: 13px; line-height: 20px; color: var(--c-body); }
+    /* estado aberto = a linha em destaque da prancheta (nome na cor da marca) */
+    .sr.aberto .sr-nome { color: var(--c-brand); }
+
+    /* ── CARDS CAES E GATOS: foto redonda com etiqueta e titulo abaixo (pedido do cliente em 21/09/2026) ── */
+    .sec-pets { display: flex; flex-direction: column; gap: 14px; padding: 12px 16px 0; background: #fff; }
+    .pc {
+      position: relative;
+      height: 460px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      padding: 0 20px;
+      text-align: center;
+      background: var(--c-soft);
+      border-radius: 12px;
+      overflow: clip;
+      isolation: isolate;
+      transition: transform .35s var(--ease), box-shadow .35s var(--ease);
+    }
+    .pc--gatos { background: #E8F1D6; }
+    /* "caes" e "gatos" gigantes viram marca d'agua verde atras da foto */
+    .pc-gigante {
+      position: absolute;
+      top: -40px; left: 0; right: 0;
+      z-index: -1;
+      font-size: 130px;
+      font-weight: 400;
+      letter-spacing: -0.075em;
+      line-height: 130px;
+      background: linear-gradient(180deg, rgba(76,122,34,.24) 40%, rgba(76,122,34,0) 80%);
+      background: linear-gradient(in oklab 180deg, rgba(76,122,34,.24) 40%, rgba(76,122,34,0) 80%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      pointer-events: none;
+    }
+    .pc-foto {
+      width: 240px; height: 240px;
+      flex-shrink: 0;
+      margin-bottom: 6px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 6px solid #fff;
+      box-shadow: 0 16px 36px #1C2E0C26;
+    }
+    .pc-img { width: 100%; height: 100%; object-fit: cover; transition: transform 1s var(--ease); }
+    .pc-tag {
+      display: flex; align-items: center; gap: 6px;
+      padding: 6px 12px;
+      background: #fff;
+      border: 1px solid var(--c-muted); border-radius: 999px;
+      font-size: 11px; font-weight: 500; line-height: 13px; color: var(--c-muted);
+    }
+    .pc-tag svg { width: 11px; height: 11px; }
+    .pc-h3 { display: flex; flex-direction: column; font-size: 22px; font-weight: 500; letter-spacing: -0.03em; line-height: 28px; color: var(--c-ink); }
+    .pc:hover { transform: translateY(-4px); box-shadow: 0 18px 40px #1C2E0C1A; }
+    .pc:hover .pc-img { transform: scale(1.05); }
+
+    /* ── CTA FINAL ── */
+    .sec-cta { padding: 110px 16px 0; }
+    .cta-card {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      padding: 186px 20px 20px;
+      background: var(--c-brand);
+      border-radius: 24px;
+    }
+    .cta-mapa {
+      position: absolute;
+      left: 20px; right: 20px; top: -44px;
+      height: 208px;
+      overflow: hidden;
+      background: #6B9E2C4D;
+      border-radius: 20px;
+      box-shadow: 0 14px 34px #1C2E0C33;
+    }
+    .cta-mapa iframe { display: block; width: 100%; height: 100%; border: 0; }
+    .cta-tag { font-size: 16px; line-height: 20px; color: #fff; }
+    .cta-conteudo { display: flex; flex-direction: column; gap: 14px; }
+    .cta-h2 { display: flex; flex-direction: column; font-size: 26px; font-weight: 500; letter-spacing: -0.02em; line-height: 32px; color: #fff; }
+    .cta-p { font-size: 14px; line-height: 22px; color: #FFFFFFE0; }
+    /* botao unico, branco, alinhado com o texto (pedido do cliente em 23/09/2026) */
+    .cta-btn {
+      align-self: flex-start;
+      height: 54px;
+      gap: 10px;
+      margin-top: 4px;
+      padding: 0 26px;
+      background: #fff;
+      color: var(--c-brand);
+      box-shadow: 0 10px 26px rgba(0,0,0,.22);
+    }
+    .cta-btn .lbl { text-transform: uppercase; }
+    .cta-btn svg { color: var(--wpp); }
+    .cta-btn::after { display: none; }
+    .cta-btn:hover { filter: none; box-shadow: 0 14px 32px rgba(0,0,0,.28); transform: translateY(-2px); }
+    .cta-btn .lbl { font-size: 11px; font-weight: 700; letter-spacing: 0.14em; line-height: 14px; }
+    .cta-btn svg { width: 18px; height: 18px; }
+
+    /* ── RODAPE ── */
+    .rodape { padding-top: 24px; }
+    .rod-in {
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+      padding: 40px 20px 96px;
+      background: var(--c-footer);
+      border-radius: 28px 28px 0 0;
+      color: #fff;
+    }
+    .rod-l1 { display: flex; flex-direction: column; gap: 22px; }
+    .rod-logo { display: flex; align-items: center; gap: 12px; font-size: 19px; font-weight: 600; line-height: 24px; }
+    .rod-logo .ic { width: 42px; height: 42px; border-radius: 50%; background: #fff; overflow: hidden; flex-shrink: 0; }
+    .rod-logo .ic img { width: 100%; height: 100%; object-fit: cover; }
+    .rod-wpp { display: flex; flex-direction: column; gap: 4px; }
+    .rod-wpp b { font-size: 18px; font-weight: 600; line-height: 24px; transition: color .3s; }
+    .rod-wpp span { font-size: 13px; line-height: 18px; color: #FFFFFFA6; }
+    .rod-wpp:hover b { color: var(--wpp); }
+    .rod-l2 { display: flex; flex-direction: column; gap: 14px; padding-top: 22px; border-top: 1px solid #FFFFFF1F; }
+    .rod-copy { display: flex; flex-direction: column; gap: 4px; font-size: 12px; line-height: 19px; color: #FFFFFF99; }
+    .rod-chegar { font-size: 12px; font-weight: 500; line-height: 18px; color: var(--c-light); transition: color .3s; }
+    .rod-chegar:hover { color: #fff; }
+
+    /* ── BOTAO FLUTUANTE DO WHATSAPP ── */
+    @keyframes pulso { 0% { transform: scale(1); opacity: .55; } 70%, 100% { transform: scale(1.55); opacity: 0; } }
+    .wpp-float {
+      position: fixed;
+      right: 18px;
+      bottom: calc(18px + env(safe-area-inset-bottom));
+      z-index: 50;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      box-shadow: 0 10px 26px #25D36673;
+    }
+    .wpp-float::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      background: var(--wpp);
+      animation: pulso 2.6s ease-out infinite;
+      z-index: -1;
+    }
+    .wpp-float svg { width: 30px; height: 30px; }
+    .wpp-float.btn-wpp { overflow: visible; transition: opacity .35s var(--ease), transform .45s var(--ease); }
+    .wpp-float.btn-wpp::after { display: none; }
+
+    /* ── TABLET: mantem o layout mobile, com largura contida ── */
+    @media (min-width: 600px) and (max-width: 1023px) {
+      .dest-cards, .serv-lista, .cta-card { max-width: 560px; margin-left: auto; margin-right: auto; }
+      .sec-pets .pc { width: 100%; max-width: 560px; margin: 0 auto; }
+    }
+
+    @media (max-width: 1023px) {
+      .only-d { display: none !important; }
+      /* texto gigante atras do cachorro oculto no mobile (pedido do cliente) */
+      .hero-gigante { display: none; }
+      /* mobile: hero estatico, sem animar a foto grande (ela e o LCP; a animacao atrasava o Speed Index) */
+      .hero-cao { animation: none; }
+    }
+
+    /* ════════════════ DESKTOP (prancheta 1440) ════════════════ */
+    @media (min-width: 1024px) {
+      .only-m { display: none !important; }
+
+      /* hero */
+      .hero {
+        height: 870px;
+        background: linear-gradient(100deg, #2E4C12 0%, #4C7A22 30%, #6B9E2C 62%, #9DC63E 100%);
+        background: linear-gradient(in oklab 100deg, #2E4C12 0%, #4C7A22 30%, #6B9E2C 62%, #9DC63E 100%);
+      }
+      .hero-palco { display: block; max-width: 1440px; margin: 0 auto; }
+      .hero-arco { top: 205px; bottom: auto; width: 868px; height: 665px; border-radius: 150px 150px 0 0; }
+      .hero-gigante { top: 104px; bottom: auto; width: 381px; height: auto; }
+      .hero-gigante span { padding-right: 14px; }
+      .hero-gigante .g1 { height: 66px; }
+      .hero-gigante .g2 { height: 136px; }
+      .hero-gigante b { line-height: 170px; }
+      .hero-gigante .g1 b { font-size: 100px; height: 125px; }
+      .hero-gigante .g2 b { font-size: 100px; height: 117px; }
+      .hero-cao { right: -17px; bottom: 2px; width: min(1349px, 93.68vw); height: auto; aspect-ratio: 1349 / 764; }
+      .hero-barra { position: absolute; top: 11px; right: 52px; height: auto; padding: 0; gap: 46px; }
+      .hero-barra div { gap: 8px; }
+      .hero-barra svg { width: 13px; height: 13px; }
+      .nav-wrap { position: absolute; top: 37px; left: 52px; right: 52px; padding: 0; }
+      .nav { height: 75px; padding: 0 16px; }
+      .logo-ic { width: 40px; height: 40px; border-radius: 10px; }
+      .logo-nome { line-height: 13px; }
+      .nav-acoes-m { display: none; }
+      .nav-menu { display: flex; align-items: center; gap: 6px; }
+      .nav-menu a {
+        display: flex; align-items: center;
+        padding: 12px 16px;
+        border-radius: 8px;
+        font-size: 12px; font-weight: 500; line-height: 14px; color: var(--c-ink);
+        transition: background .25s;
+      }
+      .nav-menu a.ativo, .nav-menu a:hover { background: var(--c-pill); }
+      .nav-acoes-d { display: flex; align-items: center; justify-content: flex-end; gap: 18px; width: 300px; flex-shrink: 0; }
+      .nav-chat { display: flex; color: var(--c-ink); transition: color .3s, transform .3s var(--ease); }
+      .nav-chat svg { width: 18px; height: 18px; stroke-width: 1.8; }
+      .nav-chat:hover { color: var(--wpp); transform: translateY(-1px); }
+      .nav-btn { width: 132px; height: 44px; }
+      .nav-btn .lbl { font-size: 12px; font-weight: 500; line-height: 14px; }
+      .hero-texto { position: absolute; top: 176px; left: 52px; align-items: flex-start; gap: 44px; padding: 0; }
+      .hero-h1 { align-self: auto; text-align: left; font-size: clamp(52px, 4.72vw, 68px); line-height: 1.0588; }
+      .hero-sub { width: 400px; text-align: left; font-size: 12px; line-height: 24px; }
+      .hero-cta { width: 352px; height: 67px; padding: 20px 34px; margin-top: 10px; }
+      .hero-cta .lbl { font-family: var(--f2); font-size: 14px; letter-spacing: 0.18em; }
+      .hero-cta svg { width: 20px; height: 20px; }
+
+      /* hero cards */
+      .hero-cards { flex-direction: row; gap: 20px; width: min(1120px, calc(100% - 64px)); margin-top: -58px; }
+      .hc { flex: 0 1 360px; padding: 24px 24px 26px 28px; border-radius: 20px; box-shadow: 0 10px 30px #15200C0F; }
+      .hc:nth-child(3) { display: flex; }
+      .hc-txt { gap: 12px; }
+      .hc-n { font-family: var(--f2); font-weight: 500; color: var(--c-brand); }
+      .hc-d { font-family: var(--f2); font-size: 14px; line-height: 20px; color: var(--c-ink); }
+
+      /* carrosseis */
+      .sec-car { --pl: max(140px, calc((100% - 1160px) / 2)); gap: 48px; }
+      .sec-aval { padding-top: 82px; }
+      .sec-etapas { padding-top: 150px; gap: 48px; }
+      .car-cab { flex-direction: row; align-items: flex-start; gap: 0; }
+      .car-tag { width: 50%; flex-shrink: 0; padding-top: 4px; font-size: 20px; line-height: 22px; }
+      .car-dir { gap: 18px; }
+      .car-h2, .sec-etapas .car-h2 { font-size: 36px; letter-spacing: -0.015em; line-height: 44px; }
+      .sec-aval .car-h2 { gap: 11px; }
+      .car-p { width: 460px; max-width: 100%; font-size: 15px; line-height: 24px; }
+      .car-fita { gap: 20px; }
+      .sec-aval .car-prog span, .sec-etapas .car-prog span { width: 37.93%; }
+      .av { width: 370px; padding: 10px; border-radius: 20px; box-shadow: none; }
+      .av img { width: 350px; height: 439px; border-radius: 14px; }
+      .et { width: 370px; gap: 22px; padding: 10px 10px 30px; border-radius: 20px; box-shadow: none; }
+      .et-img { height: 220px; }
+      .et-txt { gap: 12px; padding: 0 18px; }
+
+      /* destaques */
+      .sec-dest { gap: 28px; padding: 108px 15px 97px; }
+      .selo { padding: 5px 14px; font-size: 9px; line-height: 12px; }
+      .selo svg { width: 11px; height: 11px; }
+      .dest-h2 { font-size: 46px; line-height: 56px; }
+      .dest-cards { flex-direction: row; gap: 15px; }
+      .dc { height: 372px; border-radius: 10px; flex: 384 1 0; min-width: 0; }
+      .dc--grande { flex: 571 1 0; }
+      .dc-img { position: absolute; top: 0; right: 0; width: 57.3%; height: 100%; }
+      .dc--grande .dc-img { width: 57.8%; }
+      .dc-img--exames { object-position: 45% 50%; }
+      .dc-img--consultas { object-position: 68% 50%; }
+      .dc-img--cirurgia { object-position: 55% 45%; }
+      .dc-body { height: 100%; justify-content: space-between; padding: 32px 30px 36px; }
+      .dc-tag { font-size: 9px; line-height: 11px; }
+      .dc-main, .dc--desc .dc-main { flex-direction: column; align-items: flex-start; justify-content: flex-start; gap: 22px; }
+      .dc--desc .dc-main { gap: 16px; }
+      .dc h3 { line-height: 32px; }
+      .dc-row { flex-direction: column; align-items: flex-start; gap: 22px; }
+      .dc-row p { flex: none; width: 201px; font-size: 10px; line-height: 22px; }
+
+      /* servicos */
+      .sec-serv { padding-bottom: 111px; }
+      .serv-titulo { height: 272px; }
+      .serv-palco { width: 1440px; }
+      .serv-gigante {
+        top: 50px;
+        font-size: 250px;
+        line-height: 250px;
+        background: linear-gradient(180deg, #4C7A22 38%, rgba(76,122,34,0) 78%);
+        background: linear-gradient(in oklab 180deg, #4C7A22 38%, rgba(76,122,34,0) 78%);
+        -webkit-background-clip: text;
+        background-clip: text;
+      }
+      /* notificacoes flutuando */
+      .serv-pill {
+        position: absolute;
+        left: 0; top: 0;
+        display: flex;
+        transform-origin: 0 0;
+        padding: 12px 22px;
+        background: #fff;
+        border-radius: 999px;
+        box-shadow: 0 10px 24px #1C2E0C24;
+        font-size: 10px; font-weight: 500; line-height: 12px; color: var(--c-ink);
+        animation: flutua 4.6s ease-in-out infinite;
+      }
+      .serv-pill.p1 { rotate: -30deg; translate: 257px 97.4px; }
+      .serv-pill.p2 { rotate: 20deg; translate: 543px 28.4px; animation-duration: 5.2s; animation-delay: -1.3s; }
+      .serv-pill.p3 { rotate: 20deg; translate: 914px 34.4px; animation-duration: 4.9s; animation-delay: -2.4s; }
+      .serv-pill.p4 { rotate: -45deg; translate: 1134px 194.4px; animation-duration: 5.6s; animation-delay: -.7s; }
+      .serv-sub { max-width: none; padding: 0 0 50px; font-size: 26px; letter-spacing: -0.035em; line-height: 36px; }
+      .serv-sub span { display: block; }
+      .serv-lista { width: 878px; max-width: calc(100% - 64px); }
+      .sr { display: flex; align-items: center; height: 147px; padding: 0; }
+      .sr-info { margin-right: auto; }
+      /* no desktop a foto abre na lateral e o texto desliza para a direita */
+      .sr-midia { width: 0; height: 133px; flex-shrink: 0; transition: width .55s var(--ease), margin .55s var(--ease), outline-color .3s; }
+      .sr-midia img { width: 188px; height: 133px; }
+      .sr.aberto .sr-midia { width: 188px; height: 133px; margin: 0 24px 0 0; }
+      .sr-info { flex: none; grid-template-columns: 18px auto; column-gap: 10px; row-gap: 14px; }
+      .sr-ic { grid-row: 1 / span 2; align-self: start; padding-top: 10px; }
+      .sr-nome { font-size: 48px; line-height: 52px; }
+      .sr-desc { font-size: 11px; line-height: 14px; }
+
+      /* cards caes e gatos */
+      .sec-pets { flex-direction: row; gap: 16px; padding: 12px 15px 0; }
+      .pc { flex: 1 1 0; height: 602px; gap: 20px; }
+      .pc-gigante { top: -70px; font-size: 240px; line-height: 240px; }
+      .pc-foto { width: 340px; height: 340px; border-width: 8px; margin-bottom: 10px; }
+      .pc-tag { padding: 6px 14px; }
+      .pc-h3 { font-size: 32px; letter-spacing: -0.035em; line-height: 40px; }
+
+      /* cta final */
+      .sec-cta { padding: 130px 70px 0; }
+      .cta-card { height: 400px; gap: 0; padding: 64px 0 0 50%; border-radius: 32px; }
+      .cta-mapa { left: 15.385%; right: auto; top: -60px; width: 29.23%; height: 460px; border-radius: 24px; }
+      .cta-tag { position: absolute; left: 70px; top: 64px; font-size: 20px; line-height: 22px; }
+      .cta-conteudo { gap: 18px; padding-right: 40px; }
+      .cta-h2 { font-size: clamp(26px, 2.36vw, 34px); letter-spacing: -0.015em; line-height: 1.235; }
+      .cta-p { width: 430px; max-width: 100%; }
+      .cta-btn { height: 56px; margin-top: 6px; padding: 0 34px; }
+      .cta-btn .lbl { letter-spacing: 0.18em; }
+      .cta-btn svg { width: 20px; height: 20px; }
+
+      /* rodape */
+      .rod-in { gap: 30px; padding: 54px max(140px, calc((100% - 1160px) / 2)) 40px; border-radius: 32px 32px 0 0; }
+      .rod-l1 { flex-direction: row; align-items: flex-end; justify-content: space-between; }
+      .rod-logo { font-size: 20px; }
+      .rod-wpp { align-items: flex-end; }
+      .rod-wpp span { font-size: 12px; line-height: 16px; }
+      .rod-l2 { flex-direction: row; align-items: flex-end; justify-content: space-between; padding-top: 26px; }
+      .rod-copy { line-height: 18px; }
+
+      /* botao flutuante no desktop */
+      .wpp-float { right: 28px; bottom: 28px; }
+    }
+
+    /* notebooks estreitos (1024 a 1279): mesmo layout, com folga para o texto nao invadir as fotos */
+    @media (min-width: 1024px) and (max-width: 1279px) {
+      .dc { container-type: inline-size; }
+      .dc-img, .dc--grande .dc-img { width: 42%; }
+      .dc-main, .dc--desc .dc-main { max-width: calc(58cqw - 42px); }
+      .dc h3 { font-size: 17px; line-height: 24px; }
+      .dc-row p { width: auto; }
+      .pc-h3 { font-size: 26px; line-height: 36px; }
+    }
+    .rod-chegar { white-space: nowrap; }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .js .rv:not(.vis) { opacity: 1; }
+      .rv.vis, .hero-cao, .hero-gigante, .serv-pill, .wpp-float::before { animation: none; }
+      .btn-wpp::after { display: none; }
+    }
+
+    /* card de contato centralizado no celular (pedido do cliente em 23/09/2026) */
+    @media (max-width: 1023px) {
+      .cta-card { text-align: center; }
+      .cta-tag { align-self: center; }
+      .cta-conteudo { align-items: center; }
+      .cta-h2 { align-items: center; }
+      .cta-p { margin-left: auto; margin-right: auto; }
+      .cta-btn { align-self: center; }
+    }
+
+    /* dobra "o que fazemos" oculta (pedido do cliente em 24/09/2026); para voltar, apague estas duas linhas */
+    .sec-dest { display: none; }
+
+    /* botoes na cor da marca no fim das dobras de depoimentos e servicos (pedido do cliente em 24/09/2026) */
+    .cta-linha { display: flex; justify-content: center; padding: 0 16px; }
+    .sec-serv .cta-linha { margin-top: 36px; }
+    .btn-marca {
+      display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+      height: 54px; padding: 0 28px;
+      background: var(--c-brand); color: #fff;
+      border-radius: 999px;
+      font-size: 11px; font-weight: 700; letter-spacing: 0.14em; line-height: 14px; text-transform: uppercase; text-align: center;
+      box-shadow: 0 10px 26px rgba(0,0,0,.18);
+      transition: transform .3s ease, box-shadow .3s ease, filter .3s ease;
+    }
+    .btn-marca svg { width: 18px; height: 18px; flex-shrink: 0; fill: currentColor; }
+    .btn-marca:hover { transform: translateY(-2px); box-shadow: 0 16px 34px rgba(0,0,0,.26); filter: brightness(1.08); }
+    @media (min-width: 1024px) {
+      .sec-serv .cta-linha { margin-top: 48px; }
+      .btn-marca { height: 56px; padding: 0 36px; font-size: 12px; letter-spacing: 0.18em; }
+      .btn-marca svg { width: 20px; height: 20px; }
+    }
+
+    /* respiro depois do botao dos depoimentos, igual ao do fim da dobra de servicos (pedido do cliente em 24/09/2026) */
+    .sec-aval .cta-linha { margin-bottom: 64px; }
+    @media (min-width: 1024px) { .sec-aval .cta-linha { margin-bottom: 111px; } }
+
+    /* texto das avaliacoes centralizado no mobile (pedido do cliente em 24/09/2026) */
+    @media (max-width: 1023px) {
+      .sec-aval .car-cab { align-items: center; text-align: center; }
+      .sec-aval .car-dir { align-items: center; }
+      .sec-aval .car-h2 { justify-content: center; flex-wrap: wrap; }
+    }
+
+    /* cards de caes e gatos: foto redonda sobre a palavra gigante (pedido do cliente em 24/09/2026) */
+    .sec-pets { display: flex; flex-direction: column; align-items: center; gap: 36px; padding: 36px 16px 8px; background: #fff; }
+    .pc {
+      position: relative; display: flex; flex-direction: column; align-items: center; gap: 14px;
+      width: 100%; max-width: 420px; height: auto; padding: 0; text-align: center;
+      background: none; border: 0; border-radius: 0; box-shadow: none; overflow: visible;
+      transition: transform .35s var(--ease);
+    }
+    .pc-topo { position: relative; display: flex; align-items: center; justify-content: center; width: 100%; height: 220px; }
+    .pc .pc-gigante {
+      position: absolute; left: 50%; top: 50%; right: auto; bottom: auto; transform: translate(-50%, -50%);
+      width: max-content; font-size: 130px; font-weight: 400; letter-spacing: -0.075em; line-height: 1;
+      background: linear-gradient(180deg, var(--c-logo) 18%, transparent 90%);
+      -webkit-background-clip: text; background-clip: text; color: transparent; pointer-events: none;
+    }
+    .pc--gatos .pc-gigante { background: linear-gradient(180deg, color-mix(in srgb, var(--c-light) 55%, var(--c-brand) 45%) 18%, transparent 90%); -webkit-background-clip: text; background-clip: text; }
+    .pc-foto {
+      position: relative; z-index: 1; width: 220px; height: 220px; flex-shrink: 0;
+      border-radius: 50%; overflow: hidden; border: 8px solid #fff; background: #fff;
+      box-shadow: 0 16px 34px rgba(0,0,0,.16);
+    }
+    .pc-foto > .pc-img { position: static; inset: auto; width: 100%; height: 100%; object-fit: cover; border-radius: 0; transition: transform .8s var(--ease); }
+    .pc .pc-tag { display: inline-flex; align-items: center; gap: 6px; padding: 6px 14px; background: #fff; border: 1px solid var(--c-border); border-radius: 999px; font-size: 11px; font-weight: 500; line-height: 13px; color: var(--c-brand); }
+    .pc .pc-tag svg { width: 11px; height: 11px; color: var(--c-brand); }
+    .pc .pc-h3 { display: flex; flex-direction: column; font-size: 22px; font-weight: 500; letter-spacing: -0.03em; line-height: 28px; color: var(--c-ink); }
+    .pc:hover { transform: translateY(-4px); box-shadow: none; }
+    .pc:hover .pc-foto > .pc-img { transform: scale(1.06); }
+    @media (min-width: 1024px) {
+      .sec-pets { flex-direction: row; align-items: flex-start; gap: 24px; padding: 56px 15px 24px; }
+      .pc { flex: 1 1 0; max-width: none; gap: 18px; }
+      .pc-topo { height: 320px; }
+      .pc .pc-gigante { font-size: 280px; }
+      .pc-foto { width: 320px; height: 320px; border-width: 10px; }
+      .pc .pc-tag { font-size: 12px; line-height: 14px; }
+      .pc .pc-h3 { font-size: 32px; letter-spacing: -0.035em; line-height: 40px; }
+    }
+
+    /* feixe de luz no 24h da headline: o feixe passa e o texto responde (pedido do cliente em 24/09/2026) */
+    .hero-h1 .h24 { position: relative; display: inline-block; transform-origin: center; animation: h24-pulso 3.5s ease-in-out 1.2s infinite; }
+    .hero-h1 .h24::after {
+      content: attr(data-brilho);
+      position: absolute; left: 0; top: 0; white-space: nowrap; pointer-events: none;
+      background: linear-gradient(100deg, transparent 32%, rgba(255,255,255,.92) 50%, transparent 68%);
+      background-size: 300% 100%; background-repeat: no-repeat;
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+      animation: h24-feixe 3.5s ease-in-out 1.2s infinite;
+    }
+    @keyframes h24-feixe { 0% { background-position: 100% 0; } 22% { background-position: 0 0; } 100% { background-position: 0 0; } }
+    @keyframes h24-pulso { 0%, 6%, 18%, 100% { transform: none; filter: none; } 11% { transform: translateY(-4px) scale(1.05); filter: drop-shadow(0 0 12px rgba(255,255,255,.6)); } }
+    @media (prefers-reduced-motion: reduce) { .hero-h1 .h24 { animation: none; } .hero-h1 .h24::after { display: none; } }
+  </style>
+</head>
+<body>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PT5CRMNH" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<!-- ICONES -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.6A8.4 8.4 0 1 1 21 11.5z"/></symbol>
+  <symbol id="i-alarme" viewBox="0 0 24 24"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2 2M5 3L2 6M22 6l-3-3"/></symbol>
+  <symbol id="i-relogio" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+  <symbol id="i-cruz" viewBox="0 0 24 24"><path d="M12 4v16M4 12h16" stroke-width="2.2"/></symbol>
+  <symbol id="i-frasco" viewBox="0 0 24 24"><path d="M9 3h6M10 3v6l-5 9a2 2 0 0 0 1.8 3h10.4a2 2 0 0 0 1.8-3l-5-9V3"/></symbol>
+  <symbol id="i-tag" viewBox="0 0 24 24"><path d="M17 3a3 3 0 0 0-2.8 4L7 14.2A3 3 0 1 0 9.8 17L17 9.8A3 3 0 1 0 17 3z"/></symbol>
+  <symbol id="i-seta" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h10"/></symbol>
+  <symbol id="i-esteto" viewBox="0 0 24 24"><path d="M5 3v6a5 5 0 0 0 10 0V3M10 14v2a5 5 0 0 0 10 0v-2"/><circle cx="20" cy="12" r="2"/></symbol>
+  <symbol id="i-raio" viewBox="0 0 24 24"><path d="M13 2L4.5 13H12l-1 9 8.5-11H13z"/></symbol>
+  <symbol id="i-pulso" viewBox="0 0 24 24"><path d="M3 12h4l3-7 4 14 3-7h4"/></symbol>
+  <symbol id="i-wpp" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></symbol>
+</svg>
+
+<!-- HERO -->
+<header class="hero" id="inicio">
+  <div class="hero-palco">
+    <div class="hero-arco"></div>
+    <div class="hero-gigante" aria-hidden="true">
+      <span class="g1"><b>Point</b></span>
+      <span class="g2"><b>Animal</b></span>
+    </div>
+    <picture>
+      <source media="(min-width:1024px)" srcset="img/hero-cao-1600.webp" width="1600" height="905" />
+      <img class="hero-cao" src="img/hero-cao-1100.webp" width="1100" height="622" alt="Golden retriever" fetchpriority="high" decoding="async" />
+    </picture>
+
+    <div class="hero-barra">
+      <div><svg class="i"><use href="#i-chat"/></svg>Atendimento pelo WhatsApp</div>
+      <div><svg class="i"><use href="#i-alarme"/></svg><span><span class="only-d">Todos os dias: </span>24 horas</span></div>
+    </div>
+
+    <div class="nav-wrap">
+      <nav class="nav" aria-label="Navegação principal">
+        <div class="logo">
+          <span class="logo-ic"><img src="img/logo-96.webp" width="96" height="96" alt="Logo Point Animal" /></span>
+          <span class="logo-nome"><span>Point</span><span>Animal</span></span>
+        </div>
+        <div class="nav-menu">
+          <a href="#inicio" class="ativo">Início</a>
+          <a href="#servicos">Serviços</a>
+          <a href="#avaliacoes">Avaliações</a>
+          <a href="#contato">Contato</a>
+        </div>
+        <div class="nav-acoes-d">
+          <a class="nav-chat" href="https://wa.me/5551998282558?text=Ol%C3%A1%20encontrei%20voc%C3%AAs%20pelo%20Google%2C%20gostaria%20de%20atendimento." target="_blank" rel="noopener" data-wpp aria-label="Falar no WhatsApp"><svg class="i"><use href="#i-chat"/></svg></a>
+          <a class="btn-wpp nav-btn" href="https://wa.me/5551998282558?text=Ol%C3%A1%20encontrei%20voc%C3%AAs%20pelo%20Google%2C%20gostaria%20de%20atendimento." target="_blank" rel="noopener" data-wpp data-abrindo="Abrindo o WhatsApp"><span class="lbl">Entre em contato</span></a>
+        </div>
+        <div class="nav-acoes-m">
+          <a class="nav-circ nav-circ--wpp" href="https://wa.me/5551998282558?text=Ol%C3%A1%20encontrei%20voc%C3%AAs%20pelo%20Google%2C%20gostaria%20de%20atendimento." target="_blank" rel="noopener" data-wpp aria-label="Falar no WhatsApp"><svg class="i"><use href="#i-chat"/></svg></a>
+          <button class="nav-circ nav-circ--menu" id="btnMenu" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menuM"><svg class="i"><use href="#i-menu"/></svg></button>
+        </div>
+      </nav>
+      <div class="menu-m" id="menuM" hidden>
+        <a href="#inicio" class="ativo">Início</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#avaliacoes">Avaliações</a>
+        <a href="#contato">Contato</a>
+      </div>
+    </div>
+
+    <div class="hero-texto">
+      <h1 class="hero-h1">
+        <span class="l1">Clínica</span>
+        <span class="l2">Veterinária <span class="h24" data-brilho="24h">24h</span></span>
+        <span class="l3">em Porto Alegre</span>
+      </h1>
+      <p class="hero-sub">Clínica veterinária Point Animal em Porto Alegre. Prontos para qualquer emergência que seu pet precisar!</p>
+      <a class="btn-wpp hero-cta" href="https://wa.me/5551998282558?text=Ol%C3%A1%20encontrei%20voc%C3%AAs%20pelo%20Google%2C%20gostaria%20de%20atendimento." target="_blank" rel="noopener" data-wpp>
+        <span class="lbl">ATENDIMENTO IMEDIATO</span>
+        <svg class="i-wpp"><use href="#i-wpp"/></svg>
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- HERO CARDS -->
+<div class="hero-cards">
+  <div class="hc rv" style="--d:.45s">
+    <div class="hc-txt"><span class="hc-n">#1</span><span class="hc-d"><span>Aberta 24 horas,</span> <span>todos os dias</span></span></div>
+    <span class="hc-ic"><svg class="i"><use href="#i-relogio"/></svg></span>
+  </div>
+  <div class="hc rv" style="--d:.55s">
+    <div class="hc-txt"><span class="hc-n">#2</span><span class="hc-d"><span>Mais de 18 anos</span> <span>de experiência</span></span></div>
+    <span class="hc-ic"><svg class="i"><use href="#i-esteto"/></svg></span>
+  </div>
+  <div class="hc rv" style="--d:.65s">
+    <div class="hc-txt"><span class="hc-n">#3</span><span class="hc-d"><span>Referência em</span> <span>Porto Alegre</span></span></div>
+    <span class="hc-ic"><svg class="i"><use href="#i-pin"/></svg></span>
+  </div>
+</div>
+
+<!-- AVALIACOES -->
+<section class="sec-car sec-aval" id="avaliacoes" data-carrossel>
+  <div class="car-cab">
+    <div class="car-tag rv">avaliações</div>
+    <div class="car-dir">
+      <h2 class="car-h2 rv" style="--d:.08s"><span class="c">Depoimentos</span><span>reais</span></h2>
+      <p class="car-p rv" style="--d:.16s">Porto Alegre confia na Point Animal. Veja o que os tutores dizem sobre o atendimento da nossa equipe.</p>
+    </div>
+  </div>
+  <div class="car-track">
+    <div class="av rv"><img src="img/avaliacao-1.webp" width="496" height="636" alt="Avaliação real de tutor no Google" loading="lazy" decoding="async" /></div>
+    <div class="av rv" style="--d:.08s"><img src="img/avaliacao-2.webp" width="496" height="636" alt="Avaliação real de tutor no Google" loading="lazy" decoding="async" /></div>
+    <div class="av rv" style="--d:.16s"><img src="img/avaliacao-3.webp" width="496" height="636" alt="Avaliação real de tutor no Google" loading="lazy" decoding="async" /></div>
+    <div class="av rv" style="--d:.24s"><img src="img/avaliacao-4.webp" width="496" height="636" alt="Avaliação real de tutor no Google" loading="lazy" decoding="async" /></div>
+    <div class="av rv" style="--d:.32s"><img src="img/avaliacao-5.webp" width="496" height="636" alt="Avaliação real de tutor no Google" loading="lazy" decoding="async" /></div>
+  </div>
+  <div class="car-prog"><span></span></div>
+  <div class="cta-linha">
+    <a class="btn-marca" href="https://wa.me/5551998282558?text=Ol%C3%A1%20encontrei%20voc%C3%AAs%20pelo%20Google%2C%20gostaria%20de%20atendimento." target="_blank" rel="noopener" data-wpp>
+      <span class="lbl">Falar com Veterinário Agora</span>
+      <svg class="i-wpp"><use href="#i-wpp"/></svg>
+    </a>
+  </div>
+</section>
+
+<!-- DESTAQUES -->
+<section class="sec-dest">
+  <div class="dest-cab">
+    <span class="selo rv"><svg class="i"><use href="#i-tag"/></svg>O que fazemos</span>
+    <h2 class="dest-h2 rv" style="--d:.08s"><span>Atendimento rápido e acolhedor,</span><span>de dia ou de noite</span></h2>
+  </div>
+  <div class="dest-cards">
+    <article class="dc dc--grande dc--desc rv">
+      <img class="dc-img dc-img--cirurgia" src="img/destaque-cirurgia.webp" width="720" height="958" alt="Gato com colar elizabetano em recuperação" loading="lazy" decoding="async" />
+      <div class="dc-body">
+        <span class="dc-tag">Estrutura completa</span>
+        <div class="dc-main">
+          <h3><span>Cirurgias e</span><span>internação</span></h3>
+          <div class="dc-row">
+            <p>Clínica, cirurgias, internação e exames em um só lugar, com cuidado e técnica.</p>
+          </div>
+        </div>
+      </div>
+    </article>
+    <article class="dc rv" style="--d:.1s">
+      <img class="dc-img dc-img--exames" src="img/destaque-exames.webp" width="720" height="960" alt="Cão no colo da tutora durante o atendimento" loading="lazy" decoding="async" />
+      <div class="dc-body">
+        <span class="dc-tag">Diagnóstico</span>
+        <div class="dc-main">
+          <h3><span>Exames e</span><span>diagnósticos</span></h3>
+        </div>
+      </div>
+    </article>
+    <article class="dc rv" style="--d:.2s">
+      <img class="dc-img dc-img--consultas" src="img/destaque-consultas.webp" width="720" height="960" alt="Gato recebendo carinho durante o atendimento" loading="lazy" decoding="async" />
+      <div class="dc-body">
+        <span class="dc-tag">Equipe experiente</span>
+        <div class="dc-main">
+          <h3><span>Consultas</span><span>veterinárias</span></h3>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- SERVICOS -->
+<section class="sec-serv" id="servicos">
+  <div class="serv-titulo">
+    <div class="serv-palco">
+      <div class="serv-gigante rv">serviços</div>
+      <span class="serv-pill p1">Emergência</span>
+      <span class="serv-pill p2">Cirurgias</span>
+      <span class="serv-pill p3">Internação</span>
+      <span class="serv-pill p4">Exames</span>
+    </div>
+  </div>
+  <p class="serv-sub rv"><span>Clínica, cirurgias, internação e exames:</span> <span>estrutura completa em um só lugar</span></p>
+  <div class="serv-lista" id="servLista">
+    <div class="sr rv">
+      <span class="sr-midia"><img style="object-position:50% 36%" src="img/destaque-exames.webp" width="720" height="960" alt="Cão no colo da tutora durante a consulta" loading="lazy" decoding="async" /></span>
+      <div class="sr-info">
+        <span class="sr-ic"><svg class="i"><use href="#i-esteto"/></svg></span>
+        <span class="sr-nome">Consultas</span>
+        <span class="sr-desc">Especialistas em consultas, diagnósticos e acompanhamento completo.</span>
+      </div>
+    </div>
+    <div class="sr rv aberto padrao">
+      <span class="sr-midia"><img style="object-position:50% 40%" src="img/emergencia.webp" width="720" height="540" alt="Cão em atendimento de emergência, recebendo soro na internação" loading="lazy" decoding="async" /></span>
+      <div class="sr-info">
+        <span class="sr-ic"><svg class="i"><use href="#i-raio"/></svg></span>
+        <span class="sr-nome">Emergência 24h</span>
+        <span class="sr-desc">Pronto-atendimento com rapidez nos momentos que mais importam.</span>
+      </div>
+    </div>
+    <div class="sr rv">
+      <span class="sr-midia"><img style="object-position:50% 36%" src="img/destaque-cirurgia.webp" width="720" height="958" alt="Gato com colar elizabetano em recuperação" loading="lazy" decoding="async" /></span>
+      <div class="sr-info">
+        <span class="sr-ic"><svg class="i"><use href="#i-cruz"/></svg></span>
+        <span class="sr-nome">Cirurgias</span>
+        <span class="sr-desc">Procedimentos feitos com cuidado, técnica e muito carinho.</span>
+      </div>
+    </div>
+    <div class="sr rv">
+      <span class="sr-midia"><img style="object-position:50% 30%" src="img/card-caes.webp" width="900" height="900" alt="Pug no colo da veterinária" loading="lazy" decoding="async" /></span>
+      <div class="sr-info">
+        <span class="sr-ic"><svg class="i"><use href="#i-pulso"/></svg></span>
+        <span class="sr-nome">Internação</span>
+        <span class="sr-desc">Cada animal tratado com paciência, respeito e atenção real.</span>
+      </div>
+    </div>
+    <div class="sr rv">
+      <span class="sr-midia"><img style="object-position:50% 30%" src="img/destaque-consultas.webp" width="720" height="960" alt="Gato em atendimento com acesso venoso" loading="lazy" decoding="async" /></span>
+      <div class="sr-info">
+        <span class="sr-ic"><svg class="i"><use href="#i-frasco"/></svg></span>
+        <span class="sr-nome">Exames</span>
+        <span class="sr-desc">Estrutura para o diagnóstico no mesmo endereço, sem ir a outro lugar.</span>
+      </div>
+    </div>
+  </div>
+  <div class="cta-linha">
+    <a class="btn-marca" href="https://wa.me/5551998282558?text=Ol%C3%A1%20encontrei%20voc%C3%AAs%20pelo%20Google%2C%20gostaria%20de%20atendimento." target="_blank" rel="noopener" data-wpp>
+      <span class="lbl">Atendimento rápido agora</span>
+      <svg class="i-wpp"><use href="#i-wpp"/></svg>
+    </a>
+  </div>
+</section>
+
+<!-- CARDS CAES E GATOS -->
+<section class="sec-pets">
+  <article class="pc pc--caes rv">
+    <div class="pc-topo">
+      <span class="pc-gigante" aria-hidden="true">cães</span>
+      <div class="pc-foto"><img class="pc-img" src="img/card-caes.webp" width="900" height="900" alt="Pug no colo da veterinária" loading="lazy" decoding="async" /></div>
+    </div>
+    <span class="pc-tag"><svg class="i"><use href="#i-tag"/></svg>Atendimento humanizado</span>
+    <h3 class="pc-h3"><span>Cuidado que não para,</span><span>para quem você ama</span></h3>
+  </article>
+  <article class="pc pc--gatos rv" style="--d:.12s">
+    <div class="pc-topo">
+      <span class="pc-gigante" aria-hidden="true">gatos</span>
+      <div class="pc-foto"><img class="pc-img" src="img/card-gatos.webp" width="900" height="900" alt="Gato siamês" loading="lazy" decoding="async" /></div>
+    </div>
+    <span class="pc-tag"><svg class="i"><use href="#i-tag"/></svg>Aberta 24 horas</span>
+    <h3 class="pc-h3"><span>Clínica completa</span><span>em um só lugar</span></h3>
+  </article>
+</section>
+
+<!-- ETAPAS -->
+<section class="sec-car sec-etapas" data-carrossel>
+  <div class="car-cab">
+    <div class="car-tag rv">etapas</div>
+    <div class="car-dir">
+      <h2 class="car-h2 rv" style="--d:.08s"><span class="c">Como funciona</span><span>o atendimento na Point Animal</span></h2>
+      <p class="car-p rv" style="--d:.16s">Consultas, emergências, cirurgias, internação e exames no mesmo endereço, no Jardim Lindóia.</p>
+    </div>
+  </div>
+  <div class="car-track">
+    <div class="et rv">
+      <div class="et-img"><img src="img/etapa-1.webp" width="740" height="440" alt="Equipe da Point Animal com um filhote" loading="lazy" decoding="async" /><span class="et-n">01</span></div>
+      <div class="et-txt"><h3>Atendimento rápido</h3><p>Fale pelo WhatsApp e tenha resposta em 2 minutos, a qualquer hora do dia ou da noite.</p></div>
+    </div>
+    <div class="et rv" style="--d:.08s">
+      <div class="et-img"><img src="img/etapa-2.webp" width="740" height="440" alt="Veterinária da Point Animal com um gato no colo" loading="lazy" decoding="async" /><span class="et-n">02</span></div>
+      <div class="et-txt"><h3>Consulta com veterinário</h3><p>Especialistas em consultas, diagnósticos e acompanhamento completo.</p></div>
+    </div>
+    <div class="et rv" style="--d:.16s">
+      <div class="et-img"><img src="img/etapa-3.webp" width="740" height="440" alt="Gato recebendo soro durante o atendimento" loading="lazy" decoding="async" /><span class="et-n">03</span></div>
+      <div class="et-txt"><h3>Exames e diagnóstico</h3><p>Estrutura completa para investigar o caso e agir com rapidez.</p></div>
+    </div>
+    <div class="et rv" style="--d:.24s">
+      <div class="et-img"><img src="img/etapa-4.webp" width="740" height="440" alt="Cão em recuperação na internação" loading="lazy" decoding="async" /><span class="et-n">04</span></div>
+      <div class="et-txt"><h3>Tratamento e internação</h3><p>Cirurgias e internação quando o seu pet precisar, 24 horas por dia.</p></div>
+    </div>
+  </div>
+  <div class="car-prog"><span></span></div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="sec-cta" id="contato">
+  <div class="cta-card rv">
+    <div class="cta-mapa">
+      <iframe data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3455.3408012612767!2d-51.1540543!3d-29.998369200000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9519770681e6631d%3A0xea596da0f3b6162!2sPoint%20Animal%20Cl%C3%ADnica%20Veterin%C3%A1ria%2024%20horas!5e0!3m2!1spt-BR!2sbr!4v1789136428615!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" title="Mapa: Point Animal Clínica Veterinária 24 horas em Porto Alegre"></iframe>
+    </div>
+    <div class="cta-tag">contato</div>
+    <div class="cta-conteudo">
+      <h2 class="cta-h2"><span>A Point Animal está</span><span>esperando por você.</span></h2>
+      <p class="cta-p">Qualquer hora do dia ou da madrugada, nossa equipe está de prontidão para atender você.</p>
+      <a class="btn-wpp cta-btn" href="https://wa.me/5551998282558?text=Ol%C3%A1%20encontrei%20voc%C3%AAs%20pelo%20Google%2C%20gostaria%20de%20atendimento." target="_blank" rel="noopener" data-wpp>
+        <span class="lbl">ATENDIMENTO IMEDIATO</span>
+        <svg class="i-wpp"><use href="#i-wpp"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- RODAPE -->
+<footer class="rodape">
+  <div class="rod-in">
+    <div class="rod-l1">
+      <div class="rod-logo">
+        <span class="ic"><img src="img/logo-96.webp" width="96" height="96" alt="" loading="lazy" /></span>
+        Point Animal.
+      </div>
+      <a class="rod-wpp" href="https://wa.me/5551998282558?text=Ol%C3%A1%20encontrei%20voc%C3%AAs%20pelo%20Google%2C%20gostaria%20de%20atendimento." target="_blank" rel="noopener" data-wpp>
+        <b>WhatsApp 24h</b>
+        <span>Resposta em 2 minutos</span>
+      </a>
+    </div>
+    <div class="rod-l2">
+      <div class="rod-copy">
+        <span>© 2026 Point Animal Clínica Veterinária 24 Horas. Av. Sertório, 5165, Jardim Lindóia, Porto Alegre/RS.</span>
+        <span class="only-d">Cuidado que não para. Para o pet que você ama.</span>
+      </div>
+      <a class="rod-chegar only-d" href="https://www.google.com/maps/dir/?api=1&amp;destination=Point%20Animal%20Cl%C3%ADnica%20Veterin%C3%A1ria%2024%20horas%2C%20Av.%20Sert%C3%B3rio%2C%205165%2C%20Porto%20Alegre" target="_blank" rel="noopener">Como chegar</a>
+    </div>
+  </div>
+</footer>
+
+<!-- BOTAO FLUTUANTE -->
+<a class="btn-wpp wpp-float" href="https://wa.me/5551998282558?text=Ol%C3%A1%20encontrei%20voc%C3%AAs%20pelo%20Google%2C%20gostaria%20de%20atendimento." target="_blank" rel="noopener" data-wpp aria-label="Falar no WhatsApp">
+  <svg class="i-wpp"><use href="#i-wpp"/></svg>
+</a>
+
+<script>
+  /* Entrada dos itens conforme a rolagem */
+  (function () {
+    var itens = document.querySelectorAll('.rv');
+    itens.forEach(function (el) {
+      el.addEventListener('animationend', function (e) {
+        if (e.animationName === 'sobe') el.classList.add('ok');
+      });
+    });
+    if (!('IntersectionObserver' in window)) {
+      itens.forEach(function (el) { el.classList.add('vis'); });
+      return;
+    }
+    var io = new IntersectionObserver(function (entradas) {
+      entradas.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        var alvo = e.target;
+        /* nos carrosseis todos os cards entram juntos, mesmo os que estao fora da tela na lateral */
+        if (alvo.classList.contains('car-track')) {
+          alvo.querySelectorAll('.rv').forEach(function (c) { c.classList.add('vis'); });
+        } else {
+          alvo.classList.add('vis');
+        }
+        io.unobserve(alvo);
+      });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.12 });
+    itens.forEach(function (el) { if (!el.closest('.car-track')) io.observe(el); });
+    document.querySelectorAll('.car-track').forEach(function (t) { io.observe(t); });
+  })();
+
+  /* Carrosseis de avaliacoes e etapas: faixa infinita deslizando sem parar, com arraste e inercia */
+  document.querySelectorAll('[data-carrossel]').forEach(function (sec) {
+    var faixa = sec.querySelector('.car-track');
+    var barra = sec.querySelector('.car-prog span');
+    var reduzido = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var comMouse = window.matchMedia('(hover: hover) and (pointer: fine)');
+    var originais = [].slice.call(faixa.children);
+    var n = originais.length;
+
+    var fita = document.createElement('div');
+    fita.className = 'car-fita';
+    originais.forEach(function (c) { fita.appendChild(c); });
+    faixa.appendChild(fita);
+
+    function clona(c) {
+      var k = c.cloneNode(true);
+      k.setAttribute('aria-hidden', 'true');
+      k.addEventListener('animationend', function (e) { if (e.animationName === 'sobe') k.classList.add('ok'); });
+      return k;
+    }
+    originais.forEach(function (c) { fita.insertBefore(clona(c), originais[0]); });
+    var copiasDepois = 0;
+
+    var s = 0, x = 0, fracao = 0.2;
+    function mede() {
+      var fase = s ? ((((-x - s) % s) + s) % s) / s : 0;
+      var gap = parseFloat(getComputedStyle(fita).columnGap) || 0;
+      s = (originais[0].getBoundingClientRect().width + gap) * n;
+      var precisa = Math.ceil(Math.max(window.innerWidth, 1440) / s) + 1;
+      while (copiasDepois < precisa) {
+        originais.forEach(function (c) { fita.appendChild(clona(c)); });
+        copiasDepois++;
+      }
+      fracao = barra.offsetWidth / barra.parentNode.offsetWidth;
+      x = -(s + fase * s);
+    }
+    function normaliza() {
+      while (x <= -2 * s) x += s;
+      while (x > -s) x -= s;
+    }
+    function desenha() {
+      fita.style.transform = 'translate3d(' + x.toFixed(2) + 'px,0,0)';
+      var p = (-x - s) / s;
+      var pos = ((p + fracao / (1 + fracao)) % 1) * (1 + fracao) - fracao;
+      barra.style.transform = 'translate3d(' + (pos / fracao * 100).toFixed(3) + '%,0,0)';
+    }
+
+    var vel = 0, inercia = 0, retoma = 0, ultimo = 0;
+    var naTela = false, sobre = false, arrastando = false, rodando = false;
+    function cruzeiro() { return (window.innerWidth < 1024 ? 30 : 42) / 1000; } /* px por ms */
+    function quadro(t) {
+      var dt = ultimo ? Math.min(t - ultimo, 48) : 16;
+      ultimo = t;
+      if (!arrastando) {
+        if (inercia) {
+          x += inercia * dt;
+          inercia *= Math.pow(0.94, dt / 16.7);
+          if (Math.abs(inercia) < 0.02) inercia = 0;
+        } else {
+          var alvo = (reduzido || sobre || t < retoma) ? 0 : cruzeiro();
+          vel += (alvo - vel) * Math.min(1, dt / 400);
+          x -= vel * dt;
+        }
+        normaliza();
+        desenha();
+      }
+      if (naTela && !document.hidden) requestAnimationFrame(quadro);
+      else { rodando = false; ultimo = 0; }
+    }
+    function liga() {
+      if (rodando || !naTela || document.hidden) return;
+      rodando = true;
+      ultimo = 0;
+      requestAnimationFrame(quadro);
+    }
+
+    mede();
+    desenha();
+    window.addEventListener('resize', function () { mede(); normaliza(); desenha(); });
+
+    if ('IntersectionObserver' in window) {
+      var perto = new IntersectionObserver(function (es) {
+        if (!es[0].isIntersecting) return;
+        faixa.querySelectorAll('img[loading="lazy"]').forEach(function (img) { img.loading = 'eager'; });
+        perto.disconnect();
+      }, { rootMargin: '800px 0px' });
+      perto.observe(sec);
+      new IntersectionObserver(function (es) {
+        naTela = es[0].isIntersecting;
+        liga();
+      }, { rootMargin: '100px 0px' }).observe(faixa);
+    } else {
+      naTela = true;
+      liga();
+    }
+    document.addEventListener('visibilitychange', liga);
+
+    faixa.addEventListener('mouseenter', function () { if (comMouse.matches) sobre = true; });
+    faixa.addEventListener('mouseleave', function () { sobre = false; });
+
+    var xIni = 0, xBase = 0, amostras = [], moveu = false;
+    faixa.addEventListener('pointerdown', function (e) {
+      if (e.pointerType === 'mouse' && e.button !== 0) return;
+      arrastando = true; moveu = false; inercia = 0; vel = 0;
+      xIni = e.clientX; xBase = x;
+      amostras = [{ t: e.timeStamp, x: e.clientX }];
+      faixa.classList.add('arrastando');
+      if (faixa.setPointerCapture) faixa.setPointerCapture(e.pointerId);
+    });
+    faixa.addEventListener('pointermove', function (e) {
+      if (!arrastando) return;
+      var dx = e.clientX - xIni;
+      if (Math.abs(dx) > 5) moveu = true;
+      x = xBase + dx;
+      normaliza();
+      xBase = x - dx;
+      desenha();
+      amostras.push({ t: e.timeStamp, x: e.clientX });
+      if (amostras.length > 6) amostras.shift();
+    });
+    function solta() {
+      if (!arrastando) return;
+      arrastando = false;
+      faixa.classList.remove('arrastando');
+      var a = amostras[0], b = amostras[amostras.length - 1], dt = b.t - a.t;
+      var parado = performance.now() - b.t > 90;
+      inercia = (!parado && dt > 0) ? Math.max(-2.5, Math.min(2.5, (b.x - a.x) / dt)) : 0;
+      retoma = performance.now() + 1400;
+      liga();
+    }
+    faixa.addEventListener('pointerup', solta);
+    faixa.addEventListener('pointercancel', solta);
+    faixa.addEventListener('click', function (e) {
+      if (moveu) { e.preventDefault(); e.stopPropagation(); moveu = false; }
+    }, true);
+
+    faixa.addEventListener('wheel', function (e) {
+      if (Math.abs(e.deltaX) <= Math.abs(e.deltaY)) return;
+      e.preventDefault();
+      x -= e.deltaX; vel = 0; inercia = 0;
+      normaliza();
+      desenha();
+      retoma = performance.now() + 1400;
+    }, { passive: false });
+  });
+
+  /* CTAs de WhatsApp: o texto vira "ABRINDO O WHATSAPP" e o WhatsApp abre logo em seguida */
+  document.querySelectorAll('[data-wpp]').forEach(function (a) {
+    a.addEventListener('click', function (e) {
+      var lbl = a.querySelector('.lbl');
+      if (!lbl) return;
+      e.preventDefault();
+      if (!lbl.dataset.orig) lbl.dataset.orig = lbl.textContent;
+      lbl.textContent = a.dataset.abrindo || 'ABRINDO O WHATSAPP';
+      a.classList.add('abrindo');
+      setTimeout(function () {
+        var w = window.open(a.href, '_blank');
+        if (w) w.opener = null; else location.href = a.href;
+      }, 450);
+      clearTimeout(a._volta);
+      a._volta = setTimeout(function () {
+        lbl.textContent = lbl.dataset.orig;
+        a.classList.remove('abrindo');
+      }, 4000);
+    });
+  });
+
+  /* Servicos: a linha em destaque da prancheta (Vacinacao) fica aberta em repouso;
+     com o mouse a foto acompanha a linha, no toque abre uma linha por vez */
+  (function () {
+    var lista = document.getElementById('servLista');
+    var linhas = lista.querySelectorAll('.sr');
+    var padrao = lista.querySelector('.sr.padrao');
+    var comMouse = window.matchMedia('(hover: hover) and (pointer: fine)');
+    function abre(sr) { linhas.forEach(function (l) { l.classList.toggle('aberto', l === sr); }); }
+    linhas.forEach(function (sr) {
+      sr.addEventListener('mouseenter', function () { if (comMouse.matches) abre(sr); });
+      sr.addEventListener('click', function (e) {
+        if (comMouse.matches) return;
+        abre(sr.classList.contains('aberto') ? null : sr);
+      });
+    });
+    lista.addEventListener('mouseleave', function () { if (comMouse.matches) abre(padrao); });
+  })();
+
+  /* Mapa: o iframe do Google so carrega quando a dobra de contato se aproxima */
+  (function () {
+    var f = document.querySelector('.cta-mapa iframe');
+    if (!f) return;
+    function carrega() { if (!f.src) f.src = f.dataset.src; }
+    if (!('IntersectionObserver' in window)) { carrega(); return; }
+    var io = new IntersectionObserver(function (es) {
+      if (es[0].isIntersecting) { carrega(); io.disconnect(); }
+    }, { rootMargin: '600px 0px' });
+    io.observe(f);
+  })();
+
+
+  /* Menu mobile */
+  (function () {
+    var btn = document.getElementById('btnMenu');
+    var menu = document.getElementById('menuM');
+    btn.addEventListener('click', function () {
+      var abrir = menu.hidden;
+      menu.hidden = !abrir;
+      btn.setAttribute('aria-expanded', String(abrir));
+    });
+    menu.querySelectorAll('a').forEach(function (a) {
+      a.addEventListener('click', function () {
+        menu.hidden = true;
+        btn.setAttribute('aria-expanded', 'false');
+      });
+    });
+    document.addEventListener('click', function (e) {
+      if (!menu.hidden && !menu.contains(e.target) && !btn.contains(e.target)) {
+        menu.hidden = true;
+        btn.setAttribute('aria-expanded', 'false');
+      }
+    });
+  })();
+
+  /* Navbar marca a dobra que esta na tela */
+  (function () {
+    if (!('IntersectionObserver' in window)) return;
+    var links = document.querySelectorAll('.nav-menu a, .menu-m a');
+    var io = new IntersectionObserver(function (entradas) {
+      entradas.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        links.forEach(function (l) { l.classList.toggle('ativo', l.getAttribute('href') === '#' + e.target.id); });
+      });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+    ['inicio', 'avaliacoes', 'servicos', 'contato'].forEach(function (id) {
+      var s = document.getElementById(id);
+      if (s) io.observe(s);
+    });
+  })();
+</script>
+</body>
+</html>
